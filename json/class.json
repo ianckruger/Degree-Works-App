@@ -1,6 +1,17 @@
 [
     {
-        
+        "courseSubjectCode" : "CSCE",
+        "courseNumber" : "146",
+        "courseTitle" : "Algorithmic Design II",
+        "credits": 4,
+        "prerequisites" : [
+            {
+                "courseSubjectCode" : "CSCE",
+                "courseNumber" : "145"
+            }
+        ],
+        "applicationArea": "CS Fundimentals",
+        "carolinaCore": false
     },
     {
 
