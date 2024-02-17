@@ -1,5 +1,37 @@
 [
     {
-        
+        "roadmapID":1,
+        "major":"CSCE",
+        "majorClasses":[""],
+        "carolinaCore":[],
+        "programRequirments":{
+            "liberalArtsElectives": ["class1", "class2"],
+            "foundationalCourses": ["vector calculus", "Linear Algebra", "discrete Structures"],
+            "lowerDivisionComputing":["CSCE146","CSCE247", "etc"]
+        },
+        "electives":[]
+    },
+    {
+        "roadmapID":2,
+        "major":"CIS",
+        "majorClasses":[],
+        "carolinaCore":[],
+        "programRequirments":{
+            "liberalArtsElectives": ["class1", "class2"],
+            "foundationalCourses": [""],
+            "somethingelse":[]
+        },
+        "electives":[]
+    },
+    {
+        "roadmapID":3,
+        "major":"CE",
+        "majorClasses":[],
+        "carolinaCore":[],
+        "programRequirments":{
+            "liberalArtsElectives": ["class1", "class2"],
+            "everythingElse": ["etc"]
+        },
+        "electives":[]
     }
 ]
