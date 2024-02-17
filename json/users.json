@@ -1,0 +1,33 @@
+[
+    {
+        "firstName":"Billy",
+        "lastName":"Bob",
+        "password":"something",
+        "userType":"Student",
+        "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
+        "gpa":"4.0",
+        "year":"sophmore",
+        "currentMajor" : "CSCE",
+        "earnedCreditHours": 60,
+        "totalCurrentCredits": 15,
+        "degreeCredits": 45,
+        "parents": ["parentID1"],
+        "advisors": ["advisorID"]
+    },
+    {
+        "firstName":"Millie",
+        "lastName":"Bob",
+        "password":"somethingelse",
+        "userType":"Parent",
+        "children":["studentID1","studentID2"],
+        "child":"studentID1"
+    },
+    {
+        "firstName":"Mr.",
+        "lastName":"Advisor",
+        "password":"alsosomething",
+        "userType":"advisor",
+        "students":["studentID1","studentID2","etc"],
+        "advising":"studentID2"
+    }
+]
