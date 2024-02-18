@@ -6,7 +6,8 @@
         "transferred":false,
         "inProgess":false,
         "completed":true,
-        "semesterTaken":"Spring 2023"
+        "semesterTaken":"Spring 2023",
+        "grade":"A"
     },
     {
         "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
@@ -15,7 +16,8 @@
         "transferred":false,
         "inProgess":true,
         "completed":false,
-        "semesterTaken":"Spring 2024"
+        "semesterTaken":"Spring 2024",
+        "grade":"B-"
     },
     {
         "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
@@ -24,6 +26,7 @@
         "transferred":true,
         "inProgess":false,
         "completed":false,
-        "semesterTaken":"transferred"
+        "semesterTaken":"transferred",
+        "grade":"transferred"
     }
 ]
