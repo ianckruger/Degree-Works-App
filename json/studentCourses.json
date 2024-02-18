@@ -1,0 +1,29 @@
+[
+    {
+        "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
+        "courseSubjectCode":"CSCE",
+        "courseNumber":"146",
+        "transferred":false,
+        "inProgess":false,
+        "completed":true,
+        "semesterTaken":"Spring 2023"
+    },
+    {
+        "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
+        "courseSubjectCode":"CSCE",
+        "courseNumber":"211",
+        "transferred":false,
+        "inProgess":true,
+        "completed":false,
+        "semesterTaken":"Spring 2024"
+    },
+    {
+        "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
+        "courseSubjectCode":"CHEM",
+        "courseNumber":"112",
+        "transferred":true,
+        "inProgess":false,
+        "completed":false,
+        "semesterTaken":"transferred"
+    }
+]

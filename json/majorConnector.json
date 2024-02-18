@@ -1,19 +1,19 @@
 [
     {
         "studentID" : "3a261b51-2b01-4b22-a51c-4fce51aaaad8",
-        "roadmapID" : "1",
+        "roadmapID" : "3",
         "major" : "CE",
         "status" : "default"
     },
     {
         "studentID" : "6b8cfa42-9b47-4efc-9086-836dbbc4328c",
-        "roadmapID" : "2",
+        "roadmapID" : "1",
         "major" : "CSCE",
         "status" : "completed"
     },
     {
         "studentID" : "1c3ba470-37b6-4993-9458-ff20ab986fe7",
-        "roadmapID" : "3",
+        "roadmapID" : "2",
         "major" : "CIS",
         "status" : "incomplete"
     }

@@ -4,19 +4,44 @@
         "courseNumber" : "146",
         "courseTitle" : "Algorithmic Design II",
         "credits": 4,
-        "prerequisites" : [
-            {
-                "courseSubjectCode" : "CSCE",
-                "courseNumber" : "145"
-            }
-        ],
-        "applicationArea": "CS Fundimentals",
-        "isCarolinaCore": false
+        "applicationArea":"CIS",
+        "prerequisites" : ["CSCE145"],
+        "isCarolinaCore": false,
+        "isFoundational":true,
+        "isLibElective":false,
+        "isElective":false,
+        "isMajorCourse":false,
+        "isBIM":false,
+        "description":"a follow up of principles in CSCE145"
     },
     {
-        
+        "courseSubjectCode" : "CSCE",
+        "courseNumber" : "211",
+        "courseTitle" : "Digital Logic Design",
+        "credits": 3,
+        "applicationArea":"CSCE",
+        "prerequisites" : ["MATH141"],
+        "isCarolinaCore": false,
+        "isFoundational":true,
+        "isLibElective":false,
+        "isElective":false,
+        "isMajorCourse":false,
+        "isLabScience":false,
+        "description":"Number systems, Boolean algebra, logic design, sequential machines."
     },
     {
-
+        "courseSubjectCode" : "ELCT",
+        "courseNumber" : "321",
+        "courseTitle" : "Digital Signal Processing",
+        "credits": 3,
+        "applicationArea":"CE",
+        "prerequisites" : ["ELCT 222"],
+        "isCarolinaCore": false,
+        "isFoundational":false,
+        "isLibElective":false,
+        "isElective":true,
+        "isMajorCourse":false,
+        "isLabScience":false,
+        "description":"An introduction to analysis, design and applications of discrete time systems; z- and discrete Fourier transforms; frequency and impulse responses, FIR and IIR filters."
     }
 ]
