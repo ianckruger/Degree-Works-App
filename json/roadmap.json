@@ -2,36 +2,40 @@
     {
         "roadmapID":1,
         "major":"CSCE",
-        "majorClasses":[""],
-        "carolinaCore":[],
+        "majorClasses":["CSCE311","CSCE330","CSCE355"],
+        "carolinaCore":["CHEM111", "CSCE145", "ENGL101"],
         "programRequirments":{
-            "liberalArtsElectives": ["class1", "class2"],
-            "foundationalCourses": ["vector calculus", "Linear Algebra", "discrete Structures"],
-            "lowerDivisionComputing":["CSCE146","CSCE247", "etc"]
+            "liberalArtsElectives": ["ECON221", "PHIL102","HUMA002T"],
+            "foundationalCourses": ["MATH241", "MATH344", "ENGL463"],
+            "lowerDivisionComputing":["CSCE146","CSCE211", "CSCE210"],
+            "labScienceElective":["ANTH161","ASTR101","GEOL101"]
         },
-        "electives":[]
+        "electives":["CSCE580","CSCE555","CSCE567"]
     },
     {
         "roadmapID":2,
         "major":"CIS",
-        "majorClasses":[],
-        "carolinaCore":[],
+        "majorClasses":["CSCE242", "CSCE350","CSCE416"],
+        "carolinaCore":["SPAN110", "CSCE145", "ENGL101"],
         "programRequirments":{
-            "liberalArtsElectives": ["class1", "class2"],
-            "foundationalCourses": [""],
-            "somethingelse":[]
+            "liberalArtsElectives": ["ECON221", "PHIL102","HUMA002T"],
+            "foundationalCourses": ["ENGL462", "ENGL463", "MATH174"],
+            "lowerDivisionComputing":["CSCE146","CSCE247", "CSCE205"],
+            "bussinesInformationManagement":["ECON224", "ACCT222", "MGMT371"]
         },
-        "electives":[]
+        "electives":["ITEC447", "ITEC560", "CSCE580"]
     },
     {
         "roadmapID":3,
         "major":"CE",
-        "majorClasses":[],
-        "carolinaCore":[],
+        "majorClasses":["CSCE311","CSCE313","CSCE416"],
+        "carolinaCore":["PHYS211", "CSCE145", "ENGL101"],
         "programRequirments":{
-            "liberalArtsElectives": ["class1", "class2"],
-            "everythingElse": ["etc"]
+            "liberalArtsElectives": ["ECON221", "PHIL102","HUMA002T"],
+            "foundationalCourses": ["PHYS212","MATH241","MATH242"],
+            "lowerDivisionComputing":["CSCE146","CSCE247", "CSCE212"],
+            "electricalEngineering": ["ELCT102","ELCT201","ELCT221","ELCT222"]
         },
-        "electives":[]
+        "electives":["CSCE330","ELCT321","ELCT331"]
     }
 ]
