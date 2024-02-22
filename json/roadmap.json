@@ -1,41 +1,41 @@
 [
     {
-        "roadmapID":1,
+        "roadmapID":"ede2ccb9-00cd-4e42-b868-918cac69a04a",
         "major":"CSCE",
-        "majorClasses":["CSCE311","CSCE330","CSCE355"],
-        "carolinaCore":["CHEM111", "CSCE145", "ENGL101"],
+        "majorClasses":["3655460c-363d-4bb0-866c-c96f1dbe59f0","4fabe9eb-843a-4f24-a9df-542f5c647e86","0472de73-050b-47c1-862d-214a4bb92396"],
+        "carolinaCore":["a2d29md7-190s-29jn-29nd-1c78f59a0911", "24416fb3-6075-4ec2-9828-5a27345ab25b", "ae0e0730-d1b5-4626-bc56-31198fe553b5"],
         "programRequirments":{
-            "liberalArtsElectives": ["ECON221", "PHIL102","HUMA002T"],
-            "foundationalCourses": ["MATH241", "MATH344", "ENGL463"],
-            "lowerDivisionComputing":["CSCE146","CSCE211", "CSCE210"],
-            "labScienceElective":["ANTH161","ASTR101","GEOL101"]
+            "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "73a3e9ae-1137-4be8-bda7-b35ab0a4981c","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
+            "foundationalCourses": ["6a14df37-fe4b-4eda-aa76-897ad481df90", "73de6c1e-142d-4741-9dde-fa05fd418bad", "f2de0833-dadf-4ed8-a962-b877727ee5ef"],
+            "lowerDivisionComputing":["4185c15b-9a71-43e8-a25d-b74b2613d44a","994ee39f-7d7a-4759-8eec-9cb0a80118c2", "0b4bdfc9-dd52-4318-958c-b4144d061375"],
+            "labScienceElective":["527c541f-e465-4c3a-bcdb-f8188d36c47d","70b52607-9e59-461a-a4fd-22a97c1cc33a","4b326a7f-a200-4e9e-8e85-92130478addb"]
         },
-        "electives":["CSCE580","CSCE555","CSCE567"]
+        "electives":["71fe1804-ee6d-4261-94b8-b4ed79de78a2","6e039a96-e3be-4da9-889d-e1e958629d2a","389567d2-7ef1-4e9e-86e9-c1e57ee301c4"]
     },
     {
-        "roadmapID":2,
+        "roadmapID":"f9f55e5d-63a0-4dcd-b473-4c6c1f1db4c8",
         "major":"CIS",
-        "majorClasses":["CSCE242", "CSCE350","CSCE416"],
-        "carolinaCore":["SPAN110", "CSCE145", "ENGL101"],
+        "majorClasses":["4020b05e-04ba-41b8-830d-4635a70011a0", "4020b05e-04ba-41b8-830d-4635a70011a0","f4bf34bd-8bf4-4e9e-94fb-e88b654987fc"],
+        "carolinaCore":["86019075-6de6-45de-bac0-3aeb209f3fda", "24416fb3-6075-4ec2-9828-5a27345ab25b", "ae0e0730-d1b5-4626-bc56-31198fe553b5"],
         "programRequirments":{
-            "liberalArtsElectives": ["ECON221", "PHIL102","HUMA002T"],
-            "foundationalCourses": ["ENGL462", "ENGL463", "MATH174"],
-            "lowerDivisionComputing":["CSCE146","CSCE247", "CSCE205"],
-            "bussinesInformationManagement":["ECON224", "ACCT222", "MGMT371"]
+            "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "2b12dc3f-d52d-4dd9-8bb7-247c2f045b4e","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
+            "foundationalCourses": ["63af74eb-5faa-47d8-a9f4-7308ec5385a1", "f2de0833-dadf-4ed8-a962-b877727ee5ef", "396d923c-ea85-4ee5-ab37-740f18ca3768"],
+            "lowerDivisionComputing":["4185c15b-9a71-43e8-a25d-b74b2613d44a","b6766f27-7b24-488f-9859-b7a8f4877c08", "6b6a8c48-1628-460d-8d41-b0671f660e38"],
+            "bussinesInformationManagement":["37bd363c-2c8a-4c4d-8e83-41cdddf7adb7", "f0b31e51-1677-49b5-9073-5894347a07aa", "ca531ebd-e257-46f9-833e-9f313520e8fe"]
         },
-        "electives":["ITEC447", "ITEC560", "CSCE580"]
+        "electives":["ITEC447", "ITEC560", "71fe1804-ee6d-4261-94b8-b4ed79de78a2"]
     },
     {
-        "roadmapID":3,
+        "roadmapID":"4480a8a7-e288-46dd-8efd-4110c7ca8f9f",
         "major":"CE",
-        "majorClasses":["CSCE311","CSCE313","CSCE416"],
-        "carolinaCore":["PHYS211", "CSCE145", "ENGL101"],
+        "majorClasses":["3655460c-363d-4bb0-866c-c96f1dbe59f0","41d656db-778d-483a-9b76-179209fbe28d","5427c5b3-8670-40df-9e43-41a8029b9986"],
+        "carolinaCore":["634bb631-e316-4809-88d0-cf23d3fecf56", "24416fb3-6075-4ec2-9828-5a27345ab25b", "ae0e0730-d1b5-4626-bc56-31198fe553b5"],
         "programRequirments":{
-            "liberalArtsElectives": ["ECON221", "PHIL102","HUMA002T"],
-            "foundationalCourses": ["PHYS212","MATH241","MATH242"],
-            "lowerDivisionComputing":["CSCE146","CSCE247", "CSCE212"],
-            "electricalEngineering": ["ELCT102","ELCT201","ELCT221","ELCT222"]
+            "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "515f616b-fc51-431e-b691-16e3fbf15420","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
+            "foundationalCourses": ["c7f2aa65-cd69-4283-a84e-e125246241df","6a14df37-fe4b-4eda-aa76-897ad481df90","4fef6357-7cb5-4e89-a62d-294e1ae1d2ad"],
+            "lowerDivisionComputing":["4185c15b-9a71-43e8-a25d-b74b2613d44a","b6766f27-7b24-488f-9859-b7a8f4877c08", "a91868c3-7b9c-40f1-93a9-d2aa70a5e480"],
+            "electricalEngineering": ["1c8a75cc-d42c-49f5-9934-64a33da76372","14e38265-8eb9-4f8c-851e-ed136081997a","c791985c-1390-4a77-81d9-d891c7c597ef","ea0b33f0-e801-4bfc-b699-f399be440ff7"]
         },
-        "electives":["CSCE330","ELCT321","ELCT331"]
+        "electives":["4fabe9eb-843a-4f24-a9df-542f5c647e86","4e2513ef-b6a1-4156-8d20-64eea2bf2a95","9850adc0-c415-4446-bae4-d2b1c1584e4c"]
     }
 ]
