@@ -10,6 +10,7 @@ public abstract class DataConstant {
     protected static final String USER_FIRST_NAME = "firstName";
     protected static final String USER_LAST_NAME = "lastName";
     protected static final String USER_PASSWORD = "password";
+    protected static final String USER_USER_TYPE = "userType";
     protected static final String USER_USER_ID = "userID";
     protected static final String USER_GPA = "gpa";
     protected static final String USER_YEAR = "year";
