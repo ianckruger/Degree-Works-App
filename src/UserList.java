@@ -9,6 +9,7 @@ public class UserList {
 
     private UserList() {
         // use json dataloader here
+        userList = DataLoader.getUsers();
     }
 
     public static UserList getUserList() {
