@@ -27,4 +27,46 @@ public abstract class User {
         this.userType = userType;
 
     }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public UUID getUserUUID() {
+        return userID;
+    }
+
+    public void setUserUUID(UUID userID) {
+        this.userID = userID;
+    }
+
+    
 }
