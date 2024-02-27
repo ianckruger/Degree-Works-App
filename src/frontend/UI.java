@@ -1,3 +1,4 @@
+
 package src.frontend;
 
 import java.util.Scanner;
@@ -36,3 +37,5 @@ public class UI<RoadmapApplication> {
     }
 
 }
+
+
