@@ -1,21 +1,12 @@
 import java.util.UUID;
 
 public abstract class User {
-<<<<<<< HEAD
     private String firstName;
     private String lastName;
     private UUID userID;
     private String password;
     private String userType;
-    private String userName;
-=======
-    protected String firstName;
-    protected String lastName;
-    protected UUID userID;
-    protected String password;
-    protected String userType;
->>>>>>> d8ef128f7bb1036266fcb6bc1293ab628fe54771
-
+ 
     // new account
     public User(String firstName, String lastName, String password, String userType) {
         this.userID = UUID.randomUUID();
