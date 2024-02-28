@@ -23,13 +23,13 @@ public class DataLoader extends DataConstant {
 
                 if (userType == "student") {
                     User student = createStudent(userObject, userType);
-                    users.load(student);
+                    users.addUser(student);
                 } else if (userType == "advisor"){
                     User advisor = createAdvisor(userObject, userType);
-                    users.load(advisor);
+                    users.addUser(advisor);
                 } else if (userType == "parent") {
                     User parent = createParent(userObject, userType);
-                    users.load(parent);
+                    users.addUser(parent);
                 } else {
                     System.out.println("Gyatt");
                 }
@@ -37,7 +37,7 @@ public class DataLoader extends DataConstant {
 
             
 
-            return users;
+            return users.getUsers();
 
         } catch (Exception e) {
             e.printStackTrace();
