@@ -6,6 +6,7 @@ public abstract class User {
     protected UUID userID;
     protected String password;
     protected String userType;
+    protected String userName;
 
     // new account
     public User(String firstName, String lastName, String password, String userType) {
@@ -18,14 +19,16 @@ public abstract class User {
     }
 
     //existing account
-    public User(UUID userID, String firstName, String lastName, String password, String userType) {
+    public User(UUID userID, String userName, String firstName, String lastName, String password, String userType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userID = userID;
         this.password = password;
         this.userType = userType;
+        this.userName = userName;
 
     }
+
 
     public void setUserType(String userType) {
         this.userType = userType;
@@ -66,6 +69,16 @@ public abstract class User {
     public void setUserUUID(UUID userID) {
         this.userID = userID;
     }
+    
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    
+    
 
     
 }
