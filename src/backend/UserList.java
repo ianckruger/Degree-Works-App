@@ -37,4 +37,14 @@ public class UserList {
         userList.add(user);
     }
 
+    public boolean login(String userID, String password) {
+        for(User user : userList) {
+            if(user.getUserUUID().equals(userID) && user.getPassword().equals(password)) 
+                return true;
+                }
+    return false;
+    }
+
+
+
 }

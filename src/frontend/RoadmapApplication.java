@@ -1,15 +1,22 @@
 import java.util.ArrayList;
 public class RoadmapApplication {
+
+    private static RoadmapApplication facade;
     private UserList userList = UserList.getInstance() ;
     private RoadMapList roadmapList = roadmapList.getInstance();
     private User user;
 
+
     public RoadmapApplication() {
+        
 
     }
 
 
     public boolean login(String userName, String password) {
+        return userList.login(userName, password);
+    }
+    public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
         
     }
 
