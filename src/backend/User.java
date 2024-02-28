@@ -16,7 +16,6 @@ public abstract class User {
     protected String userType;
 >>>>>>> d8ef128f7bb1036266fcb6bc1293ab628fe54771
 
-
     // new account
     public User(String firstName, String lastName, String password, String userType) {
         this.userID = UUID.randomUUID();
