@@ -48,7 +48,7 @@ public class UI<RoadmapApplication> {
         System.out.println();
 
         System.out.println("Enter a username for registration:");
-        String userName = "4758368";
+        String userName = "4758348";
         System.out.println("Enter a password for registration:");
         String password = "Password29!";
 
