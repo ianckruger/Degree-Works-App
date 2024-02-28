@@ -20,6 +20,16 @@ public class RoadmapApplication {
         
     }
 
+    public boolean register(String firstName, String lastName,String userName, String password, String userType) {
+        if(userList.findUser(userName, password) == null) {
+            User newUser = new User(firstName, lastName, password, userType);
+            userList.addUser(newUser);
+            return true;
+
+        }
+        return false;
+    }
+
 
 
     public Roadmap getRoadmap() {

@@ -3,12 +3,13 @@ package backend;
 import java.util.UUID;
 
 public abstract class User {
-    private String firstName;
-    private String lastName;
-    private UUID userID;
-    private String password;
-    private String userType;
- 
+    protected String firstName;
+    protected String lastName;
+    protected UUID userID;
+    protected String password;
+    protected String userType;
+    protected String userName;
+
     // new account
     public User(String firstName, String lastName, String password, String userType) {
         this.userID = UUID.randomUUID();
@@ -20,12 +21,13 @@ public abstract class User {
     }
 
     //existing account
-    public User(UUID userID, String firstName, String lastName, String password, String userType) {
+    public User(UUID userID, String userName, String firstName, String lastName, String password, String userType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userID = userID;
         this.password = password;
         this.userType = userType;
+        this.userName = userName;
 
     }
 
@@ -37,6 +39,7 @@ public abstract class User {
     public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
 
     }
+
 
     public void setUserType(String userType) {
         this.userType = userType;
@@ -77,6 +80,16 @@ public abstract class User {
     public void setUserUUID(UUID userID) {
         this.userID = userID;
     }
+    
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    
+    
 
     
 }
