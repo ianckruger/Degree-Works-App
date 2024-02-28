@@ -12,6 +12,9 @@ public class RoadmapApplication {
     public boolean login(String userName, String password) {
         
     }
+    public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
+        
+    }
 
 
 

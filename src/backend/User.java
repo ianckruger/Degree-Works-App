@@ -6,6 +6,7 @@ public abstract class User {
     private UUID userID;
     private String password;
     private String userType;
+    private String userName;
 
 
     // new account
@@ -25,6 +26,15 @@ public abstract class User {
         this.userID = userID;
         this.password = password;
         this.userType = userType;
+
+    }
+
+    public boolean login(String userName, String password) {
+        
+
+    }
+
+    public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
 
     }
 
