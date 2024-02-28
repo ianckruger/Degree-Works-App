@@ -1,6 +1,8 @@
 package backend;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.UUID;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -21,13 +23,13 @@ public class DataLoader extends DataConstant {
 
                 if (userType == "student") {
                     User student = createStudent(userObject, userType);
-                    users.load(student);
+                    users.addUser(student);
                 } else if (userType == "advisor"){
                     User advisor = createAdvisor(userObject, userType);
-                    users.load(advisor);
+                    users.addUser(advisor);
                 } else if (userType == "parent") {
                     User parent = createParent(userObject, userType);
-                    users.load(parent);
+                    users.addUser(parent);
                 } else {
                     System.out.println("Gyatt");
                 }
@@ -35,7 +37,7 @@ public class DataLoader extends DataConstant {
 
             
 
-            return users;
+            return users.getUsers();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,17 +49,17 @@ public class DataLoader extends DataConstant {
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
-        String userID = (String)userObject.get(USER_USER_ID);
-        String gpa = (String)userObject.get(USER_GPA);
+        UUID userID = (UUID)userObject.get(USER_USER_ID);
+        double gpa = (double)userObject.get(USER_GPA);
         String year = (String)userObject.get(USER_YEAR);
         String currentMajor = (String)userObject.get(USER_CURRENT_MAJOR);
-        String earnedCreditHours = (String)userObject.get(USER_EARNED_CREDIT_HOURS);
-        String totalCurrentCredits = (String)userObject.get(USER_TOTAL_CURRENT_CREDITS);
-        String degreeCredits = (String)userObject.get(USER_DEGREE_CREDITS);
-        String parents = (String)userObject.get(USER_PARENTS);
-        String advisors = (String)userObject.get(USER_ADVISORS);
+        int earnedCreditHours = (int)userObject.get(USER_EARNED_CREDIT_HOURS);
+        int totalCurrentCredits = (int)userObject.get(USER_TOTAL_CURRENT_CREDITS);
+        int degreeCredits = (int)userObject.get(USER_DEGREE_CREDITS);
+        ArrayList<User> parents = (ArrayList<User>)userObject.get(USER_PARENTS); // might need to modify this
+        ArrayList<User> advisors = (ArrayList<User>)userObject.get(USER_ADVISORS);
 
-        User user = new Student(firstName, lastName, password, userType, userID, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
+        User user = new Student(userID, firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
         return user;
     }
 
@@ -65,11 +67,11 @@ public class DataLoader extends DataConstant {
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
-        String userID = (String)userObject.get(USER_USER_ID);
-        String students = (String)userObject.get(USER_STUDENTS);
-        String advising = (String)userObject.get(USER_ADVISING);
+        UUID userID = (UUID)userObject.get(USER_USER_ID);
+        ArrayList<User> students = (ArrayList<User>)userObject.get(USER_STUDENTS);
+        User advising = (User)userObject.get(USER_ADVISING);
         
-        User user = new Advisor(firstName, lastName, password, userType, userID, students, advising);
+        User user = new Advisor(userID, firstName, lastName, password, userType, students, advising);
         return user;
     }
 
@@ -77,11 +79,11 @@ public class DataLoader extends DataConstant {
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
-        String userID = (String)userObject.get(USER_USER_ID);
-        String children = (String)userObject.get(USER_CHILDREN);
-        String child = (String)userObject.get(USER_CHILD);
+        UUID userID = (UUID)userObject.get(USER_USER_ID);
+        ArrayList<User> children = (ArrayList<User>)userObject.get(USER_CHILDREN);
+        User child = (User)userObject.get(USER_CHILD);
 
-        User user = new Parent(firstName, lastName, password, userType, userID, children, child);
+        User user = new Parent(userID, firstName, lastName, password, userType, children, child);
         return user;
     }
 

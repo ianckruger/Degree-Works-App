@@ -1,11 +1,13 @@
+package backend;
+
 import java.util.UUID;
 
 public abstract class User {
-    private String firstName;
-    private String lastName;
-    private UUID userID;
-    private String password;
-    private String userType;
+    protected String firstName;
+    protected String lastName;
+    protected UUID userID;
+    protected String password;
+    protected String userType;
 
 
     // new account
