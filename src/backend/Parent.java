@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 package backend;
 
+=======
+>>>>>>> branch-zenker
 import java.util.ArrayList;
 import java.util.UUID;
 
