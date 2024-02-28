@@ -7,7 +7,6 @@ public abstract class User {
     protected String password;
     protected String userType;
 
-
     // new account
     public User(String firstName, String lastName, String password, String userType) {
         this.userID = UUID.randomUUID();
