@@ -1,3 +1,4 @@
+package backend;
 
 package src.backend;
 
@@ -11,3 +12,5 @@ public enum StudentType {
 
 
 
+public class StudentType {
+}
