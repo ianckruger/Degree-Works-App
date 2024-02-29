@@ -1,9 +1,13 @@
+package frontend;
+
 import java.util.ArrayList;
+
+import backend.User;
+import backend.UserList;
 public class RoadmapApplication {
 
     private static RoadmapApplication facade;
-    private UserList userList = UserList.getInstance() ;
-    private RoadMapList roadmapList = roadmapList.getInstance();
+    private RoadMapList roadmapList = RoadMapList.getInstance();
     private User user;
 
 
@@ -14,16 +18,20 @@ public class RoadmapApplication {
 
 
     public boolean login(String userName, String password) {
-        return userList.login(userName, password);
+        UserList userlist = UserList.getInstance();
+        return userlist.login(userName, password);
+        
     }
+
     public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
         
     }
 
     public boolean register(String firstName, String lastName,String userName, String password, String userType) {
-        if(userList.findUser(userName, password) == null) {
+        UserList userlist = UserList.getInstance();
+        if(userlist.findUser(userName) == null) {
             User newUser = new User(firstName, lastName, password, userType);
-            userList.addUser(newUser);
+            userlist.addUser(newUser);
             return true;
 
         }

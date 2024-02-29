@@ -5,25 +5,18 @@ public class UserList {
 
     private static UserList users;
     private ArrayList<User> userList;
+    private User ActiveUser;
 
     private UserList() {
-        // use json dataloader here
+        this.ActiveUser = null;
         userList = DataLoader.readUsers();
-    }
-
-    public static UserList getUserList() {
-        if (users==null) {
-            users = new UserList();
-        }
-
-        return users;
     }
 
     public static UserList getInstance() {
         if(users == null) {
             users = new UserList();
             users.userList = DataLoader.readUsers();
-        };
+        }
         return users;
     }
     
@@ -35,10 +28,12 @@ public class UserList {
         userList.add(user);
     }
 
-    public boolean login(String userName, String password) {
+    public boolean login(String username, String password) {
         for(User user : userList) {
-            if(user.getUserUUID().equals(userName) && user.getPassword().equals(password)) 
+            if(user.getUserName().equals(username) && user.getPassword().equals(password)) {
+                this.ActiveUser = user;
                 return true;
+            }
                 }
     return false;
     }
