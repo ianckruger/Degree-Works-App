@@ -10,34 +10,32 @@ public class UserList {
     private User ActiveUser;
 
     private UserList() {
-        // use json dataloader here
+        this.ActiveUser = null;
         userList = DataLoader.readUsers();
-    }
-
-    public static UserList getUserList() {
-        if (users==null) {
-            users = new UserList();
-        }
-
-        return users;
     }
 
     public static UserList getInstance() {
         if(users == null) {
             users = new UserList();
             users.userList = DataLoader.readUsers();
-        };
+        }
         return users;
+    }
+    
+    public ArrayList<User> getUsers() {
+        return userList;
     }
 
     public void addUser(User user) {
         userList.add(user);
     }
 
-    public boolean login(String userID, String password) {
+    public boolean login(String username, String password) {
         for(User user : userList) {
-            if(user.getUserUUID().equals(userID) && user.getPassword().equals(password)) 
+            if(user.getUserName().equals(username) && user.getPassword().equals(password)) {
+                this.ActiveUser = user;
                 return true;
+            }
                 }
     return false;
     }
