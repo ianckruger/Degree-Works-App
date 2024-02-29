@@ -7,6 +7,7 @@ public class UserList {
 
     private static UserList users;
     private ArrayList<User> userList;
+    private User ActiveUser;
 
     private UserList() {
         // use json dataloader here
@@ -27,10 +28,6 @@ public class UserList {
             users.userList = DataLoader.readUsers();
         };
         return users;
-    }
-    
-    public ArrayList<User> getUsers() {
-        return userList;
     }
 
     public void addUser(User user) {
