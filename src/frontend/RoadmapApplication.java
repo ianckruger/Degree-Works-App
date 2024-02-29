@@ -22,18 +22,10 @@ public class RoadmapApplication {
         return userlist.login(userName, password);
     }
 
-    public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
-        
-    }
+    
 
     public boolean register(String firstName, String lastName,String userName, String password, String userType) {
-        if(userlist.findUser(userName) == null) {
-            User newUser = new User(firstName, lastName, password, userType);
-            userlist.addUser(newUser);
-            return true;
-
-        }
-        return false;
+       
     }
 
 
