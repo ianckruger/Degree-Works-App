@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import backend.User;
 import backend.UserList;
+
 public class RoadmapApplication {
 
     private UserList userlist;
@@ -19,7 +20,6 @@ public class RoadmapApplication {
 
     public boolean login(String userName, String password) {
         return userlist.login(userName, password);
-        
     }
 
     public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
