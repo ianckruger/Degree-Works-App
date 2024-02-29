@@ -10,7 +10,7 @@ import org.json.simple.parser.JSONParser;
 public class DataLoader extends DataConstant {
 
         public static ArrayList<User> readUsers() {
-            UserList users = UserList.getUserList();
+            UserList users = UserList.getInstance();
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();

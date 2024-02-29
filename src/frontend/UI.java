@@ -2,7 +2,7 @@ package frontend;
 
 import java.util.Scanner;
 
-public class UI<RoadmapApplication> {
+public class UI {
     private Scanner scanner;
     private RoadmapApplication application;
 
@@ -11,6 +11,7 @@ public class UI<RoadmapApplication> {
         this.application = new RoadmapApplication();
     }
 
+    
     public void start() {
         System.out.println("Enter your name:");
         String name = scanner.nextLine();
@@ -18,19 +19,37 @@ public class UI<RoadmapApplication> {
 
         application.startApplication();
     }
+    
 
     public void run() {
-        displayMainMenu();
-        scenario1();
-        scenario2();
+        int userChoice = displayMainMenu();
+        switch (userChoice) {
+            case 1:
+                System.out.println("Logging in...");
+                scenario1();
+                break;
+            case 2:
+                scenario2();
+                break;
+            case 3:
+                System.out.println("Exiting...");
+                return;
+            default:
+                System.out.println("Invalid choice. Please enter a number between 1 and 3.");
+        }
+        
     }
 
-    public void displayMainMenu() {
+    public int displayMainMenu() {
         System.out.println("Main Menu:");
         System.out.println("1. Login");
         System.out.println("2. Register");
         System.out.println("3. Exit");
         System.out.println("Enter your choice:");
+
+        int choice = scanner.nextInt();
+        
+        return choice;
     }
 
     public void scenario1() {
@@ -52,6 +71,7 @@ public class UI<RoadmapApplication> {
         System.out.println("Enter a password for registration:");
         String password = "great8!";
 
+         
         if (register(userName, password)) {
             System.out.println("Registration successful!");
         } else {
@@ -62,6 +82,7 @@ public class UI<RoadmapApplication> {
             System.out.println("Username or Password is not correct.");
             return;
         }
+        
 
         System.out.println("Alex is now logged in");
     }
@@ -71,4 +92,10 @@ public class UI<RoadmapApplication> {
     public boolean register(String userName, String password) {
         return application.register(userName, password);
     }
+
+    public static void main(String[] args) {
+        UI ui = new UI();
+        ui.run();
+    }
+
 }
