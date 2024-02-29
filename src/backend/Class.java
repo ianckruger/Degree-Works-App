@@ -28,9 +28,21 @@ public class Class {
     private boolean inProgress;
     private boolean transferred;
     private String grade;
-    private ArrayList<StudentType> studentType;
 
-    public Class() {
+    public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
+    ArrayList<Class> prequisites, boolean isCarolinaCore, boolean isFoundational, boolean isLibElective, boolean isElective, boolean isMajorCourse, boolean isBIM, boolean isLabScience, String courseDescription) {
+        // methods
+    }
+
+    public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
+    ArrayList<Class> prequisites, boolean isCarolinaCore, boolean isFoundational, boolean isLibElective, boolean isElective, boolean isMajorCourse, boolean isBIM, boolean isLabScience, String courseDescription,
+    int yearTaken, int semesterTaken) {
+        // methods
+    }
+
+    public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
+    ArrayList<Class> prequisites, boolean isCarolinaCore, boolean isFoundational, boolean isLibElective, boolean isElective, boolean isMajorCourse, boolean isBIM, boolean isLabScience, String courseDescription,
+    int yearTaken, int semesterTaken, boolean completed, boolean inProgress, boolean transferred, String grade) {
         // methods
     }
 
