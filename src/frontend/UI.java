@@ -2,7 +2,7 @@ package frontend;
 
 import java.util.Scanner;
 
-public class UI<RoadmapApplication> {
+public class UI {
     private Scanner scanner;
     private RoadmapApplication application;
 
