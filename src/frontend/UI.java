@@ -1,4 +1,4 @@
-package src.frontend;
+package frontend;
 
 import java.util.Scanner;
 
@@ -66,7 +66,7 @@ public class UI<RoadmapApplication> {
         System.out.println("Alex is now logged in");
     }
 
-    }
+    
 
     public boolean register(String userName, String password) {
         return application.register(userName, password);
