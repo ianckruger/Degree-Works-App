@@ -1,4 +1,4 @@
-package frontend;
+package src.frontend;
 
 import java.util.Scanner;
 
@@ -48,15 +48,24 @@ public class UI {
         System.out.println();
 
         System.out.println("Enter a username for registration:");
-        String userName = "4289563278";
+        String userName = "aovechkin";
         System.out.println("Enter a password for registration:");
-        String password = "Password29!";
+        String password = "great8!";
 
         if (register(userName, password)) {
             System.out.println("Registration successful!");
         } else {
             System.out.println("Registration failed.");
         }
+
+        if (!application.login("aovechkin", "great8!")) {
+            System.out.println("Username or Password is not correct.");
+            return;
+        }
+
+        System.out.println("Alex is now logged in");
+    }
+
     }
 
     public boolean register(String userName, String password) {
