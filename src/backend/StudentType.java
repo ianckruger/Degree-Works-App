@@ -1,4 +1,4 @@
-package src.backend;
+package backend;
 
 public enum StudentType {
     FRESHMAN,
