@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package src.backend;
 
 public enum StudentType {
@@ -8,8 +8,6 @@ public enum StudentType {
     SENIOR
 }
 =======
-package backend;
 
-public class StudentType {
-}
->>>>>>> branch-victor
+
+
