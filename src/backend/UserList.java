@@ -1,6 +1,4 @@
-package backend;
-
-import java.util.ArrayList;
+ import java.util.ArrayList;
 
 
 public class UserList {
@@ -37,13 +35,24 @@ public class UserList {
         userList.add(user);
     }
 
-    public boolean login(String userID, String password) {
+    public boolean login(String userName, String password) {
         for(User user : userList) {
-            if(user.getUserUUID().equals(userID) && user.getPassword().equals(password)) 
+            if(user.getUserUUID().equals(userName) && user.getPassword().equals(password)) 
                 return true;
                 }
     return false;
     }
+
+    public User findUser(String username, String password) {
+        for (User user : userList) {
+            if (user.getUserName().equals(username) && user.getPassword().equals(password))
+                return user;
+        }
+        return null;
+    }
+
+
+    
 
 
 
