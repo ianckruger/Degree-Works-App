@@ -30,7 +30,7 @@ public class RoadmapApplication {
 
 
 
-    public Roadmap getRoadmap() {
+    public Roadmap getRoadmapList() {
         return roadmapList.getRoadmap;
 
     }
