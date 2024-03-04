@@ -59,7 +59,7 @@ public class DataLoader extends DataConstant {
         ArrayList<User> parents = (ArrayList<User>)userObject.get(USER_PARENTS); // might need to modify this
         ArrayList<User> advisors = (ArrayList<User>)userObject.get(USER_ADVISORS);
 
-        User user = new Student(userID, firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
+        User user = new Student(userID, firstName, lastName, password, userType, currentMajor, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
         return user;
     }
 
@@ -71,7 +71,7 @@ public class DataLoader extends DataConstant {
         ArrayList<User> students = (ArrayList<User>)userObject.get(USER_STUDENTS);
         User advising = (User)userObject.get(USER_ADVISING);
         
-        User user = new Advisor(userID, firstName, lastName, password, userType, students, advising);
+        User user = new Advisor(userID, firstName, lastName, password, userType, password, students, advising);
         return user;
     }
 
@@ -83,7 +83,7 @@ public class DataLoader extends DataConstant {
         ArrayList<User> children = (ArrayList<User>)userObject.get(USER_CHILDREN);
         User child = (User)userObject.get(USER_CHILD);
 
-        User user = new Parent(userID, firstName, lastName, password, userType, children, child);
+        User user = new Parent(userID, firstName, lastName, password, userType, password, children, child);
         return user;
     }
 
