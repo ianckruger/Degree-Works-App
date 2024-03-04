@@ -4,17 +4,19 @@ import java.util.ArrayList;
 
 import backend.User;
 import backend.UserList;
+import backend.Roadmap;
+import backend.RoadmapList;
 
 public class RoadmapApplication {
 
     private UserList userlist;
-    private RoadMapList roadmapList;
+    private RoadmapList roadmapList;
     private User user;
 
 
     public RoadmapApplication() {
         this.userlist = UserList.getInstance();
-        this.roadmapList = RoadMapList.getInstance();
+        this.roadmapList = RoadmapList.getInstance();
     }
 
 
@@ -24,14 +26,14 @@ public class RoadmapApplication {
 
     
 
-    public boolean register(String firstName, String lastName,String userName, String password, String userType) {
+   // public boolean register(String firstName, String lastName,String userName, String password, String userType) {
        
-    }
+   // }
 
 
 
-    public Roadmap getRoadmapList() {
-        return roadmapList.getRoadmap;
+    public ArrayList<Roadmap> getRoadmapList() {
+        return roadmapList.getRoadmaps();
 
     }
     public void viewTranscript() {
@@ -41,7 +43,7 @@ public class RoadmapApplication {
     public void switchState(String state) {
 
     }
-
+/* 
     public ArrayList<Class> findClass() {
 
     }
@@ -53,8 +55,8 @@ public class RoadmapApplication {
     public ArrayList<Class> getFavoriteClasses() {
 
     }
-
-    public void addFavoriteClass(Class class) {
+*/
+    public void addFavoriteClass(Class course) {
 
     }
 
