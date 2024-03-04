@@ -7,5 +7,19 @@ public class RoadmapList {
 
     private static RoadmapList roadmaps;
     private ArrayList<Roadmap> roadmapList;
-    private Roadmap ActiveRoadmap;
+    private Roadmap activeRoadmap;
+
+    private RoadmapList() {
+        this.activeRoadmap = null;
+        // roadmapList = DataLoader.readRoadmaps();
+    }
+
+    public static RoadmapList getInstance() {
+        if(roadmaps == null) {
+            roadmaps = new RoadmapList();
+            //roadmaps.roadmapList = DataLoader.readRoadmaps();
+        }
+        return roadmaps;
+    }
+
 }
