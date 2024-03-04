@@ -22,4 +22,12 @@ public class RoadmapList {
         return roadmaps;
     }
 
+    public ArrayList<Roadmap> getRoadmaps() {
+        return roadmapList;
+    } 
+
+    public void addRoadmap(Roadmap roadmap) {
+        roadmapList.add(roadmap);
+    }
+
 }

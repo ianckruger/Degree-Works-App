@@ -17,7 +17,7 @@ public class UI {
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "! Welcome to the Roadmap Application.");
 
-        application.startApplication();
+        //application.startApplication();
     }
     
 
@@ -90,7 +90,8 @@ public class UI {
     
 
     public boolean register(String userName, String password) {
-        return application.register(userName, password);
+        //return application.register(userName, password);
+        return true;
     }
 
     public static void main(String[] args) {
