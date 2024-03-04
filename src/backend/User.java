@@ -31,6 +31,7 @@ public abstract class User {
 
     }
 
+    /* 
     public boolean login(String userName, String password) {
         
 
@@ -39,7 +40,7 @@ public abstract class User {
     public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
 
     }
-
+    */
 
     public void setUserType(String userType) {
         this.userType = userType;
