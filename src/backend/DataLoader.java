@@ -56,8 +56,19 @@ public class DataLoader extends DataConstant {
         int earnedCreditHours = (int)userObject.get(USER_EARNED_CREDIT_HOURS);
         int totalCurrentCredits = (int)userObject.get(USER_TOTAL_CURRENT_CREDITS);
         int degreeCredits = (int)userObject.get(USER_DEGREE_CREDITS);
-        ArrayList<User> parents = (ArrayList<User>)userObject.get(USER_PARENTS); // might need to modify this
-        ArrayList<User> advisors = (ArrayList<User>)userObject.get(USER_ADVISORS);
+        JSONArray Jparents = (JSONArray)userObject.get(USER_PARENTS); // might need to modify this
+        JSONArray Jadvisors = (JSONArray)userObject.get(USER_ADVISORS);
+
+        ArrayList<User> parents = new ArrayList<>();
+        ArrayList<User> advisors = new ArrayList<>();
+
+        for (Object parent: Jparents ) {
+            parents.add((User) parent);
+        }
+        for (Object advisor: Jadvisors ) {
+            advisors.add((User) advisor);
+        }
+
 
         User user = new Student(userID, firstName, lastName, password, userType, currentMajor, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
         return user;
@@ -68,8 +79,14 @@ public class DataLoader extends DataConstant {
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
         UUID userID = (UUID)userObject.get(USER_USER_ID);
-        ArrayList<User> students = (ArrayList<User>)userObject.get(USER_STUDENTS);
+        JSONArray jstudents = (JSONArray)userObject.get(USER_STUDENTS);
         User advising = (User)userObject.get(USER_ADVISING);
+
+        ArrayList<User> students = new ArrayList<>();
+
+        for (Object student: jstudents ) {
+            students.add((User) student);
+        }
         
         User user = new Advisor(userID, firstName, lastName, password, userType, password, students, advising);
         return user;
@@ -80,8 +97,14 @@ public class DataLoader extends DataConstant {
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
         UUID userID = (UUID)userObject.get(USER_USER_ID);
-        ArrayList<User> children = (ArrayList<User>)userObject.get(USER_CHILDREN);
+        JSONArray jchildren = (JSONArray)userObject.get(USER_CHILDREN);
         User child = (User)userObject.get(USER_CHILD);
+
+        ArrayList<User> children = new ArrayList<>();
+
+        for (Object childs: jchildren ) {
+            children.add((User) childs);
+        }
 
         User user = new Parent(userID, firstName, lastName, password, userType, password, children, child);
         return user;
