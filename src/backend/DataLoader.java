@@ -22,16 +22,17 @@ public class DataLoader extends DataConstant {
                 JSONObject userObject = (JSONObject)userJSON.get(i);
                 String userType = (String)userObject.get(USER_USER_TYPE);
 
-                if (userType == "student") {
+                if (userType.equalsIgnoreCase("Student")) {
                     User student = createStudent(userObject, userType);
                     users.addUser(student);
-                } else if (userType == "advisor"){
+                } else if (userType.equalsIgnoreCase("Advisor")){
                     User advisor = createAdvisor(userObject, userType);
                     users.addUser(advisor);
-                } else if (userType == "parent") {
+                } else if (userType.equalsIgnoreCase("Parent")) {
                     User parent = createParent(userObject, userType);
                     users.addUser(parent);
                 } else {
+                    System.out.println(userType);
                     System.out.println("Gyatt");
                 }
             }
@@ -50,7 +51,8 @@ public class DataLoader extends DataConstant {
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
-        UUID userID = (UUID)userObject.get(USER_USER_ID);
+        String tempuserID = (String)userObject.get(USER_USER_ID);
+        UUID userID = UUID.fromString(tempuserID);
         double gpa = (double)userObject.get(USER_GPA);
         String year = (String)userObject.get(USER_YEAR);
         String currentMajor = (String)userObject.get(USER_CURRENT_MAJOR);
