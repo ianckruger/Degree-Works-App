@@ -20,9 +20,7 @@ public class DataWriter extends DataConstant {
             } catch(Exception e) {
                 e.printStackTrace();
             }
-
         }
-
         
     }
 
@@ -30,9 +28,9 @@ public class DataWriter extends DataConstant {
     public static JSONObject getUserJSON(User user) {
 		JSONObject userDetails = new JSONObject();
 
+        userDetails.put(USER_USER_ID, user.getUserUUID().toString());
 		userDetails.put(USER_FIRST_NAME, user.getFirstName());
 		userDetails.put(USER_LAST_NAME, user.getLastName());
-        userDetails.put(USER_USER_ID, user.getUserUUID().toString());
         userDetails.put(USER_PASSWORD,user.getPassword());
         userDetails.put(USER_USER_TYPE,user.getUserType());
 
@@ -58,6 +56,9 @@ public class DataWriter extends DataConstant {
         JSONObject roadmapDetails = new JSONObject();
 
         roadmapDetails.put(ROADMAP_ID, roadmap.getRoadmapID().toString());
+        roadmapDetails.put(ROADMAP_MAJOR, roadmap.getMajor());
+
+        return roadmapDetails;
         
     }
 
