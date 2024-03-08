@@ -186,4 +186,5 @@ public class DataLoader extends DataConstant {
         Roadmap roadmap = new Roadmap(roadmapID, majorName, majorClasses, carolinaCore, programRequirements, electives);
         return roadmap;
     }
+
 }
