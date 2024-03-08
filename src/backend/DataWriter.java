@@ -13,13 +13,13 @@ public class DataWriter extends DataConstant {
 
         for (int i = 0; i < users.size(); i++) {
             jsonUsers.add(getUserJSON(users.get(i)));
+        }
 
-            try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
-                file.write(jsonUsers.toJSONString());
-                file.flush();
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
+        try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
+            file.write(jsonUsers.toJSONString());
+            file.flush();
+        } catch(Exception e) {
+            e.printStackTrace();
         }
         
     }
@@ -61,10 +61,6 @@ public class DataWriter extends DataConstant {
         return roadmapDetails;
         
     }
-
-     
-
-
 
 
 }
