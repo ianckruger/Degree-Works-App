@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstant {
 
-    public static void saveUsers(ArrayList<User> users) {
+    public static void saveUsers() {
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < users.size(); i++) {
@@ -32,7 +32,7 @@ public class DataWriter extends DataConstant {
 		userDetails.put(USER_FIRST_NAME, user.getFirstName());
 		userDetails.put(USER_LAST_NAME, user.getLastName());
         userDetails.put(USER_PASSWORD,user.getPassword());
-        userDetails.put(USER_USER_TYPE,user.getUserType());
+        userDetails.put(USER_USER_TYPE, user.getUserType());
 
         return userDetails;
 	}

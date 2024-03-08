@@ -22,9 +22,7 @@ public class UI {
     
 
     public void run() {
-        System.out.println("got here 2");
         int userChoice = displayMainMenu();
-        System.out.println("got here 4");
         switch (userChoice) {
             case 1:
                 System.out.println("Logging in...");
@@ -98,7 +96,6 @@ public class UI {
 
     public static void main(String[] args) {
         UI ui = new UI();
-        System.out.println("got here 1");
         ui.run();
     }
 
