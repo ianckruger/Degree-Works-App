@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 public abstract class DataConstant {
 
     // USERS JSON FILE
-    protected static final String USER_FILE_NAME = "../json/users.json";
+    protected static final String USER_FILE_NAME = "../../json/users.json";
     protected static final String USERS = "users";
 
     // USERS JSON KEYS students
@@ -28,7 +28,7 @@ public abstract class DataConstant {
     protected static final String USER_STUDENTS = "students";
     protected static final String USER_ADVISING = "advising";
     // ROADMAP JSON FILE
-    protected static final String ROADMAP_FILE_NAME = "../json/users.json";
+    protected static final String ROADMAP_FILE_NAME = "../../json/roadmap.json";
     protected static final String ROADMAPS = "roadmap";
 
     // ROADMAP JSON KEYS
