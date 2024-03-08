@@ -110,8 +110,9 @@ public class DataLoader extends DataConstant {
         User user = new Parent(userID, firstName, lastName, password, userType, password, children, child);
         return user;
     }
+}
 
-
+/* 
     // Roadmap parsing logic same as user parsing
 
     // THIS IS ALL GOING TO BE RECONSTRUCTED LATER PROBABLY
@@ -188,3 +189,5 @@ public class DataLoader extends DataConstant {
     }
 
 }
+
+*/

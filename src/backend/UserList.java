@@ -10,7 +10,7 @@ public class UserList {
 
     private UserList() {
         this.ActiveUser = null;
-        userList = DataLoader.readUsers();
+        // userList = DataLoader.readUsers();
     }
 
     public static UserList getInstance() {
