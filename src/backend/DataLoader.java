@@ -76,17 +76,20 @@ public class DataLoader extends DataConstant {
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
-        UUID userID = (UUID)userObject.get(USER_USER_ID);
+        String tempuserID = (String)userObject.get(USER_USER_ID);
+        UUID userID = UUID.fromString(tempuserID);
         JSONArray jstudents = (JSONArray)userObject.get(USER_STUDENTS);
-        User advising = (User)userObject.get(USER_ADVISING);
+        // User advising = (User)userObject.get(USER_ADVISING);
 
         ArrayList<User> students = new ArrayList<>();
 
-        for (Object student: jstudents ) {
-            students.add((User) student);
-        }
+        // for (Object student: jstudents ) {
+        //     students.add((User) student);
+        // }
+
+
         
-        User user = new Advisor(userID, firstName, lastName, password, userType, password, students, advising);
+        User user = new Advisor(userID, firstName, lastName, password, userType, password, students);
         return user;
     }
 
@@ -94,17 +97,17 @@ public class DataLoader extends DataConstant {
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
-        UUID userID = (UUID)userObject.get(USER_USER_ID);
+        String tempuserID = (String)userObject.get(USER_USER_ID);
+        UUID userID = UUID.fromString(tempuserID);
         JSONArray jchildren = (JSONArray)userObject.get(USER_CHILDREN);
-        User child = (User)userObject.get(USER_CHILD);
 
         ArrayList<User> children = new ArrayList<>();
 
-        for (Object childs: jchildren ) {
-            children.add((User) childs);
-        }
+        // for (Object childs: jchildren ) {
+        //     children.add((User) childs);
+        // }
 
-        User user = new Parent(userID, firstName, lastName, password, userType, password, children, child);
+        User user = new Parent(userID, firstName, lastName, password, userType, password, children);
         return user;
     }
 }
