@@ -8,7 +8,9 @@ import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstant {
 
-    public static void saveUsers(ArrayList<User> users) {
+    public static void saveUsers() {
+        UserList userList = UserList.getInstance();
+        ArrayList<User> users = userList.getUsers();
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < users.size(); i++) {
@@ -25,17 +27,17 @@ public class DataWriter extends DataConstant {
     }
 
     
-    public static JSONObject getUserJSON(User user) {
-		JSONObject userDetails = new JSONObject();
-
+        public static JSONObject getUserJSON(User user) {
+        JSONObject userDetails = new JSONObject();
         userDetails.put(USER_USER_ID, user.getUserUUID().toString());
-		userDetails.put(USER_FIRST_NAME, user.getFirstName());
-		userDetails.put(USER_LAST_NAME, user.getLastName());
-        userDetails.put(USER_PASSWORD,user.getPassword());
-        userDetails.put(USER_USER_TYPE,user.getUserType());
+        userDetails.put(USER_FIRST_NAME, user.getFirstName());
+        userDetails.put(USER_LAST_NAME, user.getLastName());
+        userDetails.put(USER_PASSWORD, user.getPassword());
+        userDetails.put(USER_USER_TYPE, user.getUserType());
 
         return userDetails;
-	}
+    }
+
 
     public static void saveRoadMaps (ArrayList<Roadmap> roadmaps) {
         JSONArray jsonRoadmaps = new JSONArray();
