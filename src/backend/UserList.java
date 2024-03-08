@@ -10,6 +10,7 @@ public class UserList {
 
     private UserList() {
         this.ActiveUser = null;
+        this.userList = new ArrayList<User>();
         // userList = DataLoader.readUsers();
     }
 

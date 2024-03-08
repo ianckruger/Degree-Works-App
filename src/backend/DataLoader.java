@@ -32,7 +32,6 @@ public class DataLoader extends DataConstant {
                     User parent = createParent(userObject, userType);
                     users.addUser(parent);
                 } else {
-                    System.out.println(userType);
                     System.out.println("Gyatt");
                 }
             }
@@ -64,13 +63,9 @@ public class DataLoader extends DataConstant {
 
         ArrayList<User> parents = new ArrayList<>();
         ArrayList<User> advisors = new ArrayList<>();
-
-        for (Object parent: Jparents ) {
-            parents.add((User) parent);
-        }
-        for (Object advisor: Jadvisors ) {
-            advisors.add((User) advisor);
-        }
+        // the JSONArray objects currently store String IDS for each user
+        // To properly add arrays of users we would need to search each user for their ID, and see if they match.
+        // We are passing in empty arrays right now to ensure we can create a scenario
 
 
         User user = new Student(userID, firstName, lastName, password, userType, currentMajor, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
