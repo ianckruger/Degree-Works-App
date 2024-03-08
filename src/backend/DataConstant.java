@@ -1,10 +1,11 @@
 package backend;
 import java.lang.reflect.Array;
+import java.util.UUID;
 
 public abstract class DataConstant {
 
     // USERS JSON FILE
-    protected static final String USER_FILE_NAME = "../../json/users.json";
+    protected static final String USER_FILE_NAME = "json/users.json";
     protected static final String USERS = "users";
 
     // USERS JSON KEYS students
@@ -12,7 +13,7 @@ public abstract class DataConstant {
     protected static final String USER_LAST_NAME = "lastName";
     protected static final String USER_PASSWORD = "password";
     protected static final String USER_USER_TYPE = "userType";
-    protected static final String USER_USER_ID = "userID";
+    protected static final UUID USER_USER_ID = "userID";
     protected static final String USER_GPA = "gpa";
     protected static final String USER_YEAR = "year";
     protected static final String USER_CURRENT_MAJOR = "currentMajor";
