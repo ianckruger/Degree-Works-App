@@ -56,9 +56,9 @@ public class DataLoader extends DataConstant {
         double gpa = (double)userObject.get(USER_GPA);
         String year = (String)userObject.get(USER_YEAR);
         String currentMajor = (String)userObject.get(USER_CURRENT_MAJOR);
-        int earnedCreditHours = (int)userObject.get(USER_EARNED_CREDIT_HOURS);
-        int totalCurrentCredits = (int)userObject.get(USER_TOTAL_CURRENT_CREDITS);
-        int degreeCredits = (int)userObject.get(USER_DEGREE_CREDITS);
+        int earnedCreditHours = ((Number)userObject.get(USER_EARNED_CREDIT_HOURS)).intValue();
+        int totalCurrentCredits = ((Number)userObject.get(USER_TOTAL_CURRENT_CREDITS)).intValue();
+        int degreeCredits = ((Number)userObject.get(USER_DEGREE_CREDITS)).intValue();
         JSONArray Jparents = (JSONArray)userObject.get(USER_PARENTS); // might need to modify this
         JSONArray Jadvisors = (JSONArray)userObject.get(USER_ADVISORS);
 
