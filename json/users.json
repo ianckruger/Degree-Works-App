@@ -5,7 +5,7 @@
         "password":"something",
         "userType":"Student",
         "userID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
-        "gpa":"4.0",
+        "gpa":4.0,
         "year":"sophmore",
         "currentMajor" : "CSCE",
         "earnedCreditHours": 60,
