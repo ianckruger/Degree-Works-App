@@ -29,28 +29,29 @@ public class RoadmapApplication {
     }
 
 
-    public boolean register(String firstName, String lastName, String password, String userType) {
+ 
+    public boolean register(String userName, String firstName, String lastName, String password, String userType) {
          if ( userType.equals("student")) {
-            Student student = new Student(firstName, lastName, password, userType);
+            Student student = new Student(userName, firstName, lastName, password, userType);
             userlist.addUser(student);;
             DataWriter.saveUsers();
             return true;
         } else if(userType.equals("parent")) {
-            Parent parent = new Parent(firstName, lastName, password, userType);
+            Parent parent = new Parent(userName, firstName, lastName, password, userType);
             userlist.addUser(parent);
             DataWriter.saveUsers();
             return true;
         } else if(userType.equals("advisor")) {
-            Advisor advisor = new Advisor(firstName, lastName, password, userType);
+            Advisor advisor = new Advisor(userName, firstName, lastName, password, userType);
             userlist.addUser(advisor);
             DataWriter.saveUsers();
             return true;
 
         }
-
         return false;
-    }
 
+    }
+ 
      
 
 
