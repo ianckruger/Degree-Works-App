@@ -16,7 +16,7 @@ public class Student extends User {
 
     public Student(String username, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
         super(username, firstName, lastName, password, userType);
-        this.gpa = 4.0;
+        this.gpa = 0.0;
         this.year =  "freshmen";
         this.currentMajor = "CSCE";
         this.earnedCreditHours = 0;
