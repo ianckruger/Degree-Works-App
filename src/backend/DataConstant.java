@@ -1,10 +1,11 @@
 package backend;
 import java.lang.reflect.Array;
+import java.util.UUID;
 
 public abstract class DataConstant {
 
     // USERS JSON FILE
-    protected static final String USER_FILE_NAME = "../json/users.json";
+    protected static final String USER_FILE_NAME = "json/users.json";
     protected static final String USERS = "users";
 
     // USERS JSON KEYS students
@@ -28,12 +29,15 @@ public abstract class DataConstant {
     protected static final String USER_STUDENTS = "students";
     protected static final String USER_ADVISING = "advising";
     // ROADMAP JSON FILE
-    protected static final String ROADMAP_FILE_NAME = "../json/users.json";
+    protected static final String ROADMAP_FILE_NAME = "json/roadmap.json";
     protected static final String ROADMAPS = "roadmap";
 
     // ROADMAP JSON KEYS
     protected static final String ROADMAP_ID = "roadmapID";
     protected static final String ROADMAP_MAJOR = "major";
-
+    protected static final String ROADMAP_MAJOR_CLASSES = "majorsClasses";
+    protected static final String ROADMAP_CAROLINA_CORE = "carolinaCore";
+    protected static final String ROADMAP_PROGRAM_REQUIREMENTS = "programRequirements";
+    protected static final String ROADMAP_ELECTIVES = "electives";
 
 }

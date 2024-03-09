@@ -5,7 +5,7 @@
         "password":"something",
         "userType":"Student",
         "userID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
-        "gpa":"4.0",
+        "gpa":4.0,
         "year":"sophmore",
         "currentMajor" : "CSCE",
         "earnedCreditHours": 60,
@@ -27,7 +27,7 @@
         "firstName":"Mr.",
         "lastName":"Advisor",
         "password":"alsosomething",
-        "userType":"advisor",
+        "userType":"Advisor",
         "userID":"190b113f-ee31-400b-8f30-cdd4e71fcfb4",
         "students":["3a261b51-2b01-4b22-a51c-4fce51aaaad8","190b113f-ee31-400b-8f30-cdd4e71fcfb4","etc"],
         "advising":"190b113f-ee31-400b-8f30-cdd4e71fcfb4"

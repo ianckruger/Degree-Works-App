@@ -17,12 +17,14 @@ public class UI {
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "! Welcome to the Roadmap Application.");
 
-        application.startApplication();
+        //application.startApplication();
     }
     
 
     public void run() {
+        System.out.println("got here 2");
         int userChoice = displayMainMenu();
+        System.out.println("got here 4");
         switch (userChoice) {
             case 1:
                 System.out.println("Logging in...");
@@ -87,14 +89,35 @@ public class UI {
         System.out.println("Alex is now logged in");
     }
 
+  
+
+
+    //For user to login
+    public void loginUser() {
+        System.out.println("Enter your username:");
+        String username = scanner.nextLine();
+        System.out.println("Enter your password:");
+        String password = scanner.nextLine();
+    
+        if (application.login(username, password)) {
+            System.out.println("Login successful!");
+            // Proceed with the application
+        } else {
+            System.out.println("Login failed. Please check your username and password.");
+        }
+    }
     
 
+
+
     public boolean register(String userName, String password) {
-        return application.register(userName, password);
+        //return application.register(userName, password);
+        return true;
     }
 
     public static void main(String[] args) {
         UI ui = new UI();
+        System.out.println("got here 1");
         ui.run();
     }
 

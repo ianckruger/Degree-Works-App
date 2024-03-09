@@ -16,9 +16,10 @@ public class Roadmap {
     private HistoryState historyState;
     private double progressBar;
     private UUID roadmapID;
+    private String major;
 
 
-    public Roadmap(Student student) {
+    public Roadmap() {
 
     }
 
@@ -30,5 +31,13 @@ public class Roadmap {
         return roadmapID;
 
     }
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
 
 }

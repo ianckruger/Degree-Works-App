@@ -1,4 +1,5 @@
- import java.util.ArrayList;
+package backend;
+import java.util.ArrayList;
 
 
 public class UserList {
@@ -9,7 +10,8 @@ public class UserList {
 
     private UserList() {
         this.ActiveUser = null;
-        userList = DataLoader.readUsers();
+        this.userList = new ArrayList<User>();
+        // userList = DataLoader.readUsers();
     }
 
     public static UserList getInstance() {
