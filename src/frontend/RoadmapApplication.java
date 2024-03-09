@@ -26,9 +26,21 @@ public class RoadmapApplication {
 
     
 
-   // public boolean register(String firstName, String lastName,String userName, String password, String userType) {
+    public boolean register(String firstName, String lastName, String userName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors, ArrayList<User> children, User child, ArrayList<User> students, User advising) {
+        if(userType.equalsIgnoreCase("student")) {
+            return userlist.registerStudent(firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
+        }
+        else if(userType.equalsIgnoreCase("parent")) {
+            return userlist.registerParent(firstName, lastName, password, userType, children, child);
+        }
+        else if(userType.equalsIgnoreCase("advisor")) {
+            return userlist.registerAdvisor(firstName, lastName, password, userType, students, advising);
+        } else {
+            return false;
+        }
+        
        
-   // }
+    }
 
 
 
