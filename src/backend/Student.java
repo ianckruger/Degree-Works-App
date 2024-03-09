@@ -14,6 +14,7 @@ public class Student extends User {
     private ArrayList<User> parents;
     private ArrayList<User> advisor;
 
+<<<<<<< HEAD
     public Student(String firstName, String lastName, String password, String userType) {
         super(firstName, lastName, password, userType);
         this.gpa = 0;
@@ -36,9 +37,21 @@ public class Student extends User {
         this.degreeCredits = degreeCredits;
         this.parents = parents;
         this.advisor = advisors;
+=======
+    public Student(String username, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
+        super(username, firstName, lastName, password, userType);
+        this.gpa = 0.0;
+        this.year =  "freshmen";
+        this.currentMajor = "CSCE";
+        this.earnedCreditHours = 0;
+        this.totalCurrentCredits = 0;
+        this.degreeCredits = 0;
+        this.parents = new ArrayList<>();
+        this.advisor = new ArrayList<>();
+>>>>>>> e10518673a06fbdab532e2212605ddfcb8f0888e
     }
 
-    public Student(UUID userID, String username, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
+    public Student(String username, UUID userID, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
         super(userID, username, firstName, lastName, password, userType);
         this.gpa = gpa;
         this.year = year;

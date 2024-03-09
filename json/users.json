@@ -2,6 +2,7 @@
     {
         "firstName":"Billy",
         "lastName":"Bob",
+        "userName":"username1",
         "password":"something",
         "userType":"Student",
         "userID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
@@ -17,6 +18,7 @@
     {
         "firstName":"Millie",
         "lastName":"Bob",
+        "userName":"username2",
         "password":"somethingelse",
         "userType":"Parent",
         "userID":"7ac05900-fa46-4479-8f09-c569f9d2e18d",
@@ -26,6 +28,7 @@
     {
         "firstName":"Mr.",
         "lastName":"Advisor",
+        "userName":"username3",
         "password":"alsosomething",
         "userType":"Advisor",
         "userID":"190b113f-ee31-400b-8f30-cdd4e71fcfb4",

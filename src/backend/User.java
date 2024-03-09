@@ -11,8 +11,9 @@ public abstract class User {
     protected String userName;
 
     // new account
-    public User(String firstName, String lastName, String password, String userType) {
+    public User(String username, String firstName, String lastName, String password, String userType) {
         this.userID = UUID.randomUUID();
+        this.userName = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
