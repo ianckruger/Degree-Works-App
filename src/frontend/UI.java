@@ -64,12 +64,11 @@ public class UI {
     }
 
     public void scenario2() {
-        System.out.println();
-
+        scanner.nextLine();
         System.out.println("Enter a username for registration:");
-        String userName = "aovechkin";
+        String userName = scanner.nextLine();
         System.out.println("Enter a password for registration:");
-        String password = "great8!";
+        String password = scanner.nextLine();
 
          
         if (register(userName, password)) {
