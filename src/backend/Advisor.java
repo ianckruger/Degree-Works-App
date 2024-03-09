@@ -9,10 +9,8 @@ public class Advisor extends User {
 
     public Advisor(String username, String firstName, String lastName, String password, String userType, ArrayList<User> students, User advising) {
         super(username, firstName, lastName, password, userType);
-        this.advising = advising;
-        this.students = students;
-
-        
+        this.students = new ArrayList<>();
+        this.advising = null;
     }
 
     public Advisor(String username, UUID userID, String firstName, String lastName, String password, String userType, ArrayList<User> students) {
