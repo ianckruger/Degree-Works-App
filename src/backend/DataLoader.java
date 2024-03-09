@@ -47,6 +47,7 @@ public class DataLoader extends DataConstant {
     }
 
     public static User createStudent(JSONObject userObject,String userType) {
+        String userName = (String)userObject.get(USER_USERNAME);
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
@@ -68,11 +69,12 @@ public class DataLoader extends DataConstant {
         // We are passing in empty arrays right now to ensure we can create a scenario
 
 
-        User user = new Student(userID, firstName, lastName, password, userType, currentMajor, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
+        User user = new Student(userName, userID, firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
         return user;
     }
 
     public static User createAdvisor(JSONObject userObject, String userType) {
+        String userName = (String)userObject.get(USER_USERNAME);
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
@@ -89,11 +91,12 @@ public class DataLoader extends DataConstant {
 
 
         
-        User user = new Advisor(userID, firstName, lastName, password, userType, password, students);
+        User user = new Advisor(userName, userID, firstName, lastName, password, userType, students);
         return user;
     }
 
     public static User createParent(JSONObject userObject, String userType) {
+        String userName = (String)userObject.get(USER_USERNAME);
         String firstName = (String)userObject.get(USER_FIRST_NAME);
         String lastName = (String)userObject.get(USER_LAST_NAME);
         String password = (String)userObject.get(USER_PASSWORD);
@@ -107,7 +110,7 @@ public class DataLoader extends DataConstant {
         //     children.add((User) childs);
         // }
 
-        User user = new Parent(userID, firstName, lastName, password, userType, password, children);
+        User user = new Parent(userName, userID, firstName, lastName, password, userType, children);
         return user;
     }
 }

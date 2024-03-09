@@ -9,6 +9,7 @@ public abstract class DataConstant {
     protected static final String USERS = "users";
 
     // USERS JSON KEYS students
+    protected static final String USER_USERNAME = "userName";
     protected static final String USER_FIRST_NAME = "firstName";
     protected static final String USER_LAST_NAME = "lastName";
     protected static final String USER_PASSWORD = "password";
