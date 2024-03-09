@@ -7,6 +7,12 @@ public class Parent extends User {
     private User child;
     private ArrayList<User> children;
 
+    public Parent(String firstName, String lastName, String password, String userType) {
+        super(firstName, lastName, password, userType);
+        this.child = null;
+        this.children = null;
+    }
+
     public Parent(String firstName, String lastName, String password, String userType, ArrayList<User> children, User child) {
         super(firstName, lastName, password, userType);
         this.child = child;
