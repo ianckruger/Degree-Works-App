@@ -7,8 +7,8 @@ public class Advisor extends User {
     private ArrayList<User> students;
     private User advising;
 
-    public Advisor(String firstName, String lastName, String password, String userType, ArrayList<User> students, User advising) {
-        super(firstName, lastName, password, userType);
+    public Advisor(String username, String firstName, String lastName, String password, String userType, ArrayList<User> students, User advising) {
+        super(username, firstName, lastName, password, userType);
         this.advising = advising;
         this.students = students;
 
