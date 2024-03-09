@@ -26,7 +26,7 @@ public class Student extends User {
         this.advisor = advisors;
     }
 
-    public Student(UUID userID, String username, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
+    public Student(String username, UUID userID, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
         super(userID, username, firstName, lastName, password, userType);
         this.gpa = gpa;
         this.year = year;
