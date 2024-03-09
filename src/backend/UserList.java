@@ -45,7 +45,7 @@ public class UserList {
         if ( userType.equals("student")) {
             Student student = new Student(firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits,   degreeCredits,  parents, advisors);
             userList.add(ActiveUser);
-            //save user
+            DataWriter.saveUsers();
             return true;
         }
         return false;
@@ -56,7 +56,7 @@ public class UserList {
         if(userType.equals("parent")) {
             Parent parent = new Parent(firstName, lastName, password, userType, children, child );
             userList.add(ActiveUser);
-            //save user
+            DataWriter.saveUsers();
             return true;
         }
         return false;
@@ -67,12 +67,14 @@ public class UserList {
         if(userType.equals("advisor")) {
             Advisor advisor = new Advisor(firstName, lastName, password, userType, students, advising);
             userList.add(ActiveUser);
-            //save user
+            DataWriter.saveUsers();
             return true;
 
         }
         return false;
     }
+
+     
 
 
 
