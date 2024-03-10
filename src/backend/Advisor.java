@@ -25,6 +25,13 @@ public class Advisor extends User {
         super(userID, username, firstName, lastName, password, userType);
         this.students = students;
 
-        
     }
+
+    public User getAdvising() {
+        return advising;
+    };
+
+    public ArrayList<User> getStudents() {
+        return students;
+    };
 }

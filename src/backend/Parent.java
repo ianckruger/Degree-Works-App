@@ -25,5 +25,13 @@ public class Parent extends User {
         this.children = children;
 
     }
+
+    public User getChild() {
+        return child;
+    };
+
+    public ArrayList<User> getChildren() {
+        return children;
+    };
     
 }
