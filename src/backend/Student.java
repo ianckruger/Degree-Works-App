@@ -11,8 +11,8 @@ public class Student extends User {
     private int earnedCreditHours;
     private int totalCurrentCredits;
     private int degreeCredits;
-    private ArrayList<User> parents;
-    private ArrayList<User> advisor;
+    private ArrayList<String> parents;
+    private ArrayList<String> advisor;
 
     public Student(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
@@ -26,7 +26,7 @@ public class Student extends User {
         this.advisor = null;
         
     }
-    public Student(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
+    public Student(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
         super(userName, firstName, lastName, password, userType);
         this.gpa = gpa;
         this.year = year;
@@ -38,7 +38,7 @@ public class Student extends User {
         this.advisor = advisors;
     }
 
-    public Student(String username, UUID userID, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
+    public Student(String username, UUID userID, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
         super(userID, username, firstName, lastName, password, userType);
         this.gpa = gpa;
         this.year = year;
@@ -74,11 +74,11 @@ public class Student extends User {
         return totalCurrentCredits;
     }
 
-    public ArrayList<User> getParents() {
+    public ArrayList<String> getParents() {
         return parents;
     }
 
-    public ArrayList<User> getAdvisors() {
+    public ArrayList<String> getAdvisors() {
         return advisor;
     }
     

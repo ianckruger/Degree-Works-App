@@ -46,6 +46,8 @@ public class DataWriter extends DataConstant {
     public static JSONObject completeStudent(Student user, JSONObject userDetails) {
         userDetails.put(USER_GPA, user.getGPA());
         userDetails.put(USER_DEGREE_CREDITS, user.getDegreeCredits());
+        userDetails.put(USER_YEAR, user.getYear());
+        userDetails.put(USER_CURRENT_MAJOR, user.getCurrentMajor());
         return userDetails;
     }
 

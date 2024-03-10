@@ -62,8 +62,16 @@ public class DataLoader extends DataConstant {
         JSONArray Jparents = (JSONArray)userObject.get(USER_PARENTS); // might need to modify this
         JSONArray Jadvisors = (JSONArray)userObject.get(USER_ADVISORS);
 
-        ArrayList<User> parents = new ArrayList<>();
-        ArrayList<User> advisors = new ArrayList<>();
+        ArrayList<String> parents = new ArrayList<>();
+        for (int i = 0; i < Jparents.size(); i++) {
+            String addThis = (String)Jparents.get(i);
+            parents.add(addThis);
+        }
+        ArrayList<String> advisors = new ArrayList<>();
+        for (int i = 0; i < Jadvisors.size(); i++) {
+            String addThis = (String)Jadvisors.get(i);
+            advisors.add(addThis);
+        }
         // the JSONArray objects currently store String IDS for each user
         // To properly add arrays of users we would need to search each user for their ID, and see if they match.
         // We are passing in empty arrays right now to ensure we can create a scenario
@@ -83,7 +91,11 @@ public class DataLoader extends DataConstant {
         JSONArray jstudents = (JSONArray)userObject.get(USER_STUDENTS);
         // User advising = (User)userObject.get(USER_ADVISING);
 
-        ArrayList<User> students = new ArrayList<>();
+        ArrayList<String> students = new ArrayList<>();
+        for (int i = 0; i < jstudents.size(); i++) {
+            String addThis = (String)jstudents.get(i);
+            students.add(addThis);
+        }
 
         // for (Object student: jstudents ) {
         //     students.add((User) student);
@@ -104,7 +116,11 @@ public class DataLoader extends DataConstant {
         UUID userID = UUID.fromString(tempuserID);
         JSONArray jchildren = (JSONArray)userObject.get(USER_CHILDREN);
 
-        ArrayList<User> children = new ArrayList<>();
+        ArrayList<String> children = new ArrayList<>();
+        for (int i = 0; i < jchildren.size(); i++) {
+            String addThis = (String)jchildren.get(i);
+            children.add(addThis);
+        }
 
         // for (Object childs: jchildren ) {
         //     children.add((User) childs);
