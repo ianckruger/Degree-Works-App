@@ -49,5 +49,37 @@ public class Student extends User {
         this.parents = parents;
         this.advisor = advisors;
     }
+
+    public double getGPA() {
+        return gpa;
+    }
+
+    public int getDegreeCredits() {
+        return degreeCredits;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public String getCurrentMajor() {
+        return currentMajor;
+    }
+
+    public int getEarnedCreditHours() {
+        return earnedCreditHours;
+    }
+
+    public int getTotalCurrentCredits() {
+        return totalCurrentCredits;
+    }
+
+    public ArrayList<User> getParents() {
+        return parents;
+    }
+
+    public ArrayList<User> getAdvisors() {
+        return advisor;
+    }
     
 }

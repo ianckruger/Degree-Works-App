@@ -26,8 +26,8 @@ public class DataWriter extends DataConstant {
         
     }
         // Need to add other things like null objects so json works
-        // Need to differentiate 
-        public static JSONObject getUserJSON(User user) {
+        // Need to differentiate     
+    public static JSONObject getUserJSON(User user) {
         JSONObject userDetails = new JSONObject();
         userDetails.put(USER_USERNAME, user.getUserName());
         userDetails.put(USER_USER_ID, user.getUserUUID().toString());
@@ -36,6 +36,16 @@ public class DataWriter extends DataConstant {
         userDetails.put(USER_PASSWORD, user.getPassword());
         userDetails.put(USER_USER_TYPE, user.getUserType());
 
+        if(user.getUserType().equalsIgnoreCase("Student")) {
+            
+        }
+
+        return userDetails;
+    }
+
+    public static JSONObject completeStudent(Student user, JSONObject userDetails) {
+        userDetails.put(USER_GPA, user.getGPA());
+        userDetails.put(USER_DEGREE_CREDITS, user.getDegreeCredits());
         return userDetails;
     }
 
