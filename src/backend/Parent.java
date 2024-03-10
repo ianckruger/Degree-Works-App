@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Parent extends User {
     private User child;
-    private ArrayList<User> children;
+    private ArrayList<String> children;
 
     public Parent(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
@@ -13,14 +13,14 @@ public class Parent extends User {
         this.children = null;
     }
 
-    public Parent(String userName, String firstName, String lastName, String password, String userType, ArrayList<User> children, User child) {
+    public Parent(String userName, String firstName, String lastName, String password, String userType, ArrayList<String> children, User child) {
         super(userName, firstName, lastName, password, userType);
         this.child = child;
         this.children = children;
 
     }
 
-    public Parent(String username, UUID userID, String firstName, String lastName, String password, String userType, ArrayList<User> children) {
+    public Parent(String username, UUID userID, String firstName, String lastName, String password, String userType, ArrayList<String> children) {
         super(userID, username, firstName, lastName, password, userType);
         this.children = children;
 
@@ -30,7 +30,7 @@ public class Parent extends User {
         return child;
     };
 
-    public ArrayList<User> getChildren() {
+    public ArrayList<String> getChildren() {
         return children;
     };
     

@@ -103,7 +103,7 @@ public class DataLoader extends DataConstant {
 
 
         
-        User user = new Advisor(userName, userID, firstName, lastName, password, userType, students);
+        User user = new Advisor(userName, firstName, lastName, password, userType);
         return user;
     }
 
@@ -126,7 +126,7 @@ public class DataLoader extends DataConstant {
         //     children.add((User) childs);
         // }
 
-        User user = new Parent(userName, userID, firstName, lastName, password, userType, children);
+        User user = new Parent(userName, firstName, lastName, password, userType);
         return user;
     }
 }
