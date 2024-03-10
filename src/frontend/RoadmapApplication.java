@@ -31,17 +31,17 @@ public class RoadmapApplication {
 
  
     public boolean register(String userName, String firstName, String lastName, String password, String userType) {
-         if ( userType.equals("student")) {
+         if ( userType.equals("Student")) {
             Student student = new Student(userName, firstName, lastName, password, userType);
             userlist.addUser(student);;
             DataWriter.saveUsers();
             return true;
-        } else if(userType.equals("parent")) {
+        } else if(userType.equals("Parent")) {
             Parent parent = new Parent(userName, firstName, lastName, password, userType);
             userlist.addUser(parent);
             DataWriter.saveUsers();
             return true;
-        } else if(userType.equals("advisor")) {
+        } else if(userType.equals("Advisor")) {
             Advisor advisor = new Advisor(userName, firstName, lastName, password, userType);
             userlist.addUser(advisor);
             DataWriter.saveUsers();

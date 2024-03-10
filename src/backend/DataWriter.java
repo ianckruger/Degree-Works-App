@@ -25,7 +25,8 @@ public class DataWriter extends DataConstant {
         }
         
     }
-    
+        // Need to add other things like null objects so json works
+        // Need to differentiate 
         public static JSONObject getUserJSON(User user) {
         JSONObject userDetails = new JSONObject();
         userDetails.put(USER_USERNAME, user.getUserName());

@@ -53,9 +53,13 @@ public class UI {
     }
 
     public void scenario1() {
-        System.out.println();
+        scanner.nextLine();
+        System.out.println("Enter a username:");
+        String userName = scanner.nextLine();
+        System.out.println("Enter a password:");
+        String password = scanner.nextLine();
 
-        if (!application.login("cmcdavid", "9797")) {
+        if (!application.login(userName, password)) {
             System.out.println("Username or Password is not correct.");
             return;
         }
@@ -69,21 +73,27 @@ public class UI {
         String userName = scanner.nextLine();
         System.out.println("Enter a password for registration:");
         String password = scanner.nextLine();
+        System.out.println("Enter your first name for registration:");
+        String firstName = scanner.nextLine();
+        System.out.println("Enter your last name for registration:");
+        String lastName = scanner.nextLine();
+        System.out.println("Enter your User Type (Student/Parent/Advisor) for registration:");
+        String userType = scanner.nextLine();
 
          
-        if (register(userName, password)) {
+        if (register(userName, password, firstName, lastName, userType)) {
             System.out.println("Registration successful!");
         } else {
             System.out.println("Registration failed.");
         }
 
-        if (!application.login("aovechkin", "great8!")) {
+        if (!application.login(userName, password)) {
             System.out.println("Username or Password is not correct.");
             return;
         }
         
 
-        System.out.println("Alex is now logged in");
+        System.out.println(firstName+ " is now logged in");
     }
 
   
@@ -107,9 +117,8 @@ public class UI {
 
 
 
-    public boolean register(String userName, String password) {
-        //return application.register(userName, password);
-        return true;
+    public boolean register(String userName, String password, String firstName, String lastName, String userType) {
+        return application.register(userName, firstName, lastName, password , userType);
     }
 
     public static void main(String[] args) {
