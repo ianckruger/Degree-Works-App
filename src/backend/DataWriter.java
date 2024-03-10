@@ -14,7 +14,13 @@ public class DataWriter extends DataConstant {
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < users.size(); i++) {
-            jsonUsers.add(getUserJSON(users.get(i)));
+            if(users.get(i).getUserType().equalsIgnoreCase("Student")) 
+                jsonUsers.add(completeStudent((Student) users.get(i);));
+            else if (users.get(i).getUserType().equalsIgnoreCase("Advisor"))
+                jsonUsers.add(completeAdvisor((Advisor) users.get(i)));
+            else if (user.get(i).getUserType().equalsIgnoreCase("Parent"))
+            jsonUsers.add(completeParent((Parent) users.get(i)));
+                
         }
 
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
