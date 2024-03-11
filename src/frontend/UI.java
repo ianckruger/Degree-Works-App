@@ -34,11 +34,20 @@ public class UI {
             case 3:
                 System.out.println("Exiting...");
                 return;
+            case 4:
+                scenario3(); // Creating a Student Account
+                break;
+            case 5:
+                scenario4(); // Creating a Parent Account
+                break;
+            case 6:
+                scenario5(); // Creating an Advisor Account
+                break;
             default:
-                System.out.println("Invalid choice. Please enter a number between 1 and 3.");
+                System.out.println("Invalid choice. Please enter a number between 1 and 6.");
         }
-        
     }
+    
 
     public int displayMainMenu() {
         System.out.println("Main Menu:");
@@ -86,7 +95,57 @@ public class UI {
         System.out.println("Alex is now logged in");
     }
 
-  
+    public void scenario3() {
+        System.out.println("Creating a Student Account...");
+        // Hard-coded student account details
+        String userName = "student123";
+        String firstName = "John";
+        String lastName = "Doe";
+        String password = "password123";
+        String userType = "student";
+        // Additional student details (e.g., GPA, year, current major) would go here
+    
+        if (application.register(userName, firstName, lastName, password, userType)) {
+            System.out.println("Student account created successfully!");
+        } else {
+            System.out.println("Failed to create student account.");
+        }
+    }
+    
+    public void scenario4() {
+        System.out.println("Creating a Parent Account...");
+        // Hard-coded parent account details
+        String userName = "parent456";
+        String firstName = "Jane";
+        String lastName = "Smith";
+        String password = "password456";
+        String userType = "parent";
+        // Additional parent details (e.g., children) would go here
+    
+        if (application.register(userName, firstName, lastName, password, userType)) {
+            System.out.println("Parent account created successfully!");
+        } else {
+            System.out.println("Failed to create parent account.");
+        }
+    }
+    
+    public void scenario5() {
+        System.out.println("Creating an Advisor Account...");
+        // Hard-coded advisor account details
+        String userName = "advisor789";
+        String firstName = "Dr.";
+        String lastName = "Advisor";
+        String password = "password789";
+        String userType = "advisor";
+        // Additional advisor details (e.g., students advising) would go here
+    
+        if (application.register(userName, firstName, lastName, password, userType)) {
+            System.out.println("Advisor account created successfully!");
+        } else {
+            System.out.println("Failed to create advisor account.");
+        }
+    }
+    
 
 
     //For user to login
