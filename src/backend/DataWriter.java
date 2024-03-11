@@ -18,7 +18,7 @@ public class DataWriter extends DataConstant {
                 jsonUsers.add(completeStudent((Student) users.get(i);));
             else if (users.get(i).getUserType().equalsIgnoreCase("Advisor"))
                 jsonUsers.add(completeAdvisor((Advisor) users.get(i)));
-            else if (user.get(i).getUserType().equalsIgnoreCase("Parent"))
+            else if (users.get(i).getUserType().equalsIgnoreCase("Parent"))
             jsonUsers.add(completeParent((Parent) users.get(i)));
                 
         }
@@ -56,6 +56,18 @@ public class DataWriter extends DataConstant {
         userDetails.put(USER_CURRENT_MAJOR, user.getCurrentMajor());
         userDetails.put(USER_PARENTS, JSONArray.toJSONString(user.getParents()));
         userDetails.put(USER_ADVISORS, JSONArray.toJSONString(user.getAdvisors()));
+        return userDetails;
+    }
+
+    public static JSONObject completeAdvisor(Advisor user) {
+        JSONObject userDetails = getUserJSON(user);
+        userDetails.put(USER_STUDENTS, JSONArray.toJSONString(user.getStudents()));
+        return userDetails;
+    }
+
+    public static JSONObject completeParent(Parent user) {
+        JSONObject userDetails = getUserJSON(user);
+        userDetails.put(USER_CHILDREN, JSONArray.toJSONString(user.getChildren()));
         return userDetails;
     }
 
