@@ -108,10 +108,10 @@ public class UI {
     public void scenario3() {
         System.out.println("Creating a Student Account...");
         // Hard-coded student account details
-        String userName = "student123";
-        String firstName = "John";
-        String lastName = "Doe";
-        String password = "password123";
+        String userName = "seabass20";
+        String firstName = "Sebastian";
+        String lastName = "Aho";
+        String password = "TheFish20!";
         String userType = "student";
         // Additional student details (e.g., GPA, year, current major) would go here
     
@@ -125,10 +125,10 @@ public class UI {
     public void scenario4() {
         System.out.println("Creating a Parent Account...");
         // Hard-coded parent account details
-        String userName = "parent456";
-        String firstName = "Jane";
-        String lastName = "Smith";
-        String password = "password456";
+        String userName = "lzenker";
+        String firstName = "Lisa";
+        String lastName = "Zenker";
+        String password = "Peake21146!";
         String userType = "parent";
         // Additional parent details (e.g., children) would go here
     
@@ -142,10 +142,10 @@ public class UI {
     public void scenario5() {
         System.out.println("Creating an Advisor Account...");
         // Hard-coded advisor account details
-        String userName = "advisor789";
-        String firstName = "Dr.";
-        String lastName = "Advisor";
-        String password = "password789";
+        String userName = "rkeafe";
+        String firstName = "Ryanne";
+        String lastName = "Keafe";
+        String password = "Mrs.Advisor8829!";
         String userType = "advisor";
         // Additional advisor details (e.g., students advising) would go here
     
