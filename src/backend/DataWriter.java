@@ -18,7 +18,7 @@ public class DataWriter extends DataConstant {
                 jsonUsers.add(completeStudent((Student) users.get(i);));
             else if (users.get(i).getUserType().equalsIgnoreCase("Advisor"))
                 jsonUsers.add(completeAdvisor((Advisor) users.get(i)));
-            else if (user.get(i).getUserType().equalsIgnoreCase("Parent"))
+            else if (users.get(i).getUserType().equalsIgnoreCase("Parent"))
             jsonUsers.add(completeParent((Parent) users.get(i)));
                 
         }
