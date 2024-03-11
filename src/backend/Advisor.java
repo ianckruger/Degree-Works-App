@@ -9,7 +9,7 @@ public class Advisor extends User {
 
     public Advisor(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
-        this.students = null;
+        this.students = new ArrayList<String>();
         this.advising = null;
 
     }

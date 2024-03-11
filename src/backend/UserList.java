@@ -40,7 +40,7 @@ public class UserList {
     return false;
     }
 
-    public boolean registerStudent(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<User> parents, ArrayList<User> advisors) {
+    public boolean registerStudent(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
         UserList userlist = UserList.getInstance();
         if ( userType.equals("student")) {
             Student student = new Student(userName, firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits,   degreeCredits,  parents, advisors);
@@ -51,7 +51,7 @@ public class UserList {
         return false;
     }
 
-    public boolean registerParent(String userName, String firstName, String lastName, String password, String userType, ArrayList<User> children, User child) {
+    public boolean registerParent(String userName, String firstName, String lastName, String password, String userType, ArrayList<String> children, User child) {
         UserList userlist = UserList.getInstance();
         if(userType.equals("parent")) {
             Parent parent = new Parent(userName, firstName, lastName, password, userType, children, child );
@@ -62,7 +62,7 @@ public class UserList {
         return false;
     }
 
-    public boolean registerAdvisor(String userName, String firstName, String lastName, String password, String userType, ArrayList<User> students, User advising) {
+    public boolean registerAdvisor(String userName, String firstName, String lastName, String password, String userType, ArrayList<String> students, User advising) {
         UserList userlist = UserList.getInstance();
         if(userType.equals("advisor")) {
             Advisor advisor = new Advisor(userName, firstName, lastName, password, userType, students, advising);

@@ -15,7 +15,7 @@ public class DataWriter extends DataConstant {
 
         for (int i = 0; i < users.size(); i++) {
             if(users.get(i).getUserType().equalsIgnoreCase("Student")) 
-                jsonUsers.add(completeStudent((Student) users.get(i);));
+                jsonUsers.add(completeStudent((Student) users.get(i)));
             else if (users.get(i).getUserType().equalsIgnoreCase("Advisor"))
                 jsonUsers.add(completeAdvisor((Advisor) users.get(i)));
             else if (users.get(i).getUserType().equalsIgnoreCase("Parent"))
@@ -54,20 +54,36 @@ public class DataWriter extends DataConstant {
         userDetails.put(USER_TOTAL_CURRENT_CREDITS, user.getTotalCurrentCredits());
         userDetails.put(USER_YEAR, user.getYear());
         userDetails.put(USER_CURRENT_MAJOR, user.getCurrentMajor());
-        userDetails.put(USER_PARENTS, JSONArray.toJSONString(user.getParents()));
-        userDetails.put(USER_ADVISORS, JSONArray.toJSONString(user.getAdvisors()));
+        JSONArray parentsArray = new JSONArray();
+        JSONArray advisorsArray = new JSONArray();
+        for (String parent : user.getParents()) {
+            parentsArray.add(parent);
+        }
+        for (String advisor : user.getAdvisors()) {
+            advisorsArray.add(advisor);
+        }
+        userDetails.put(USER_PARENTS, advisorsArray);
+        userDetails.put(USER_ADVISORS, parentsArray);
         return userDetails;
     }
 
     public static JSONObject completeAdvisor(Advisor user) {
         JSONObject userDetails = getUserJSON(user);
-        userDetails.put(USER_STUDENTS, JSONArray.toJSONString(user.getStudents()));
+        JSONArray studentArray = new JSONArray();
+        for (String parent : user.getStudents()) {
+            studentArray.add(parent);
+        }
+        userDetails.put(USER_STUDENTS, studentArray);
         return userDetails;
     }
 
     public static JSONObject completeParent(Parent user) {
         JSONObject userDetails = getUserJSON(user);
-        userDetails.put(USER_CHILDREN, JSONArray.toJSONString(user.getChildren()));
+        JSONArray childArray = new JSONArray();
+        for (String parent : user.getChildren()) {
+            childArray.add(parent);
+        }
+        userDetails.put(USER_CHILDREN, childArray);
         return userDetails;
     }
 

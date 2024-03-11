@@ -1,7 +1,9 @@
 package backend;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.UUID;
+
 
 public class Student extends User {
 
@@ -22,8 +24,8 @@ public class Student extends User {
         this.earnedCreditHours = 0;
         this.totalCurrentCredits = 0;
         this.degreeCredits = 0;
-        this.parents = null;
-        this.advisor = null;
+        this.parents = new ArrayList<String>();
+        this.advisor = new ArrayList<String>();
         
     }
     public Student(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {

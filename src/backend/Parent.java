@@ -10,7 +10,7 @@ public class Parent extends User {
     public Parent(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
         this.child = null;
-        this.children = null;
+        this.children = new ArrayList<String>();
     }
 
     public Parent(String userName, String firstName, String lastName, String password, String userType, ArrayList<String> children, User child) {
