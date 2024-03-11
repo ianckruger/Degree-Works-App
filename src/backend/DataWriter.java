@@ -14,7 +14,13 @@ public class DataWriter extends DataConstant {
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < users.size(); i++) {
-            jsonUsers.add(getUserJSON(users.get(i)));
+            if(users.get(i).getUserType().equalsIgnoreCase("Student")) 
+                jsonUsers.add(completeStudent((Student) users.get(i)));
+            else if (users.get(i).getUserType().equalsIgnoreCase("Advisor"))
+                jsonUsers.add(completeAdvisor((Advisor) users.get(i)));
+            else if (users.get(i).getUserType().equalsIgnoreCase("Parent"))
+            jsonUsers.add(completeParent((Parent) users.get(i)));
+                
         }
 
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
@@ -25,8 +31,10 @@ public class DataWriter extends DataConstant {
         }
         
     }
-    
-        public static JSONObject getUserJSON(User user) {
+        // Need to add other things like null objects so json works
+        // Need to differentiate    
+        
+    public static JSONObject getUserJSON(User user) {
         JSONObject userDetails = new JSONObject();
         userDetails.put(USER_USERNAME, user.getUserName());
         userDetails.put(USER_USER_ID, user.getUserUUID().toString());
@@ -35,6 +43,47 @@ public class DataWriter extends DataConstant {
         userDetails.put(USER_PASSWORD, user.getPassword());
         userDetails.put(USER_USER_TYPE, user.getUserType());
 
+        return userDetails;
+    }
+
+    public static JSONObject completeStudent(Student user) {
+        JSONObject userDetails = getUserJSON(user);
+        userDetails.put(USER_GPA, user.getGPA());
+        userDetails.put(USER_DEGREE_CREDITS, user.getDegreeCredits());
+        userDetails.put(USER_EARNED_CREDIT_HOURS, user.getEarnedCreditHours());
+        userDetails.put(USER_TOTAL_CURRENT_CREDITS, user.getTotalCurrentCredits());
+        userDetails.put(USER_YEAR, user.getYear());
+        userDetails.put(USER_CURRENT_MAJOR, user.getCurrentMajor());
+        JSONArray parentsArray = new JSONArray();
+        JSONArray advisorsArray = new JSONArray();
+        for (String parent : user.getParents()) {
+            parentsArray.add(parent);
+        }
+        for (String advisor : user.getAdvisors()) {
+            advisorsArray.add(advisor);
+        }
+        userDetails.put(USER_PARENTS, advisorsArray);
+        userDetails.put(USER_ADVISORS, parentsArray);
+        return userDetails;
+    }
+
+    public static JSONObject completeAdvisor(Advisor user) {
+        JSONObject userDetails = getUserJSON(user);
+        JSONArray studentArray = new JSONArray();
+        for (String parent : user.getStudents()) {
+            studentArray.add(parent);
+        }
+        userDetails.put(USER_STUDENTS, studentArray);
+        return userDetails;
+    }
+
+    public static JSONObject completeParent(Parent user) {
+        JSONObject userDetails = getUserJSON(user);
+        JSONArray childArray = new JSONArray();
+        for (String parent : user.getChildren()) {
+            childArray.add(parent);
+        }
+        userDetails.put(USER_CHILDREN, childArray);
         return userDetails;
     }
 

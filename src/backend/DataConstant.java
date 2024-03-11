@@ -25,10 +25,8 @@ public abstract class DataConstant {
     protected static final String USER_ADVISORS = "advisors";
     // PARENT USERS JSON KEYS
     protected static final String USER_CHILDREN = "children";
-    protected static final String USER_CHILD = "child";
     // ADVISOR USERS JSON KEYS
     protected static final String USER_STUDENTS = "students";
-    protected static final String USER_ADVISING = "advising";
     // ROADMAP JSON FILE
     protected static final String ROADMAP_FILE_NAME = "json/roadmap.json";
     protected static final String ROADMAPS = "roadmap";
@@ -38,7 +36,18 @@ public abstract class DataConstant {
     protected static final String ROADMAP_MAJOR = "major";
     protected static final String ROADMAP_MAJOR_CLASSES = "majorsClasses";
     protected static final String ROADMAP_CAROLINA_CORE = "carolinaCore";
-    protected static final String ROADMAP_PROGRAM_REQUIREMENTS = "programRequirements";
     protected static final String ROADMAP_ELECTIVES = "electives";
+    protected static final String ROADMAP_LIBERAL_ARTS_ELECTIVES = "liberalArtsElectives";
+    protected static final String ROADMAP_FOUNDATIONAL_COURSES = "foundationalCourses";
+    protected static final String ROADMAP_LOWER_DIVISION_COMPUTING = "lowerDivisionComputing";
+
+    // ROADMAP - CSCE
+    protected static final String ROADMAP_LAB_SCIENCE_ELECTIVE = "labScienceElective";
+
+    // ROADMAP - CIS
+    protected static final String ROADMAP_BUSINESS_INFORMATION_MANAGEMENT = "bussinessInformationManagement";
+
+    // ROADMAP - CE
+    protected static final String ROADMAP_ELECTRICAL_ENGINEERING = "electricalEngineering";
 
 }
