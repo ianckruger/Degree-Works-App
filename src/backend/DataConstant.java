@@ -25,10 +25,8 @@ public abstract class DataConstant {
     protected static final String USER_ADVISORS = "advisors";
     // PARENT USERS JSON KEYS
     protected static final String USER_CHILDREN = "children";
-    protected static final String USER_CHILD = "child";
     // ADVISOR USERS JSON KEYS
     protected static final String USER_STUDENTS = "students";
-    protected static final String USER_ADVISING = "advising";
     // ROADMAP JSON FILE
     protected static final String ROADMAP_FILE_NAME = "json/roadmap.json";
     protected static final String ROADMAPS = "roadmap";
