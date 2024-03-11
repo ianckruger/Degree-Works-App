@@ -59,6 +59,18 @@ public class DataWriter extends DataConstant {
         return userDetails;
     }
 
+    public static JSONObject completeAdvisor(Advisor user) {
+        JSONObject userDetails = getUserJSON(user);
+        userDetails.put(USER_STUDENTS, JSONArray.toJSONString(user.getStudents()));
+        return userDetails;
+    }
+
+    public static JSONObject completeParent(Parent user) {
+        JSONObject userDetails = getUserJSON(user);
+        userDetails.put(USER_CHILDREN, JSONArray.toJSONString(user.getChildren()));
+        return userDetails;
+    }
+
 
     public static void saveRoadMaps (ArrayList<Roadmap> roadmaps) {
         JSONArray jsonRoadmaps = new JSONArray();

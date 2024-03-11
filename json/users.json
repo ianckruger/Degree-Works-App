@@ -1,1 +1,37 @@
-[{"firstName":"Billy","lastName":"Bob","password":"something","userType":"Student","userName":"username1","userID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8"},{"firstName":"Millie","lastName":"Bob","password":"somethingelse","userType":"Parent","userName":"username2","userID":"7ac05900-fa46-4479-8f09-c569f9d2e18d"},{"firstName":"Mr.","lastName":"Advisor","password":"alsosomething","userType":"Advisor","userName":"username3","userID":"190b113f-ee31-400b-8f30-cdd4e71fcfb4"},{"firstName":"3","lastName":"4","password":"2","userType":"Student","userName":"1","userID":"3e8079e5-ffb8-4f9f-bffa-c89ec931b5eb"}]
+[
+    {
+        "firstName":"Billy",
+        "lastName":"Bob",
+        "password":"something",
+        "userType":"Student",
+        "userName":"username1",
+        "userID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8"
+    },
+
+    {
+        "firstName":"Millie",
+        "lastName":"Bob",
+        "password":"somethingelse",
+        "userType":"Parent",
+        "userName":"username2",
+        "userID":"7ac05900-fa46-4479-8f09-c569f9d2e18d"
+    },
+
+    {
+        "firstName":"Mr.",
+        "lastName":"Advisor",
+        "password":"alsosomething",
+        "userType":"Advisor",
+        "userName":"username3",
+        "userID":"190b113f-ee31-400b-8f30-cdd4e71fcfb4"
+    },
+    
+    {
+        "firstName":"3",
+        "lastName":"4",
+        "password":"2",
+        "userType":"Student",
+        "userName":"1",
+        "userID":"3e8079e5-ffb8-4f9f-bffa-c89ec931b5eb"
+    }
+]
