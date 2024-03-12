@@ -13,8 +13,10 @@ public class Student extends User {
     private int earnedCreditHours;
     private int totalCurrentCredits;
     private int degreeCredits;
-    private ArrayList<String> parents;
+    private ArrayList<String> parent;
     private ArrayList<String> advisor;
+    private ArrayList<Advisor> advisors;
+    private ArrayList<Parent> parents;
 
     public Student(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
@@ -24,8 +26,10 @@ public class Student extends User {
         this.earnedCreditHours = 0;
         this.totalCurrentCredits = 0;
         this.degreeCredits = 0;
-        this.parents = new ArrayList<String>();
+        this.parent = new ArrayList<String>();
         this.advisor = new ArrayList<String>();
+        this.advisors = new ArrayList<Advisor>();
+        this.parents = new ArrayList<Parent>();
         
     }
     public Student(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
@@ -36,7 +40,7 @@ public class Student extends User {
         this.earnedCreditHours = earnedCreditHours;
         this.totalCurrentCredits = totalCurrentCredits;
         this.degreeCredits = degreeCredits;
-        this.parents = parents;
+        this.parent = parents;
         this.advisor = advisors;
     }
 
@@ -48,7 +52,7 @@ public class Student extends User {
         this.earnedCreditHours = earnedCreditHours;
         this.totalCurrentCredits = totalCurrentCredits;
         this.degreeCredits = degreeCredits;
-        this.parents = parents;
+        this.parent = parents;
         this.advisor = advisors;
     }
 
@@ -77,7 +81,7 @@ public class Student extends User {
     }
 
     public ArrayList<String> getParents() {
-        return parents;
+        return parent;
     }
 
     public ArrayList<String> getAdvisors() {
