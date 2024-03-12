@@ -83,5 +83,16 @@ public class Student extends User {
     public ArrayList<String> getAdvisors() {
         return advisor;
     }
+
+    public void changeMajor(String major) {
+
+    }
+
+    // public ArrayList<Class> getFavoriteClasses() {
+        
+    // }
+
     
+
+     
 }

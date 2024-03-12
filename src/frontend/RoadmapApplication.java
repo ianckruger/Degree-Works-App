@@ -52,8 +52,6 @@ public class RoadmapApplication {
 
     }
  
-     
-
 
     public ArrayList<Roadmap> getRoadmapList() {
         return roadmapList.getRoadmaps();
