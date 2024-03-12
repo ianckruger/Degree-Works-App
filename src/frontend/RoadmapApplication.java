@@ -30,6 +30,7 @@ public class RoadmapApplication {
 
 
  
+ 
     public boolean register(String userName, String firstName, String lastName, String password, String userType) {
          if ( userType.equals("Student")) {
             Student student = new Student(userName, firstName, lastName, password, userType);
@@ -46,8 +47,9 @@ public class RoadmapApplication {
             userlist.addUser(advisor);
             DataWriter.saveUsers();
             return true;
-
         }
+
+ 
         return false;
 
     }
