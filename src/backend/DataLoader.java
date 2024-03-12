@@ -36,6 +36,76 @@ public class DataLoader extends DataConstant {
                 }
             }
 
+            for(User user : users.getUsers()) {
+
+                if(user.getUserType().equalsIgnoreCase("Student")) {
+                    Student student = (Student) user;
+
+                    if(!student.getAdvisors().isEmpty()) {
+                        for(int i=0; i < student.getAdvisors().size(); i++) {
+                            String uuid = student.getAdvisors().get(i);
+
+                            for(User user1 : users.getUsers()) {
+                                if(user1.getUserUUID().toString().equals(uuid)) {
+                                    Advisor advisor = (Advisor) user1;
+                                    student.getAdvisor().add(advisor);
+                                }
+                            }
+                        }
+                     }
+
+                     if(!student.getParents().isEmpty()) {
+                        for(int i=0; i < student.getParents().size(); i++) {
+                            String uuid = student.getParents().get(i);
+
+                            for(User user1 : users.getUsers()) {
+                                if(user1.getUserUUID().toString().equals(uuid)) {
+                                    Parent parent = (Parent) user1;
+                                    student.getParent().add(parent);
+                                }
+                            }
+                        }
+                     }
+                }
+
+                if(user.getUserType().equalsIgnoreCase("Advisor")) {
+                    Advisor advisor = (Advisor) user;
+                    
+                    if(!advisor.getStudents().isEmpty()) {
+                        for(int i=0; i < advisor.getStudents().size(); i++) {
+                            String uuid = advisor.getStudents().get(i);
+
+                            for(User user1 : users.getUsers()) {
+                                if(user1.getUserUUID().toString().equals(uuid)) {
+                                    Student student = (Student) user1;
+                                    advisor.getStudent().add(student);
+                                }
+                            }
+                        }
+                     }
+
+                }
+
+                if(user.getUserType().equalsIgnoreCase("Parent")) {
+                    Parent parent = (Parent) user;
+                    
+                    if(!parent.getChildren().isEmpty()) {
+                        for(int i=0; i < parent.getChildren().size(); i++) {
+                            String uuid = parent.getChildren().get(i);
+
+                            for(User user1 : users.getUsers()) {
+                                if(user1.getUserUUID().toString().equals(uuid)) {
+                                    Student student = (Student) user1;
+                                    parent.getChilds().add(student);
+                                }
+                            }
+                        }
+                     }
+
+                }
+
+            }
+
             
 
             return users.getUsers();
