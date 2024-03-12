@@ -6,6 +6,7 @@ import java.util.UUID;
 public class Parent extends User {
     private User child;
     private ArrayList<String> children;
+    private ArrayList<Student> childs;
 
     public Parent(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
@@ -32,6 +33,10 @@ public class Parent extends User {
 
     public ArrayList<String> getChildren() {
         return children;
+    };
+
+    public ArrayList<Student> getChilds() {
+        return childs;
     };
     
 }

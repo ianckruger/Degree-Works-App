@@ -5,6 +5,7 @@ import java.util.UUID;
 
 public class Advisor extends User {
     private ArrayList<String> students;
+    private ArrayList<Student> student;
     private User advising;
 
     public Advisor(String userName, String firstName, String lastName, String password, String userType) {
@@ -32,5 +33,9 @@ public class Advisor extends User {
 
     public ArrayList<String> getStudents() {
         return students;
+    };
+
+    public ArrayList<Student> getStudent() {
+        return student;
     };
 }
