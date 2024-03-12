@@ -87,5 +87,14 @@ public class Student extends User {
     public ArrayList<String> getAdvisors() {
         return advisor;
     }
+
+    public ArrayList<Parent> getParent() {
+        return parents;
+    }
+
+    public ArrayList<Advisor> getAdvisor() {
+        return advisors;
+    }
+    
     
 }
