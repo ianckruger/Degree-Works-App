@@ -73,7 +73,7 @@ public class UI {
             return;
         }
 
-        System.out.println("Connor is now logged in");
+        System.out.println(userName+" is now logged in");
     }
 
     public void scenario2() {

@@ -87,7 +87,7 @@ public class DataWriter extends DataConstant {
         return userDetails;
     }
 
-
+/* 
     public static void saveRoadMaps (ArrayList<Roadmap> roadmaps) {
         JSONArray jsonRoadmaps = new JSONArray();
 
@@ -103,6 +103,7 @@ public class DataWriter extends DataConstant {
         }
     }
 
+    
     public static JSONObject getRoadmapJSON(Roadmap roadmap) {
         JSONObject roadmapDetails = new JSONObject();
 
@@ -112,6 +113,6 @@ public class DataWriter extends DataConstant {
         return roadmapDetails;
         
     }
-
+*/
 
 }
