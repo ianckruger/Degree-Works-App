@@ -26,10 +26,10 @@ public class UI {
         switch (userChoice) {
             case 1:
                 System.out.println("Logging in...");
-                scenario1();
+                userLogin();
                 break;
             case 2:
-                scenario2();
+                userRegister();
                 break;
             case 3:
                 System.out.println("Exiting...");
@@ -61,7 +61,7 @@ public class UI {
         return choice;
     }
 
-    public void scenario1() {
+    public void userLogin() {
         scanner.nextLine();
         System.out.println("Enter a username:");
         String userName = scanner.nextLine();
@@ -76,10 +76,18 @@ public class UI {
         System.out.println(userName+" is now logged in");
     }
 
-    public void scenario2() {
+    public void userRegister() {
         scanner.nextLine();
-        System.out.println("Enter a username for registration:");
-        String userName = scanner.nextLine();
+        while (true) {
+            System.out.println("Enter a username for registration:");
+            String userName = scanner.nextLine();
+    
+            // Check if the username is taken
+            if (application.isUsernameTaken(userName)) {
+                System.out.println("Username already exists. Please choose a different Username !");
+                continue; // Continue to prompt for username input
+            }
+        
         System.out.println("Enter a password for registration:");
         String password = scanner.nextLine();
         System.out.println("Enter your first name for registration:");
@@ -103,7 +111,11 @@ public class UI {
         
 
         System.out.println(firstName+ " is now logged in");
+        break;
     }
+     
+}
+
 
     public void scenario3() {
         System.out.println("Creating a Student Account...");
