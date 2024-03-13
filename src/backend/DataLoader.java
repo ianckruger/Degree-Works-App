@@ -159,7 +159,6 @@ public class DataLoader extends DataConstant {
         String tempuserID = (String)userObject.get(USER_USER_ID);
         UUID userID = UUID.fromString(tempuserID);
         JSONArray jstudents = (JSONArray)userObject.get(USER_STUDENTS);
-        // User advising = (User)userObject.get(USER_ADVISING);
 
         ArrayList<String> students = new ArrayList<>();
         for (int i = 0; i < jstudents.size(); i++) {
@@ -167,13 +166,10 @@ public class DataLoader extends DataConstant {
             students.add(addThis);
         }
 
-        // for (Object student: jstudents ) {
-        //     students.add((User) student);
-        // }
 
 
         
-        User user = new Advisor(userName, firstName, lastName, password, userType);
+        User user = new Advisor(userName, userID, firstName, lastName, password, userType, students);
         return user;
     }
 
@@ -192,11 +188,7 @@ public class DataLoader extends DataConstant {
             children.add(addThis);
         }
 
-        // for (Object childs: jchildren ) {
-        //     children.add((User) childs);
-        // }
-
-        User user = new Parent(userName, firstName, lastName, password, userType);
+        User user = new Parent(userName, userID, firstName, lastName, password, userType, children);
         return user;
     }
 
@@ -204,38 +196,63 @@ public class DataLoader extends DataConstant {
         CourseList courses = CourseList.getInstance();
         
         try {
-            FileReader reader = new FileReader(/*the data constant for class json file */);
-            FileReader STCreader = new FileReader(/*the data constant for studentCourses json file */);
+            FileReader reader = new FileReader(COURSE_FILE_NAME);
+            FileReader STCreader = new FileReader(STUDENT_COURSE_FILE_NAME);
 
             String userID = user.getUserUUID().toString();
             
             JSONParser parser = new JSONParser();
+
             JSONArray courseJSON = (JSONArray) parser.parse(reader);
-            JSONArray courseAndStudentJSON = (JSONArray) parser.parse(reader);
+            JSONArray courseAndStudentJSON = (JSONArray) parser.parse(STCreader);
 
             for(int i=0; i < courseJSON.size(); i++) {
                 JSONObject courseObject = (JSONObject)courseJSON.get(i);
                 // find some way to get the object based on the user id thats passed in and then this current course ID
 
-                String courseSubjectCode = (String)courseObject.get(/*data constant subject code */);
-                String courseNumber = (String)courseObject.get(/*data constant course number */);
-                String courseTitle = (String)courseTitle.get(/*data constant course title */);
-                String tempuserID = (String)courseObject.get(/*data constant course uuid */);
-                UUID courseID = UUID.fromString(tempuserID);
-                int credits = ((Number)courseObject.get(/*course credits */)).intValue();
-                String applicationArea = (String)courseObject.get(/*application area */);
-                String description = (String)courseObject.get(/*data constant for course description */);
-                int yearTake = ((Number))
+                String courseSubjectCode = (String)courseObject.get(COURSE_SUBJECT_CODE);
+                String courseNumber = (String)courseObject.get(COURSE_NUMBER);
+                String courseTitle = (String)courseObject.get(COURSE_TITLE);
+                String tempID = (String)courseObject.get(COURSE_ID);
+                UUID courseID = UUID.fromString(tempID);
+                int credits = ((Number)courseObject.get(COURSE_CREDITS)).intValue();
+                String applicationArea = (String)courseObject.get(COURSE_APPLICATION_AREA);
+                String description = (String)courseObject.get(COURSE_DESCRIPTION);
+
+                // Have to initialize them outside if statement or else they cant be 
+                // passed through and created in the constructor
+                String yearTaken = "Not taken";
+                boolean transferred = false;
+                boolean inProgress = false;
+                boolean completed = false;
+                double grade = 0.00;
+
+                for (int j=0; j < courseAndStudentJSON.size(); j++) {    
+                    JSONObject courseAndStudentObject = (JSONObject)courseAndStudentJSON.get(i);
+                    String courseStudentID = (String)courseAndStudentObject.get(STUDENT_COURSE_STUDENT_ID);
+                    String courseMatchID = (String)courseAndStudentObject.get(STUDENT_COURSE_ID);
+                    if(userID.equals(courseStudentID)&& tempID.equals(courseMatchID)) {
+                        yearTaken = (String)courseAndStudentObject.get(STUDENT_COURSE_SEMESTER_TAKEN);
+                        transferred = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_TRANSFERRED);
+                        inProgress = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_IN_PROGRESS);
+                        completed = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_COMPLETED);
+                        grade = (double)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
+                        break;
+                    }
+                }
+
                 
 
-                JSONArray prereqs = (JSONArray)courseObject.get(/* JSON array for course things*/);
+                JSONArray prereqs = (JSONArray)courseObject.get(COURSE_PREREQ);
 
                 ArrayList<String> actualPrereqs = new ArrayList<>();
                 for (int j = 0; i < prereqs.size(); i++) {
-                    String addThis = (String)prereqs.get(i);
+                    String addThis = (String)prereqs.get(j);
                     actualPrereqs.add(addThis);
                 }
 
+                Class course = new Class(courseSubjectCode, courseNumber, courseTitle, courseID, credits, applicationArea, actualPrereqs, description, yearTaken, completed, inProgress, transferred, grade);
+                courses.addCourse(course);
 
                 
                 // AHHAHAHAGAGAHAG I DONT KNOW WHERE TO IMPLEMENT THE STUDENT INFORMATION FOR COURSE SPECIFIC THINGS
@@ -245,6 +262,20 @@ public class DataLoader extends DataConstant {
                 // ok so we call the course and roadmap information after the user logs in
                 // 
 
+
+            }
+
+            // implement prereq retriever
+            for(Class course : courses.getCourses()) {
+                for ( String prereq : course.getPrereqIDs()) {
+                    for (Class prereqCourse : courses.getCourses() ) {
+                        if (prereqCourse.getCourseID().toString().equals(prereq)) {
+                            course.getPrereqs().add(prereqCourse);
+                            break;
+                        }
+                    }
+                }  
+            }
 
         }
 

@@ -11,7 +11,9 @@ public class Class {
     private UUID courseID; 
     private int credits;
     private String applicationArea;
-    private ArrayList<Class> prerequisites;
+    private ArrayList<String> prerequisitesIDS;
+    private ArrayList<Class> prereqs;
+
     // private boolean isCarolinaCore;
     // private boolean isFoundational;
     // private boolean isLibElective;
@@ -30,7 +32,7 @@ public class Class {
     private double grade;
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
-    ArrayList<Class> prequisites, boolean isCarolinaCore, boolean isFoundational, boolean isLibElective, boolean isElective, boolean isMajorCourse, boolean isBIM, boolean isLabScience, String courseDescription) {
+    ArrayList<String> prequisites, String courseDescription) {
         
         setCourseSubjectCode(courseSubjectCode);
         setCourseNumber(courseNumber);
@@ -39,12 +41,13 @@ public class Class {
         setApplicationArea(applicationArea);
         setCredits(credits);
         setCouresDescription(courseDescription);
+        this.prerequisitesIDS = prequisites;
+        this.prereqs = new ArrayList<Class>();
 
     }
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
-    ArrayList<Class> prequisites, boolean isCarolinaCore, boolean isFoundational, boolean isLibElective, boolean isElective, boolean isMajorCourse, boolean isBIM, boolean isLabScience, String courseDescription,
-    int yearTaken, String semesterTaken) {
+    ArrayList<String> prequisites,  String courseDescription, int yearTaken, String semesterTaken) {
 
         setCourseSubjectCode(courseSubjectCode);
         setCourseNumber(courseNumber);
@@ -55,11 +58,12 @@ public class Class {
         setCouresDescription(courseDescription);
         setYearTaken(yearTaken);
         setSemesterTaken(semesterTaken);
+        this.prerequisitesIDS = prequisites;
+        this.prereqs = new ArrayList<Class>();
     
     }
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
-    ArrayList<Class> prequisites, boolean isCarolinaCore, boolean isFoundational, boolean isLibElective, boolean isElective, boolean isMajorCourse, boolean isBIM, boolean isLabScience, String courseDescription,
-    int yearTaken, String semesterTaken, boolean completed, boolean inProgress, boolean transferred, double grade) {
+    ArrayList<String> prequisites, String courseDescription, String semesterTaken, boolean completed, boolean inProgress, boolean transferred, double grade) {
         setCourseSubjectCode(courseSubjectCode);
         setCourseNumber(courseNumber);
         setCourseTitle(courseTitle);
@@ -70,6 +74,8 @@ public class Class {
         setYearTaken(yearTaken);
         setSemesterTaken(semesterTaken);
         setGrade(grade);
+        this.prerequisitesIDS = prequisites;
+        this.prereqs = new ArrayList<Class>();
      }
 
     public String getCourseSubjectCode() {
@@ -150,6 +156,13 @@ public class Class {
         this.grade = grade;
     }
 
+    public ArrayList<String> getPrereqIDs() {
+        return this.prerequisitesIDS;
+    }
+
+    public ArrayList<Class> getPrereqs() {
+        return this.prereqs;
+    }
 
 
 }
