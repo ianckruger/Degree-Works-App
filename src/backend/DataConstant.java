@@ -50,4 +50,20 @@ public abstract class DataConstant {
     // ROADMAP - CE
     protected static final String ROADMAP_ELECTRICAL_ENGINEERING = "electricalEngineering";
 
+    //COURSE JSON FILE
+    protected static final String COURSE_FILE_NAME = "json/studentCourses.json";
+    protected static final String COURSES = "studentCourses";
+
+
+    //COURSE JON KEYS
+    protected static final String COURSE_STUDENT_ID = "studentID";
+    protected static final String COURSE_SUBJECT_CODE = "courseSubjectCode";
+    protected static final String COURSE_NUMBER = "courseNumber";
+    protected static final String COURSE_ID = "courseID";
+    protected static final String COURSE_TRANSFERRED = "transferred";
+    protected static final String COURSE_IN_PROGRESS = "inProgress";
+    protected static final String COURSE_COMPLETED = "completed";
+    protected static final String COURSE_SEMESTER_TAKEN = "semesterTaken";
+    protected static final String COURSE_GRADE = "grade";
+
 }
