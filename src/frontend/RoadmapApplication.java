@@ -56,7 +56,10 @@ public class RoadmapApplication {
     }
 
     public boolean isUsernameTaken(String userName) {
-        ArrayList<User> userList = DataLoader.readUsers();
+        // Looks great, no need to call data loader tho, should automatically 
+        // be called when UI is ran, just get instance of list.
+        UserList users = UserList.getInstance();
+        ArrayList<User> userList = users.getUsers();
         for (User user : userList) {
             if(user.getUserName().equals(userName)) {
                 return true;
