@@ -15,19 +15,28 @@ import backend.Student;
 public class RoadmapApplication {
 
     private UserList userlist;
-    private RoadmapList roadmapList;
+    private Roadmap roadmap;
     private User user;
 
 
     public RoadmapApplication() {
         this.userlist = UserList.getInstance();
-        this.roadmapList = RoadmapList.getInstance();
+        // this.roadmap = Roadmap.getInstance();
     }
 
 
     public boolean login(String userName, String password) {
-        return userlist.login(userName, password);
-    }
+            UserList users = UserList.getInstance();
+            ArrayList<User> userList = users.getUsers();
+             for(User user : userList) {
+                if(user.getUserName().equals(userName) && user.getPassword().equals(password)) {
+                    this.user = user;
+                    return true;
+                }
+         } 
+        return false;
+
+     }
 
 
  
@@ -71,10 +80,9 @@ public class RoadmapApplication {
     }
  
 
-    public ArrayList<Roadmap> getRoadmapList() {
-        return roadmapList.getRoadmaps();
-
-    }
+    // public Roadmap getRoadmap() {
+    //     return roadmap.getInstance();
+    // }
     public void viewTranscript() {
 
     }
