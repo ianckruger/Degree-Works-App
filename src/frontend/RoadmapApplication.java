@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import backend.User;
 import backend.UserList;
 import backend.Advisor;
+import backend.DataLoader;
 import backend.DataWriter;
 import backend.Parent;
 import backend.Roadmap;
@@ -32,17 +33,17 @@ public class RoadmapApplication {
  
  
     public boolean register(String userName, String firstName, String lastName, String password, String userType) {
-         if ( userType.equals("Student")) {
+         if ( userType.equalsIgnoreCase("student")) {
             Student student = new Student(userName, firstName, lastName, password, userType);
             userlist.addUser(student);
             DataWriter.saveUsers();
             return true;
-        } else if(userType.equals("Parent")) {
+        } else if(userType.equalsIgnoreCase("parent")) {
             Parent parent = new Parent(userName, firstName, lastName, password, userType);
             userlist.addUser(parent);
             DataWriter.saveUsers();
             return true;
-        } else if(userType.equals("Advisor")) {
+        } else if(userType.equalsIgnoreCase("advisor")) {
             Advisor advisor = new Advisor(userName, firstName, lastName, password, userType);
             userlist.addUser(advisor);
             DataWriter.saveUsers();
@@ -50,6 +51,18 @@ public class RoadmapApplication {
         }
 
  
+        return false;
+
+    }
+
+    public boolean isUsernameTaken(String userName) {
+        ArrayList<User> userList = DataLoader.readUsers();
+        for (User user : userList) {
+            if(user.getUserName().equals(userName)) {
+                return true;
+            }
+
+        }
         return false;
 
     }
