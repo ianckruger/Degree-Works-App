@@ -199,6 +199,61 @@ public class DataLoader extends DataConstant {
         User user = new Parent(userName, firstName, lastName, password, userType);
         return user;
     }
+
+    public static ArrayList<Class> readCourses(User user) {
+        CourseList courses = CourseList.getInstance();
+        
+        try {
+            FileReader reader = new FileReader(/*the data constant for class json file */);
+            FileReader STCreader = new FileReader(/*the data constant for studentCourses json file */);
+
+            String userID = user.getUserUUID().toString();
+            
+            JSONParser parser = new JSONParser();
+            JSONArray courseJSON = (JSONArray) parser.parse(reader);
+            JSONArray courseAndStudentJSON = (JSONArray) parser.parse(reader);
+
+            for(int i=0; i < courseJSON.size(); i++) {
+                JSONObject courseObject = (JSONObject)courseJSON.get(i);
+                // find some way to get the object based on the user id thats passed in and then this current course ID
+
+                String courseSubjectCode = (String)courseObject.get(/*data constant subject code */);
+                String courseNumber = (String)courseObject.get(/*data constant course number */);
+                String courseTitle = (String)courseTitle.get(/*data constant course title */);
+                String tempuserID = (String)courseObject.get(/*data constant course uuid */);
+                UUID courseID = UUID.fromString(tempuserID);
+                int credits = ((Number)courseObject.get(/*course credits */)).intValue();
+                String applicationArea = (String)courseObject.get(/*application area */);
+                String description = (String)courseObject.get(/*data constant for course description */);
+                int yearTake = ((Number))
+                
+
+                JSONArray prereqs = (JSONArray)courseObject.get(/* JSON array for course things*/);
+
+                ArrayList<String> actualPrereqs = new ArrayList<>();
+                for (int j = 0; i < prereqs.size(); i++) {
+                    String addThis = (String)prereqs.get(i);
+                    actualPrereqs.add(addThis);
+                }
+
+
+                
+                // AHHAHAHAGAGAHAG I DONT KNOW WHERE TO IMPLEMENT THE STUDENT INFORMATION FOR COURSE SPECIFIC THINGS
+                // maybe since user will be called first before everything like classes and roadmap, we can load every class
+                // specific to the user code?
+
+                // ok so we call the course and roadmap information after the user logs in
+                // 
+
+
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
 
 /* 

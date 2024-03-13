@@ -6,15 +6,15 @@ import java.util.UUID;
 public abstract class MajorState {
 
     protected Roadmap roadmap;
-    private ArrayList<String> majorClasses;
-    private ArrayList<String> carolinaCore;
-    private ArrayList<String> electives;
-    private ArrayList<String> liberalArtsElectives;
-    private ArrayList<String> foundationalCourses;
-    private ArrayList<String> lowerDivisionComputing;
+    private ArrayList<Class> majorClasses;
+    private ArrayList<Class> carolinaCore;
+    private ArrayList<Class> electives;
+    private ArrayList<Class> liberalArtsElectives;
+    private ArrayList<Class> foundationalCourses;
+    private ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
 
-    public MajorState(UUID roadmapID, String major, ArrayList<String> majorClasses, ArrayList<String> carolinaCore, ArrayList<String> liberalArtsElectives, ArrayList<String> foundationalCourses, ArrayList<String> lowerDivisionComputing, ArrayList<String> electives) {
+    public MajorState(UUID roadmapID, String major, ArrayList<Class> majorClasses, ArrayList<Class> carolinaCore, ArrayList<Class> liberalArtsElectives, ArrayList<Class> foundationalCourses, ArrayList<Class> lowerDivisionComputing, ArrayList<Class> electives) {
         this.majorClasses = majorClasses;
         this.carolinaCore = carolinaCore;
         this.liberalArtsElectives = liberalArtsElectives;
@@ -26,51 +26,51 @@ public abstract class MajorState {
         this.majorState = majorState;
     }
 
-    public ArrayList<String> getMajorClasses() {
+    public ArrayList<Class> getMajorClasses() {
         return majorClasses;
     }
 
-    public void setMajorClasses(ArrayList<String> majorClasses) {
+    public void setMajorClasses(ArrayList<Class> majorClasses) {
         this.majorClasses = majorClasses;
     }
 
-    public ArrayList<String> getCarolinaCore() {
+    public ArrayList<Class> getCarolinaCore() {
         return carolinaCore;
     }
 
-    public void setCarolinaCore(ArrayList<String> carolinaCore) {
+    public void setCarolinaCore(ArrayList<Class> carolinaCore) {
         this.carolinaCore = carolinaCore;
     }
 
-    public ArrayList<String> getLiberalArtsElectives() {
+    public ArrayList<Class> getLiberalArtsElectives() {
         return liberalArtsElectives;
     }
     
-    public void setLiberalArtsElectives(ArrayList<String> liberalArtsElectives) {
+    public void setLiberalArtsElectives(ArrayList<Class> liberalArtsElectives) {
         this.liberalArtsElectives = liberalArtsElectives;
     }
 
-    public ArrayList<String> getFoundationalCourses() {
+    public ArrayList<Class> getFoundationalCourses() {
         return foundationalCourses;
     }
 
-    public void setFoundationalCourses(ArrayList<String> foundationalCourses) {
+    public void setFoundationalCourses(ArrayList<Class> foundationalCourses) {
         this.foundationalCourses = foundationalCourses;
     }
 
-    public ArrayList<String> getLowerDivisionComputing() {
+    public ArrayList<Class> getLowerDivisionComputing() {
         return lowerDivisionComputing;
     }
 
-    public void setLowerDivisionComputing(ArrayList<String> lowerDivisionComputing) {
+    public void setLowerDivisionComputing(ArrayList<Class> lowerDivisionComputing) {
         this.lowerDivisionComputing = lowerDivisionComputing;
     }
 
-    public ArrayList<String> getElectives() {
+    public ArrayList<Class> getElectives() {
         return electives;
     }
 
-    public void setElectives(ArrayList<String> electives) {
+    public void setElectives(ArrayList<Class> electives) {
         this.electives = electives;
     }
 
