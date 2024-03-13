@@ -192,6 +192,11 @@ public class DataLoader extends DataConstant {
         return user;
     }
 
+
+
+
+
+
     public static ArrayList<Class> readCourses(User user) {
         CourseList courses = CourseList.getInstance();
         
@@ -267,14 +272,16 @@ public class DataLoader extends DataConstant {
 
             // implement prereq retriever
             for(Class course : courses.getCourses()) {
-                for ( String prereq : course.getPrereqIDs()) {
-                    for (Class prereqCourse : courses.getCourses() ) {
-                        if (prereqCourse.getCourseID().toString().equals(prereq)) {
-                            course.getPrereqs().add(prereqCourse);
-                            break;
+                if (!course.getPrereqIDs().isEmpty()){
+                    for ( String prereq : course.getPrereqIDs()) {
+                        for (Class prereqCourse : courses.getCourses() ) {
+                            if (prereqCourse.getCourseID().toString().equals(prereq)) {
+                                course.getPrereqs().add(prereqCourse);
+                                break;
+                            }
                         }
-                    }
-                }  
+                    }  
+                }
             }
 
         }
@@ -285,7 +292,80 @@ public class DataLoader extends DataConstant {
         return null;
     }
 
+
+    public static Roadmap readRoadmap() {
+        // initialize empty roadmap
+        Roadmap roadmap = new Roadmap();
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
     // Roadmap parsing logic same as user parsing

@@ -1,17 +1,16 @@
 package backend;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class CsceState extends MajorState {
-    private ArrayList<String> labScienceElective;
+    private ArrayList<Class> labScienceElective;
 
-    public CsceState(MajorState majorState, ArrayList<String> labScienceElective) {
+    public CsceState(MajorState majorState, ArrayList<Class> labScienceElective) {
         super(majorState);
         this.labScienceElective = null;
     };
 
-    public ArrayList<String> getLabScienceElective() {
+    public ArrayList<Class> getLabScienceElective() {
         return labScienceElective;
     }
     

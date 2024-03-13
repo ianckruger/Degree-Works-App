@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class CisState extends MajorState {
-    private ArrayList<String> businessInformationManagement;
+    private ArrayList<Class> businessInformationManagement;
 
     public CisState(MajorState majorState, ArrayList<String> businessInformationManagement) {
         super(majorState);
         this.businessInformationManagement = null;
     };
 
-    public ArrayList<String> getBusinessInformationManagement() {
+    public ArrayList<Class> getBusinessInformationManagement() {
         return businessInformationManagement;
     }
     
