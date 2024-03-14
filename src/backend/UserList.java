@@ -30,15 +30,6 @@ public class UserList {
         userList.add(user);
     }
 
-    public boolean login(String username, String password) {
-        for(User user : userList) {
-            if(user.getUserName().equals(username) && user.getPassword().equals(password)) {
-                this.ActiveUser = user;
-                return true;
-            }
-         }
-    return false;
-    }
 
     public boolean registerStudent(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
         UserList userlist = UserList.getInstance();

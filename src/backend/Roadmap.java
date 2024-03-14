@@ -17,11 +17,21 @@ public class Roadmap {
     // private double progressBar;
     protected UUID roadmapID;
     private String major;
+    private static Roadmap roadmap;
+
 
     public Roadmap() {
+<<<<<<< HEAD
         cisState = new CisState(this);
         csceState = new CsceState(this);
         ceState = new CeState(this);
+=======
+
+         
+        cisState = new CisState(majorState, null);
+        csceState = new CsceState(majorState, null);
+        ceState = new CeState(majorState, null);
+>>>>>>> c2f22a4ecc967c1e45f319b5469f0a1bdfd5867b
 
         if(majorState.equals(cisState)) {
             setMajorState(cisState);
@@ -30,6 +40,13 @@ public class Roadmap {
         } else if (majorState.equals(cisState)) {
             setMajorState(ceState);
         }
+    }
+
+    public static Roadmap getInstance() {
+        if(roadmap == null) {
+            roadmap = new Roadmap();
+         }
+        return roadmap;
     }
 
 
