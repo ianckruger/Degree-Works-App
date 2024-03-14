@@ -19,9 +19,9 @@ public class Roadmap {
     private String major;
 
     public Roadmap() {
-        cisState = new CisState(majorState, null);
-        csceState = new CsceState(majorState, null);
-        ceState = new CeState(majorState, null);
+        cisState = new CisState(this);
+        csceState = new CsceState(this);
+        ceState = new CeState(this);
 
         if(majorState.equals(cisState)) {
             setMajorState(cisState);
@@ -35,6 +35,18 @@ public class Roadmap {
 
     public void setMajorState(MajorState majorState) {
         this.majorState = majorState;
+    }
+
+    public void setCisState(CisState state) {
+        this.cisState = state;
+    }
+
+    public void setCeState(CeState state) {
+        this.ceState = state;
+    }
+
+    public void setCsState(CsceState state) {
+        this.csceState = state;
     }
 
     public String displayClasses() {

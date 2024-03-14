@@ -14,12 +14,8 @@ public abstract class MajorState {
     private ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
 
-    public MajorState(UUID roadmapID, String major, ArrayList<Class> majorClasses, ArrayList<Class> carolinaCore, ArrayList<Class> liberalArtsElectives, ArrayList<Class> foundationalCourses, ArrayList<Class> lowerDivisionComputing, ArrayList<Class> electives) {
-        this.majorClasses = majorClasses;
-        this.carolinaCore = carolinaCore;
-        this.liberalArtsElectives = liberalArtsElectives;
-        this.foundationalCourses = foundationalCourses;
-        this.lowerDivisionComputing = lowerDivisionComputing;
+    public MajorState(Roadmap roadmap) {
+        this.roadmap = roadmap;
     }
 
     public MajorState(MajorState majorState) {

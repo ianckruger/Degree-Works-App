@@ -6,9 +6,8 @@ import java.util.UUID;
 public class CeState extends MajorState {
     private ArrayList<Class> electricalEngineering;
 
-    public CeState(MajorState majorState, ArrayList<Class> electricalEngineering) {
-        super(majorState);
-        this.electricalEngineering = null;
+    public CeState(Roadmap roadmap) {
+        super(roadmap);
     };
 
     public ArrayList<Class> getElectricalEngineering() {

@@ -2,6 +2,7 @@
     {
         "roadmapID":"ede2ccb9-00cd-4e42-b868-918cac69a04a",
         "major":"CSCE",
+        "notes":[],
         "majorClasses":["3655460c-363d-4bb0-866c-c96f1dbe59f0","4fabe9eb-843a-4f24-a9df-542f5c647e86","0472de73-050b-47c1-862d-214a4bb92396"],
         "carolinaCore":["a2d29md7-190s-29jn-29nd-1c78f59a0911", "24416fb3-6075-4ec2-9828-5a27345ab25b", "ae0e0730-d1b5-4626-bc56-31198fe553b5"],
         "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "73a3e9ae-1137-4be8-bda7-b35ab0a4981c","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
@@ -13,6 +14,7 @@
     {
         "roadmapID":"f9f55e5d-63a0-4dcd-b473-4c6c1f1db4c8",
         "major":"CIS",
+        "notes":[],
         "majorClasses":["4020b05e-04ba-41b8-830d-4635a70011a0", "4020b05e-04ba-41b8-830d-4635a70011a0","f4bf34bd-8bf4-4e9e-94fb-e88b654987fc"],
         "carolinaCore":["86019075-6de6-45de-bac0-3aeb209f3fda", "24416fb3-6075-4ec2-9828-5a27345ab25b", "ae0e0730-d1b5-4626-bc56-31198fe553b5"],
         "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "2b12dc3f-d52d-4dd9-8bb7-247c2f045b4e","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
@@ -24,6 +26,7 @@
     {
         "roadmapID":"4480a8a7-e288-46dd-8efd-4110c7ca8f9f",
         "major":"CE",
+        "notes":[],
         "majorClasses":["3655460c-363d-4bb0-866c-c96f1dbe59f0","41d656db-778d-483a-9b76-179209fbe28d","5427c5b3-8670-40df-9e43-41a8029b9986"],
         "carolinaCore":["634bb631-e316-4809-88d0-cf23d3fecf56", "24416fb3-6075-4ec2-9828-5a27345ab25b", "ae0e0730-d1b5-4626-bc56-31198fe553b5"],
         "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "515f616b-fc51-431e-b691-16e3fbf15420","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
