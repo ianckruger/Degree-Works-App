@@ -6,12 +6,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational": true,
-        "isLibElective": false,
-        "isElective": true,
-        "isMajorCourse": false,
-        "isBIM": false,
         "description":"Introduction to grammar and practical vocabulary necessary for fundamental communication skills."
     }
 
@@ -23,12 +17,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Grammar and vocabulary necessary for fundamental communication skills. "
     },
 
@@ -40,12 +28,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Practice and further development of essential listening, reading, speaking, and writing skills."
     },
 
@@ -57,12 +39,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Introduction to grammar and practical vocabulary necessary for fundamental communication skills."
     },
 
@@ -74,12 +50,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Grammar and vocabulary necessary for fundamental communication skills."
     },
 
@@ -91,12 +61,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Practice and further development of essential listening, reading, speaking, and writing skills."
     },
 
@@ -108,12 +72,6 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Grammar and practical vocabulary necessary for fundamental communication skills."
     },
 
@@ -125,11 +83,5 @@
         "credits": 3,
         "applicationArea":"GFL",
         "prerequisites" : ["ao093msh7-101m-19sh-298h-b74b2613d44a"],
-        "isCarolinaCore": true,
-        "isFoundational":true,
-        "isLibElective":false,
-        "isElective":True,
-        "isMajorCourse":false,
-        "isBIM":false,
         "description":"Practice and further development of essential listening, reading, speaking, and writing skills."
     },

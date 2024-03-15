@@ -8,7 +8,7 @@
         "foundationalCourses": ["6a14df37-fe4b-4eda-aa76-897ad481df90", "73de6c1e-142d-4741-9dde-fa05fd418bad", "f2de0833-dadf-4ed8-a962-b877727ee5ef"],
         "lowerDivisionComputing":["4185c15b-9a71-43e8-a25d-b74b2613d44a","994ee39f-7d7a-4759-8eec-9cb0a80118c2", "0b4bdfc9-dd52-4318-958c-b4144d061375"],
         "labScienceElective":["527c541f-e465-4c3a-bcdb-f8188d36c47d","70b52607-9e59-461a-a4fd-22a97c1cc33a","4b326a7f-a200-4e9e-8e85-92130478addb"],
-        "electives":["71fe1804-ee6d-4261-94b8-b4ed79de78a2","6e039a96-e3be-4da9-889d-e1e958629d2a","389567d2-7ef1-4e9e-86e9-c1e57ee301c4"]
+        "csceElectives":["71fe1804-ee6d-4261-94b8-b4ed79de78a2","6e039a96-e3be-4da9-889d-e1e958629d2a","389567d2-7ef1-4e9e-86e9-c1e57ee301c4"]
     },
     {
         "roadmapID":"f9f55e5d-63a0-4dcd-b473-4c6c1f1db4c8",
@@ -29,7 +29,7 @@
         "liberalArtsElectives": ["bc877478-c069-4304-ae89-8820a387344a", "515f616b-fc51-431e-b691-16e3fbf15420","d92b95ee-d496-4b13-a43a-65f11006aa7d"],
         "foundationalCourses": ["c7f2aa65-cd69-4283-a84e-e125246241df","6a14df37-fe4b-4eda-aa76-897ad481df90","4fef6357-7cb5-4e89-a62d-294e1ae1d2ad"],
         "lowerDivisionComputing":["4185c15b-9a71-43e8-a25d-b74b2613d44a","b6766f27-7b24-488f-9859-b7a8f4877c08", "a91868c3-7b9c-40f1-93a9-d2aa70a5e480"],
-        "electricalEngineering": ["1c8a75cc-d42c-49f5-9934-64a33da76372","14e38265-8eb9-4f8c-851e-ed136081997a","c791985c-1390-4a77-81d9-d891c7c597ef","ea0b33f0-e801-4bfc-b699-f399be440ff7"],
+        "ceElectives": ["1c8a75cc-d42c-49f5-9934-64a33da76372","14e38265-8eb9-4f8c-851e-ed136081997a","c791985c-1390-4a77-81d9-d891c7c597ef","ea0b33f0-e801-4bfc-b699-f399be440ff7"],
         "electives":["4fabe9eb-843a-4f24-a9df-542f5c647e86","4e2513ef-b6a1-4156-8d20-64eea2bf2a95","9850adc0-c415-4446-bae4-d2b1c1584e4c"]
     }
 ]
