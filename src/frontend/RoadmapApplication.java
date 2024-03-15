@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import backend.User;
 import backend.UserList;
 import backend.Advisor;
+import backend.CourseList;
 import backend.DataLoader;
 import backend.DataWriter;
 import backend.Parent;
@@ -17,11 +18,13 @@ public class RoadmapApplication {
     private UserList userlist;
     private Roadmap roadmap;
     private User user;
+    private CourseList courseList;
 
 
     public RoadmapApplication() {
         this.userlist = UserList.getInstance();
-        // this.roadmap = Roadmap.getInstance();
+        this.courseList = CourseList.getInstance();
+        this.roadmap = Roadmap.getInstance();
     }
 
 

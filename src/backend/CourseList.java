@@ -13,7 +13,7 @@ public class CourseList {
     public static CourseList getInstance() {
         if (courses == null) {
             courses = new CourseList();
-            // call data loaders
+            courses.courseList = DataLoader.readCourses();
         }
         return courses;
     }

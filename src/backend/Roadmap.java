@@ -21,30 +21,23 @@ public class Roadmap {
 
 
     public Roadmap() {
-<<<<<<< HEAD
         cisState = new CisState(this);
         csceState = new CsceState(this);
         ceState = new CeState(this);
-=======
 
-         
-        cisState = new CisState(majorState, null);
-        csceState = new CsceState(majorState, null);
-        ceState = new CeState(majorState, null);
->>>>>>> c2f22a4ecc967c1e45f319b5469f0a1bdfd5867b
-
-        if(majorState.equals(cisState)) {
+        if(major.equalsIgnoreCase("cis")){
             setMajorState(cisState);
-        } else if (majorState.equals(csceState)) {
-            setMajorState(csceState);
-        } else if (majorState.equals(cisState)) {
+        } else if (major.equalsIgnoreCase("ce")){
             setMajorState(ceState);
+        } else if (major.equalsIgnoreCase("csce")){
+            setMajorState(csceState);
         }
     }
 
     public static Roadmap getInstance() {
         if(roadmap == null) {
-            roadmap = new Roadmap();
+
+            roadmap = DataLoader.readRoadmap();
          }
         return roadmap;
     }
@@ -52,6 +45,16 @@ public class Roadmap {
 
     public void setMajorState(MajorState majorState) {
         this.majorState = majorState;
+    }
+
+    public void setMajorState(String major) {
+        if(major.equalsIgnoreCase("cis")){
+            setMajorState(cisState);
+        } else if (major.equalsIgnoreCase("ce")){
+            setMajorState(ceState);
+        } else if (major.equalsIgnoreCase("csce")){
+            setMajorState(csceState);
+        }
     }
 
     public void setCisState(CisState state) {

@@ -26,6 +26,10 @@ public class UserList {
         return userList;
     }
 
+    public User getActive() {
+        return this.ActiveUser;
+    }
+
     public void addUser(User user) {
         userList.add(user);
     }

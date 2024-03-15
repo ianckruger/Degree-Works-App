@@ -197,13 +197,15 @@ public class DataLoader extends DataConstant {
 
 
 
-    public static ArrayList<Class> readCourses(User user) {
+    public static ArrayList<Class> readCourses() {
         CourseList courses = CourseList.getInstance();
+        UserList users = UserList.getInstance();
         
         try {
             FileReader reader = new FileReader(COURSE_FILE_NAME);
             FileReader STCreader = new FileReader(STUDENT_COURSE_FILE_NAME);
 
+            User user = users.getActive();
             String userID = user.getUserUUID().toString();
             
             JSONParser parser = new JSONParser();
