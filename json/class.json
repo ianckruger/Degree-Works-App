@@ -227,7 +227,7 @@
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :   ["789c6ed0-53e3-476c-8761-f08bf727d08c"],
-        "description": "Basic theoretical principles of computing as modeled by formal languages, grammars, automata, and Turing machines; fundamental limits of computation.   CL: 2020.",
+        "description": "Basic theoretical principles of computing as modeled by formal languages, grammars, automata, and Turing machines; fundamental limits of computation.   CL: 2020."
     },
     {
         "courseSubjectCode" :  "CSCE",
@@ -846,7 +846,7 @@
         "courseID":     "a014f77a-2ac5-4f22-87d7-f0ab623dce64",
         "credits": 3,
         "applicationArea": [],
-        "prerequisites" :  [ "84b21549-16e9-4117-978c-39a43fb665b2",],
+        "prerequisites" :  [ "84b21549-16e9-4117-978c-39a43fb665b2"],
         "description":   "Logic, number theory, sequences, series, recursion, mathematical induction, set theory, enumeration, functions, relations, graphs and trees. Connections to computers and to programming are emphasized when possible.   FS: 11/04/2020.   CL: 2020."
     },
     {
@@ -1227,7 +1227,7 @@
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":    "Pervasive impact of computers on today\u0027s global society; skills and strategies for using technology.  How information technologies impact daily life and drive change.   FS: 02/02/2022.",
+        "description":    "Pervasive impact of computers on today\u0027s global society; skills and strategies for using technology.  How information technologies impact daily life and drive change.   FS: 02/02/2022."
     },
     {
         "courseSubjectCode" :  "ITEC",
@@ -1237,7 +1237,7 @@
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":    "Project management principles and standard practices, including software applications for project management.   FS: 12/04/2019.   CL: 2020.",
+        "description":    "Project management principles and standard practices, including software applications for project management.   FS: 12/04/2019.   CL: 2020."
     },
     {
         "courseSubjectCode" : "GEOL",
