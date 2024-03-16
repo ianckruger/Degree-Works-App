@@ -1,6 +1,11 @@
 package backend;
 import java.util.ArrayList;
 import java.util.UUID;
+import java.io.FileReader;
+import java.io.IOException;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class Roadmap {
     // private Student student;
@@ -77,5 +82,34 @@ public class Roadmap {
         return "";
     }
     
+
+
+    @Override
+    public String toString() {
+        JSONObject roadmapData = readRoadmapDataFromFile();
+        if (roadmapData != null) {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (Object key : roadmapData.keySet()) {
+                String keyStr = (String) key;
+                Object keyvalue = roadmapData.get(keyStr);
+                stringBuilder.append(keyStr).append(": ").append(keyvalue).append("\n");
+            }
+            return stringBuilder.toString();
+        } else {
+            return "Error: Unable to retrieve roadmap data";
+        }
+    }
+
+    private JSONObject readRoadmapDataFromFile() {
+        JSONParser parser = new JSONParser();
+        try {
+            Object obj = parser.parse(new FileReader("roadmap.json"));
+            JSONObject jsonObject = (JSONObject) obj;
+            return jsonObject;
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 }
