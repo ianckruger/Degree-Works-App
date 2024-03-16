@@ -176,7 +176,7 @@
         "courseID": "7ff23b34-bdcf-498d-8314-1d510bc8ffef",
         "credits":3 ,
         "applicationArea": "Robotics",
-        "prerequisites" : ["57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6"],
+        "prerequisites" : [ ],
         "description": "Design and control of robots. Interactions between robots, sensing, actuation, and computation.   FS: 04/03/2013.   CL: 2020."
     },
     {
@@ -784,7 +784,7 @@
         "courseNumber" :  "344L",
         "courseTitle" :   "Applied Linear Algebra Lab", 
         "courseID":     "944f3d4d-9424-48c0-840e-18a79e18e00b",
-        "credits": 3,
+        "credits": 1,
         "applicationArea": [],
         "prerequisites" :  [ "12b2ee6d-d2c5-47fb-93de-08b5950ea2ae"],
         "description":  "Computer based applications of linear algebra for science and engineering students. Topics include numerical analysis of matrices, direct and indirect methods for solving linear systems, and least squares method (regression). Typical applications include practical issues related to discrete Markov processes, image compression, and linear programming.   FS: 06/01/2022."
@@ -890,8 +890,8 @@
         "description":   "Classical mechanics and wave motion. Calculus-level course for students of science and engineering.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  " ",
+        "courseSubjectCode" :  "PHYS",
+        "courseNumber" :  "211L",
         "courseTitle" :     "Essentials of Physics I Lab", 
         "courseID":      "8b52945b-8079-4906-8e35-500bdd72cb8f",
         "credits": 1,
@@ -1270,94 +1270,115 @@
         "description":    "An introduction to study of the earth through observation of ancient and modern earth systems in a field setting.  Field trips required.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
-        "credits": 3,
+        "courseSubjectCode" :  "CHEM",
+        "courseNumber" :  "112L",
+        "courseTitle" :     "General Chemistry II Lab",  
+        "courseID":     "75764c82-d463-4fcf-a367-e7f925416456", 
+        "credits": 1,
         "applicationArea": [],
-        "prerequisites" :  [],
-        "description":   
+        "prerequisites" :  [ "66a95212-0d75-4fae-97ff-c3c76c29d47e"],
+        "description":   "Continuation of CHEM 111L with emphasis on solution properties, kinetics, equilibrium, acids and bases, and qualitative analysis.   FS: 09/12/2013.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
+        "courseSubjectCode" :  "AFAM",
+        "courseNumber" :  "201",
+        "courseTitle" :  "Introduction to African American Studies: Social and Historical Foundations",     
+        "courseID":     "af901bb2-f867-4d7e-a938-06e0d66639c6",  
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":   
+        "description":    "Introduction to the key debates, figures, and concepts that are fundamental to the interdisciplinary study of the historical, political, and social development of black life in America.   FS: 04/06/2016.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
+        "courseSubjectCode" :  "AFAM",
+        "courseNumber" :  "202",
+        "courseTitle" :  "Introduction to African-American Studies",     
+        "courseID":    "277c57bf-d5b8-4a69-941f-0f494c30d99e",   
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":   
+        "description":    "Introduction to the analysis and discussion of creative works and traditions by and about African Americans through folklore, music, art, dance, and literature.   FS: 11/04/2020.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
+        "courseSubjectCode" :  "PHIL",
+        "courseNumber" :  "213",
+        "courseTitle" :        "Communicating Moral Issues",
+        "courseID":     "b08931d4-1c51-42df-96b6-aef74900873a", 
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":   
+        "description":    "Moral issues confronting men and women in contemporary society and the challenges of communicating effectively about them. Topics will vary but may include access to health care, euthanasia, abortion, same sex marriage and the moral and environmental consequences of eating animals.   FS: 04/06/2016.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
+        "courseSubjectCode" :  "CSCE",
+        "courseNumber" :  "247",
+        "courseTitle" :    "Software Engineering",   
+        "courseID":     "730005f1-113d-446e-865c-31b46dfbc924", 
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":   
+        "description":   "Fundamentals of software design and development; software implementation strategies; object-oriented design techniques; functional design techniques; design patterns; design process; source control; testing.    FS: 12/6/2017.   CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
+        "courseSubjectCode" :  "ACCT",
+        "courseNumber" :  "324",
+        "courseTitle" :    "Survey of Federal Taxation",   
+        "courseID":      "6390e71f-3219-4036-8347-5f8545de9a32", 
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":   
+        "description":    "Federal tax law and preparation of individual income tax returns. Not allowed as an upper-division elective by accounting majors and not open for students who received credit for ACCT 403.    CL: 2020."
     },
     {
-        "courseSubjectCode" :  "",
-        "courseNumber" :  "",
-        "courseTitle" :       
-        "courseID":      
+        "courseSubjectCode" :  "ECON",
+        "courseNumber" :  "311",
+        "courseTitle" :       "Issues in Economics",
+        "courseID":      "95e7009a-e959-4a3d-a546-293748d5d4f0", 
         "credits": 3,
         "applicationArea": [],
         "prerequisites" :  [],
-        "description":   
+        "description":   "The nature and causes of major economic problems facing the nation and its communities, and policy alternatives designed to solve them. The philosophy and methodology of economics in social problem solving.   CL: 2020."
     },
-
-    
-    
-
-     
-
-
-
-    
-
-    
-    
-
-    
-
-
-
-
-
+    {
+        "courseSubjectCode" :  "CSCE",
+        "courseNumber" :   "350",
+        "courseTitle" :   "Data Structures and Algorithms",    
+        "courseID":     "6c8202fd-b31b-4647-b551-b7f4dbf007a0",
+        "credits": 3,
+        "applicationArea": [],
+        "prerequisites" :  [ "39046cda-f913-4f9b-a002-f06e7c59f235"],
+        "description":   "Techniques for representing and processing information, including the use of lists, trees, and graphs; analysis of algorithms; sorting, searching, and hashing techniques.   FS: 12/07/2016.   CL: 2020."
+    },
+    {
+        "courseSubjectCode" : "CSCE", 
+        "courseNumber" :   "313",
+        "courseTitle" :   "Embedded Systems",     
+        "courseID":   "bab69897-7cbf-4acd-839e-cec82daa1cd0",  
+        "credits": 3,
+        "applicationArea": [],
+        "prerequisites" :  [ "789c6ed0-53e3-476c-8761-f08bf727d08c"],
+        "description":  "Fundamentals of embedded systems: hardware components, software components, hardware/software interface design, and hardware/software co-design.   CL: 2020."
+    },
+    {
+        "courseSubjectCode" : "ELCT", 
+        "courseNumber" :   "321",
+        "courseTitle" :     "Digital Signal Processing",  
+        "courseID":    "de747cdf-8019-4d39-bebc-278236f3d700", 
+        "credits": 3,
+        "applicationArea": [],
+        "prerequisites" :  [ "c055ccc9-3200-476a-83c6-01040cc7ddee"],
+        "description":   "An introduction to analysis, design and applications of discrete time systems; z- and discrete Fourier transforms; frequency and impulse responses, FIR and IIR filters.   FS: 11/07/2018.   CL: 2020."
+    },
+    {
+        "courseSubjectCode" :  "ELCT",
+        "courseNumber" :   "331",
+        "courseTitle" :     "Control Systems",  
+        "courseID":     "d5702212-9e45-497b-bb74-d78bb9a5f9e1", 
+        "credits": 3,
+        "applicationArea": [],
+        "prerequisites" :  [ "c055ccc9-3200-476a-83c6-01040cc7ddee"],
+        "description": "Fundamentals of control systems. Analysis and design of control systems using physical system models. State variables, steady-state error, time- and frequency-responses, control system stability. Root locus analysis and controller design – PI, PD, PID, lead-lag compensator. Nyquist stability criterion.   FS: 11/07/2018.   CL: 2020." 
+    }
 
      
 ]
