@@ -30,6 +30,10 @@ public class UserList {
         return this.ActiveUser;
     }
 
+    public void setActiveUser(User user) {
+        this.ActiveUser = user;
+    }
+
     public void addUser(User user) {
         userList.add(user);
     }

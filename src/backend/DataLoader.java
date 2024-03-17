@@ -234,8 +234,9 @@ public class DataLoader extends DataConstant {
                 boolean completed = false;
                 double grade = 0.00;
 
+                
                 for (int j=0; j < courseAndStudentJSON.size(); j++) {    
-                    JSONObject courseAndStudentObject = (JSONObject)courseAndStudentJSON.get(i);
+                    JSONObject courseAndStudentObject = (JSONObject)courseAndStudentJSON.get(j);
                     String courseStudentID = (String)courseAndStudentObject.get(STUDENT_COURSE_STUDENT_ID);
                     String courseMatchID = (String)courseAndStudentObject.get(STUDENT_COURSE_ID);
                     if(userID.equals(courseStudentID)&& tempID.equals(courseMatchID)) {
@@ -297,7 +298,9 @@ public class DataLoader extends DataConstant {
 
     public static Roadmap readRoadmap() {
         // initialize empty roadmap
-        Roadmap roadmap = new Roadmap();
+        UserList users = UserList.getInstance();
+        Student user = (Student) users.getActive();
+        Roadmap roadmap = new Roadmap(user.getCurrentMajor());
         CourseList courses = CourseList.getInstance();
         try {
             FileReader reader = new FileReader(ROADMAP_FILE_NAME);
@@ -312,58 +315,72 @@ public class DataLoader extends DataConstant {
                 if(major.equalsIgnoreCase("cis")) {
                     CisState state = new CisState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-                    for (int j = 0; j < majorClasses.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (majorClasses.get(j).equals(course.getCourseID())) {
-                                state.getMajorClasses().add(course);
+                    if(majorClasses.size()!= 0) {
+                        for (int j = 0; j < majorClasses.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (majorClasses.get(j).equals(course.getCourseID())) {
+                                    state.getMajorClasses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray carolinaCore = (JSONArray)roadmapObject.get(ROADMAP_CAROLINA_CORE);
-                    for (int j = 0; j < carolinaCore.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (carolinaCore.get(j).equals(course.getCourseID())) {
-                                state.getCarolinaCore().add(course);
+                    if(carolinaCore.size()!= 0) {
+                        for (int j = 0; j < carolinaCore.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (carolinaCore.get(j).equals(course.getCourseID())) {
+                                    state.getCarolinaCore().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray electives = (JSONArray)roadmapObject.get(ROADMAP_ELECTIVES);
-                    for (int j = 0; j < electives.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (electives.get(j).equals(course.getCourseID())) {
-                                state.getElectives().add(course);
+                    if(electives.size()!= 0) {
+                        for (int j = 0; j < electives.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (electives.get(j).equals(course.getCourseID())) {
+                                    state.getElectives().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray libArts = (JSONArray)roadmapObject.get(ROADMAP_LIBERAL_ARTS_ELECTIVES);
-                    for (int j = 0; j < libArts.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (libArts.get(j).equals(course.getCourseID())) {
-                                state.getLiberalArtsElectives().add(course);
+                    if(libArts.size()!= 0) {
+                        for (int j = 0; j < libArts.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (libArts.get(j).equals(course.getCourseID())) {
+                                    state.getLiberalArtsElectives().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray foundational = (JSONArray)roadmapObject.get(ROADMAP_FOUNDATIONAL_COURSES);
-                    for (int j = 0; j < foundational.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (foundational.get(j).equals(course.getCourseID())) {
-                                state.getFoundationalCourses().add(course);
+                    if(foundational.size()!= 0) {
+                        for (int j = 0; j < foundational.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (foundational.get(j).equals(course.getCourseID())) {
+                                    state.getFoundationalCourses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray lowerDivisonComputing = (JSONArray)roadmapObject.get(ROADMAP_LOWER_DIVISION_COMPUTING);
-                    for (int j = 0; j < lowerDivisonComputing.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
-                                state.getFoundationalCourses().add(course);
+                    if(lowerDivisonComputing.size()!= 0) {
+                        for (int j = 0; j < lowerDivisonComputing.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
+                                    state.getFoundationalCourses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray bussinessFoundation = (JSONArray)roadmapObject.get(ROADMAP_BUSINESS_INFORMATION_MANAGEMENT);
-                    for (int j = 0; j < bussinessFoundation.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (bussinessFoundation.get(j).equals(course.getCourseID())) {
-                                state.getBusinessInformationManagement().add(course);
+                    if(bussinessFoundation.size()!= 0) {
+                        for (int j = 0; j < bussinessFoundation.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (bussinessFoundation.get(j).equals(course.getCourseID())) {
+                                    state.getBusinessInformationManagement().add(course);
+                                }
                             }
                         }
                     }
@@ -373,58 +390,72 @@ public class DataLoader extends DataConstant {
                 } else if (major.equalsIgnoreCase("ce")) {
                     CeState state = new CeState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-                    for (int j = 0; j < majorClasses.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (majorClasses.get(j).equals(course.getCourseID())) {
-                                state.getMajorClasses().add(course);
+                    if(majorClasses.size()!= 0) {
+                        for (int j = 0; j < majorClasses.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (majorClasses.get(j).equals(course.getCourseID())) {
+                                    state.getMajorClasses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray carolinaCore = (JSONArray)roadmapObject.get(ROADMAP_CAROLINA_CORE);
-                    for (int j = 0; j < carolinaCore.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (carolinaCore.get(j).equals(course.getCourseID())) {
-                                state.getCarolinaCore().add(course);
+                    if(carolinaCore.size()!= 0) {
+                        for (int j = 0; j < carolinaCore.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (carolinaCore.get(j).equals(course.getCourseID())) {
+                                    state.getCarolinaCore().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray electives = (JSONArray)roadmapObject.get(ROADMAP_ELECTIVES);
-                    for (int j = 0; j < electives.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (electives.get(j).equals(course.getCourseID())) {
-                                state.getElectives().add(course);
+                    if(electives.size()!= 0) {
+                        for (int j = 0; j < electives.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (electives.get(j).equals(course.getCourseID())) {
+                                    state.getElectives().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray libArts = (JSONArray)roadmapObject.get(ROADMAP_LIBERAL_ARTS_ELECTIVES);
-                    for (int j = 0; j < libArts.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (libArts.get(j).equals(course.getCourseID())) {
-                                state.getLiberalArtsElectives().add(course);
+                    if(libArts.size()!= 0) {
+                        for (int j = 0; j < libArts.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (libArts.get(j).equals(course.getCourseID())) {
+                                    state.getLiberalArtsElectives().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray foundational = (JSONArray)roadmapObject.get(ROADMAP_FOUNDATIONAL_COURSES);
-                    for (int j = 0; j < foundational.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (foundational.get(j).equals(course.getCourseID())) {
-                                state.getFoundationalCourses().add(course);
+                    if(foundational.size()!= 0) {
+                        for (int j = 0; j < foundational.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (foundational.get(j).equals(course.getCourseID())) {
+                                    state.getFoundationalCourses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray lowerDivisonComputing = (JSONArray)roadmapObject.get(ROADMAP_LOWER_DIVISION_COMPUTING);
-                    for (int j = 0; j < lowerDivisonComputing.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
-                                state.getFoundationalCourses().add(course);
+                    if(lowerDivisonComputing.size()!= 0) {
+                        for (int j = 0; j < lowerDivisonComputing.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
+                                    state.getFoundationalCourses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray eletricEng = (JSONArray)roadmapObject.get(ROADMAP_ELECTRICAL_ENGINEERING);
-                    for (int j = 0; j < eletricEng.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (eletricEng.get(j).equals(course.getCourseID())) {
-                                state.getElectricalEngineering().add(course);
+                    if(eletricEng.size()!= 0) {
+                        for (int j = 0; j < eletricEng.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (eletricEng.get(j).equals(course.getCourseID())) {
+                                    state.getElectricalEngineering().add(course);
+                                }
                             }
                         }
                     }
@@ -434,59 +465,74 @@ public class DataLoader extends DataConstant {
 
                 } else if (major.equalsIgnoreCase("csce")){
                     CsceState state = new CsceState(roadmap);
+
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-                    for (int j = 0; j < majorClasses.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (majorClasses.get(j).equals(course.getCourseID())) {
-                                state.getMajorClasses().add(course);
+                    if(majorClasses.size()!= 0) {
+                        for (int j = 0; j < majorClasses.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (majorClasses.get(j).equals(course.getCourseID())) {
+                                    state.getMajorClasses().add(course);
+                                }
                             }
                         }
-                    }
+                    }   
                     JSONArray carolinaCore = (JSONArray)roadmapObject.get(ROADMAP_CAROLINA_CORE);
-                    for (int j = 0; j < carolinaCore.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (carolinaCore.get(j).equals(course.getCourseID())) {
-                                state.getCarolinaCore().add(course);
+                    if(carolinaCore.size()!= 0) {
+                        for (int j = 0; j < carolinaCore.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (carolinaCore.get(j).equals(course.getCourseID())) {
+                                    state.getCarolinaCore().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray electives = (JSONArray)roadmapObject.get(ROADMAP_ELECTIVES);
-                    for (int j = 0; j < electives.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (electives.get(j).equals(course.getCourseID())) {
-                                state.getElectives().add(course);
+                    if(electives.size()!= 0) {
+                        for (int j = 0; j < electives.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (electives.get(j).equals(course.getCourseID())) {
+                                    state.getElectives().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray libArts = (JSONArray)roadmapObject.get(ROADMAP_LIBERAL_ARTS_ELECTIVES);
-                    for (int j = 0; j < libArts.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (libArts.get(j).equals(course.getCourseID())) {
-                                state.getLiberalArtsElectives().add(course);
+                    if(libArts.size()!= 0) {
+                        for (int j = 0; j < libArts.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (libArts.get(j).equals(course.getCourseID())) {
+                                    state.getLiberalArtsElectives().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray foundational = (JSONArray)roadmapObject.get(ROADMAP_FOUNDATIONAL_COURSES);
-                    for (int j = 0; j < foundational.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (foundational.get(j).equals(course.getCourseID())) {
-                                state.getFoundationalCourses().add(course);
+                    if(foundational.size()!= 0) {
+                        for (int j = 0; j < foundational.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (foundational.get(j).equals(course.getCourseID())) {
+                                    state.getFoundationalCourses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray lowerDivisonComputing = (JSONArray)roadmapObject.get(ROADMAP_LOWER_DIVISION_COMPUTING);
-                    for (int j = 0; j < lowerDivisonComputing.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
-                                state.getFoundationalCourses().add(course);
+                    if(lowerDivisonComputing.size()!= 0) {
+                        for (int j = 0; j < lowerDivisonComputing.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
+                                    state.getFoundationalCourses().add(course);
+                                }
                             }
                         }
                     }
                     JSONArray labScience = (JSONArray)roadmapObject.get(ROADMAP_LAB_SCIENCE_ELECTIVE);
-                    for (int j = 0; j < labScience.size(); j++) {
-                        for(Class course : courses.getCourses() ) {
-                            if (labScience.get(j).equals(course.getCourseID())) {
-                                state.getLabScienceElective().add(course);
+                    if(labScience.size()!= 0) {
+                        for (int j = 0; j < labScience.size(); j++) {
+                            for(Class course : courses.getCourses() ) {
+                                if (labScience.get(j).equals(course.getCourseID())) {
+                                    state.getLabScienceElective().add(course);
+                                }
                             }
                         }
                     }

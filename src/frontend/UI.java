@@ -2,6 +2,9 @@ package frontend;
 
 import java.util.Scanner;
 
+import backend.CourseList;
+import backend.UserList;
+
 public class UI {
     private Scanner scanner;
     private RoadmapApplication application;
@@ -72,8 +75,12 @@ public class UI {
             System.out.println("Username or Password is not correct.");
             return;
         }
-
+        
         System.out.println(userName+" is now logged in");
+        // CourseList courses = CourseList.getInstance();
+        // for (int i= 0; i < courses.getCourses().size(); i++) {
+        //     System.out.print(courses.getCourses().get(i).getCourseTitle());
+        // }
     }
 
     public void userRegister() {

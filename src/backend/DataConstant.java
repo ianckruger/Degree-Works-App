@@ -35,7 +35,7 @@ public abstract class DataConstant {
     protected static final String ROADMAP_ID = "roadmapID";
     protected static final String ROADMAP_MAJOR = "major";
     protected static final String ROADMAP_NOTES = "notes";
-    protected static final String ROADMAP_MAJOR_CLASSES = "majorsClasses";
+    protected static final String ROADMAP_MAJOR_CLASSES = "majorClasses";
     protected static final String ROADMAP_CAROLINA_CORE = "carolinaCore";
     protected static final String ROADMAP_ELECTIVES = "electives";
     protected static final String ROADMAP_LIBERAL_ARTS_ELECTIVES = "liberalArtsElectives";

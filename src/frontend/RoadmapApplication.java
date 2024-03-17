@@ -23,8 +23,7 @@ public class RoadmapApplication {
 
     public RoadmapApplication() {
         this.userlist = UserList.getInstance();
-        this.courseList = CourseList.getInstance();
-        this.roadmap = Roadmap.getInstance();
+        
     }
 
 
@@ -33,13 +32,17 @@ public class RoadmapApplication {
             ArrayList<User> userList = users.getUsers();
              for(User user : userList) {
                 if(user.getUserName().equals(userName) && user.getPassword().equals(password)) {
-                    this.user = user;
+                    users.setActiveUser(user);
+                    this.courseList = CourseList.getInstance();
+                    this.roadmap = Roadmap.getInstance();
                     return true;
                 }
          } 
         return false;
 
      }
+
+     
 
 
  

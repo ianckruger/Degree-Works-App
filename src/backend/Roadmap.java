@@ -20,11 +20,13 @@ public class Roadmap {
     private static Roadmap roadmap;
 
 
-    public Roadmap() {
+    public Roadmap(String major) {
+        this.major = major;
         cisState = new CisState(this);
         csceState = new CsceState(this);
         ceState = new CeState(this);
 
+        
         if(major.equalsIgnoreCase("cis")){
             setMajorState(cisState);
         } else if (major.equalsIgnoreCase("ce")){
@@ -36,7 +38,6 @@ public class Roadmap {
 
     public static Roadmap getInstance() {
         if(roadmap == null) {
-
             roadmap = DataLoader.readRoadmap();
          }
         return roadmap;
