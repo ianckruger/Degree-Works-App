@@ -13,5 +13,13 @@ public class CeState extends MajorState {
     public ArrayList<Class> getElectricalEngineering() {
         return electricalEngineering;
     }
+
+    public String toString() {
+        StringBuilder ceString = new StringBuilder(super.toString());
+
+        ceString.append("Electrical Engineering Electives: ").append(electricalEngineering).append("\n");
+
+        return ceString.toString();
+    }
     
 }

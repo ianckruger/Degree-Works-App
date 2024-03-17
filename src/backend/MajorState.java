@@ -70,4 +70,18 @@ public abstract class MajorState {
         this.electives = electives;
     }
 
+    public String toString() {
+        StringBuilder msString = new StringBuilder();
+
+        msString.append("Major Classes: ").append(majorClasses).append("\n");
+        msString.append("Carolina Core: ").append(carolinaCore).append("\n");
+        msString.append("Electives: ").append(electives).append("\n");
+        msString.append("Liberal Arts Electives: ").append(liberalArtsElectives).append("\n");
+        msString.append("Foundational Courses: ").append(foundationalCourses).append("\n");
+        msString.append("Lower Division Computing: ").append(lowerDivisionComputing).append("\n");
+
+
+        return msString.toString();
+    }
+
 }

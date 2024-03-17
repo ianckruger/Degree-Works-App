@@ -12,5 +12,13 @@ public class CsceState extends MajorState {
     public ArrayList<Class> getLabScienceElective() {
         return labScienceElective;
     }
+
+    public String toString() {
+        StringBuilder csceString = new StringBuilder(super.toString());
+
+        csceString.append("Lab Scienece Electives: ").append(labScienceElective).append("\n");
+
+        return csceString.toString();
+    }
     
 }

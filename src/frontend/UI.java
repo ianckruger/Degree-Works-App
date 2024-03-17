@@ -104,7 +104,6 @@ public class UI {
         String lastName = scanner.nextLine();
         System.out.println("Enter your User Type (Student/Parent/Advisor) for registration:");
         String userType = scanner.nextLine();
-
          
         if (register(userName, password, firstName, lastName, userType)) {
             System.out.println("Registration successful!");
