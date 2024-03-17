@@ -845,8 +845,8 @@
         "courseTitle" :    "Discrete Mathematics for Computer Science",
         "courseID":     "a014f77a-2ac5-4f22-87d7-f0ab623dce64",
         "credits": 3,
-        "applicationArea": "Robotics",
-        "prerequisites" :  [ "84b21549-16e9-4117-978c-39a43fb665b2"],
+        "applicationArea": [],
+        "prerequisites" :  [ "84b21549-16e9-4117-978c-39a43fb665b2",],
         "description":   "Logic, number theory, sequences, series, recursion, mathematical induction, set theory, enumeration, functions, relations, graphs and trees. Connections to computers and to programming are emphasized when possible.   FS: 11/04/2020.   CL: 2020."
     },
     {
