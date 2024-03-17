@@ -286,7 +286,7 @@ public class DataLoader extends DataConstant {
                     }  
                 }
             }
-
+            return courses.getCourses();
         }
 
         catch (Exception e) {
