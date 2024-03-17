@@ -164,5 +164,17 @@ public class Class {
         return this.prereqs;
     }
 
+    @Override
+    public String toString() {
+        return "Course Subject Code: " + courseSubjectCode + "\n" +
+           "Course Number: " + courseNumber + "\n" +
+           "Course Title: " + courseTitle + "\n" +
+           "Course ID: " + courseID + "\n" +
+           "Credits: " + credits + "\n" +
+           "Application Area: " + applicationArea + "\n" +
+           "Prerequisites: " + prereqs + "\n" +
+           "Description: " + courseDescription;
+}
+
 
 }
