@@ -7,6 +7,7 @@ public class CsceState extends MajorState {
 
     public CsceState(Roadmap roadmap) {
         super(roadmap);
+        this.labScienceElective = new ArrayList<>();
     };
 
     public ArrayList<Class> getLabScienceElective() {

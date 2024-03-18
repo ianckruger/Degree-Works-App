@@ -17,6 +17,13 @@ public abstract class MajorState {
 
     public MajorState(Roadmap roadmap) {
         this.roadmap = roadmap;
+        this.majorClasses = new ArrayList<>();
+        this.carolinaCore = new ArrayList<>();
+        this.electives = new ArrayList<>();
+        this.liberalArtsElectives = new ArrayList<>();
+        this.foundationalCourses = new ArrayList<>();
+        this.lowerDivisionComputing = new ArrayList<>();
+        this.advisorNotes = new ArrayList<>();
         
     }
 
