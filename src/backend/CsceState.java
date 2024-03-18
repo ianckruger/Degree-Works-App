@@ -15,14 +15,7 @@ public class CsceState extends MajorState {
     }
 
     public String toString() {
-        StringBuilder csceString = new StringBuilder();
-        csceString.append("Major Classes:\n");
-        System.out.println(majorClasses);
-        if(!majorClasses.isEmpty()) {
-            for (Class course : majorClasses) {
-                csceString.append(course.toString()).append("\n");
-            }
-        }
+        StringBuilder csceString = new StringBuilder(super.toString());
 
         csceString.append("Lab Science Electives:\n");
         for (Class course : labScienceElective) {

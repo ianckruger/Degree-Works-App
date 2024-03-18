@@ -29,7 +29,7 @@ public class Class {
     private boolean completed;
     private boolean inProgress;
     private boolean transferred;
-    private double grade;
+    private String grade;
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
     ArrayList<String> prequisites, String courseDescription) {
@@ -62,7 +62,7 @@ public class Class {
     
     }
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
-    ArrayList<String> prequisites, String courseDescription, String semesterTaken, boolean completed, boolean inProgress, boolean transferred, double grade) {
+    ArrayList<String> prequisites, String courseDescription, String semesterTaken, boolean completed, boolean inProgress, boolean transferred, String grade) {
         setCourseSubjectCode(courseSubjectCode);
         setCourseNumber(courseNumber);
         setCourseTitle(courseTitle);
@@ -142,10 +142,10 @@ public class Class {
         this.applicationArea = applicationArea;
     }
 
-    public double getGrade() {
+    public String getGrade() {
         return grade;
     }
-    public void setGrade(double grade) {
+    public void setGrade(String grade) {
         this.grade = grade;
     }
 
@@ -160,7 +160,7 @@ public class Class {
     
 
     public boolean checkIfFailed() {
-        if (this.grade < 60) {
+        if (this.grade.equals("C") || this.grade.equals("D") || this.grade.equals("F")) {
             return true; // true for failed
         }
         return false; // false if passed
