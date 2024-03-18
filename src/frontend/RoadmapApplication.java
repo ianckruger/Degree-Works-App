@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import backend.User;
 import backend.UserList;
 import backend.Advisor;
+import backend.CeState;
+import backend.CisState;
 import backend.CourseList;
+import backend.CsceState;
 import backend.DataLoader;
 import backend.DataWriter;
 import backend.Parent;
@@ -102,6 +105,32 @@ public class RoadmapApplication {
         user = null;
         return true;
 
+    }
+
+    boolean  printStudentProgress() {
+        Student student = (Student) user;
+        String major = student.getCurrentMajor();
+        if (major != null) {
+                switch (major.toLowerCase()) {
+                    case "csce":
+                        CsceState csceState = new CsceState(roadmap);
+                        System.out.println(csceState.toString());
+                        break;
+                    case "cis":
+                        CisState cisState = new CisState(roadmap);
+                        System.out.println(cisState.toString());
+                        break;
+                    case "ce":
+                        CeState ceState = new CeState(roadmap);
+                        System.out.println(ceState.toString());
+                        break;
+                    
+                }
+                return true;
+            } else {
+                System.out.println("Student's major type not found.");
+                return false;
+            }
     }
 
    

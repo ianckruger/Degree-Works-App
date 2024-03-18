@@ -75,13 +75,35 @@ public abstract class MajorState {
     public String toString() {
         StringBuilder msString = new StringBuilder();
 
-        msString.append("Major Classes: ").append(majorClasses).append("\n");
-        msString.append("Carolina Core: ").append(carolinaCore).append("\n");
-        msString.append("Electives: ").append(electives).append("\n");
-        msString.append("Liberal Arts Electives: ").append(liberalArtsElectives).append("\n");
-        msString.append("Foundational Courses: ").append(foundationalCourses).append("\n");
-        msString.append("Lower Division Computing: ").append(lowerDivisionComputing).append("\n");
+        msString.append("Major Classes:\n");
+        for (Class course : majorClasses) {
+            msString.append(course.toString()).append("\n");
+        }
 
+        msString.append("Carolina Core:\n");
+        for (Class course : carolinaCore) {
+            msString.append(course.toString()).append("\n");
+        }
+
+        msString.append("Electives:\n");
+        for (Class course : electives) {
+            msString.append(course.toString()).append("\n");
+        }
+
+        msString.append("Liberal Arts Electives:\n");
+        for (Class course : liberalArtsElectives) {
+            msString.append(course.toString()).append("\n");
+        }
+
+        msString.append("Foundational Courses:\n");
+        for (Class course : foundationalCourses) {
+            msString.append(course.toString()).append("\n");
+        }
+
+        msString.append("Lower Division Computing:\n");
+        for (Class course : lowerDivisionComputing) {
+            msString.append(course.toString()).append("\n");
+        }
 
         return msString.toString();
     }

@@ -8,7 +8,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class Roadmap {
-    // private Student student;
+    private Student student;
     // private ArrayList<String> classes;
     private MajorState majorState;
     // private StatusState statusState;
