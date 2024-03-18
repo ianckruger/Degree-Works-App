@@ -33,19 +33,19 @@ public class RoadmapApplication {
     public boolean login(String userName, String password) {
             UserList users = UserList.getInstance();
             ArrayList<User> userList = users.getUsers();
-            if (userList != null)
-            {
+            if (userList != null) {
                 for(User user : userList) {
                     if(user.getUserName().equals(userName) && user.getPassword().equals(password)) {
                         // add a check 
     
                         // if (student)
-                        users.setActiveUser(user);
-                        this.courseList = CourseList.getInstance();
-                        this.roadmap = Roadmap.getInstance();
-                        return true;
-                        
-    
+                        if(user instanceof Student) {
+                            users.setActiveUser(user);
+                            this.courseList = CourseList.getInstance();
+                            this.roadmap = Roadmap.getInstance();
+                            return true;
+
+                        }  
                         // else aka if an advisor
                         // "What student would you like to see" 
                         // user enters: student id
@@ -54,13 +54,10 @@ public class RoadmapApplication {
                         // print out advisor options
                         // add note function should add a string into roadmap arraylist of string "notes"
                     }
- 
             }
              
          }  
          return false; 
-           
-
      }
 
      
