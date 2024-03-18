@@ -480,7 +480,7 @@
         "description": "Concepts, algorithms and tools for important problems in Bioinformatics, including nucleotide and amino acid sequence alignment, DNA fragment assembly, phylogenetic reconstruction, and protein structure visualization and assessment.   CL: 2020."
     },
     {
-        "courseSubjectCode" :   "f97adcff-bebf-4e87-a9dc-4bc05e2534dd",
+        "courseSubjectCode" :  "CSCE",
         "courseNumber" :  "556",
         "courseTitle" :  "Data Analysis in Python: Application to Neuroscience",
         "courseID":  "f97adcff-bebf-4e87-a9dc-4bc05e2534dd",
