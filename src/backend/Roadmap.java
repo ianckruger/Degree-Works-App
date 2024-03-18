@@ -82,7 +82,7 @@ public class Roadmap {
     }
 
     public String displayClasses() {
-        return "";
+        return majorState.toString();
     }
     
     public String displayStudentInfo() {

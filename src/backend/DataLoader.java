@@ -316,7 +316,6 @@ public class DataLoader extends DataConstant {
         CourseList courses = CourseList.getInstance();
         try {
             FileReader reader1 = new FileReader(ROADMAP_FILE_NAME);
-            FileReader reader2 = new FileReader(ROADMAP_NOTES);
             JSONParser parser = new JSONParser();
             JSONArray roadmapJSON = (JSONArray) parser.parse(reader1);
             
