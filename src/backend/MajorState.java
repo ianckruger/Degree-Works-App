@@ -87,7 +87,7 @@ public abstract class MajorState {
             for (Class course : majorClasses) {
                msString.append(course.toString()).append("\n");
             }
-        } else {
+        } else if (majorClasses.isEmpty()) {
             msString.append("No major classes available\n");
         }
         

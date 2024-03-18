@@ -14,8 +14,18 @@ public class CourseList {
         if (courses == null) {
             courses = new CourseList();
             courses.courseList = DataLoader.readCourses();
+            if (courses.courseList.isEmpty()) {
+                System.out.println("No courses found in the course list.");
+            } else {
+                System.out.println("Courses loaded successfully:");
+                for (Class course : courses.courseList) {
+                    System.out.println(course);
+                }
+            }
         }
         return courses;
+            
+        
     }
 
     public ArrayList<Class> getCourses() {

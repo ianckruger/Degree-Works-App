@@ -268,7 +268,7 @@ public class DataLoader extends DataConstant {
                 JSONArray prereqs = (JSONArray)courseObject.get(COURSE_PREREQ);
 
                 ArrayList<String> actualPrereqs = new ArrayList<>();
-                for (int j = 0; i < prereqs.size(); i++) {
+                for (int j = 0; j < prereqs.size(); j++) {
                     String addThis = (String)prereqs.get(j);
                     actualPrereqs.add(addThis);
                 }
