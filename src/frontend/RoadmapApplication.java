@@ -26,6 +26,7 @@ public class RoadmapApplication {
 
     public RoadmapApplication() {
         this.userlist = UserList.getInstance();
+ 
         
     }
 
@@ -115,7 +116,7 @@ public class RoadmapApplication {
 
     public boolean printStudentProgress() {
         Student student = (Student)userlist.getActive();
-
+ 
         if(student != null) {
             String major = student.getCurrentMajor();
             if (major != null ) {
