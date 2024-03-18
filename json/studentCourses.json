@@ -230,5 +230,27 @@
         "completed":true,
         "semesterTaken":"Spring 2023",
         "grade":"B+"
+    },
+    {
+        "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
+        "courseSubjectCode" :  "ARTH",
+        "courseNumber" :  "107",
+        "courseID":  "0fb4ac09-b5df-47a0-a95b-566e31940f04",   
+        "transferred":false,
+        "inProgess":false,
+        "completed":true,
+        "semesterTaken":"Spring 2023",
+        "grade":"A+"
+    },
+    {
+        "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
+        "courseSubjectCode" :  "AFAM",
+        "courseNumber" :  "202",
+        "courseID":    "277c57bf-d5b8-4a69-941f-0f494c30d99e",   
+        "transferred":false,
+        "inProgess":false,
+        "completed":true,
+        "semesterTaken":"Spring 2023",
+        "grade":"A+"
     }
 ]
