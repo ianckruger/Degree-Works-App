@@ -17,6 +17,7 @@ public class Student extends User {
     private ArrayList<String> advisor;
     private ArrayList<Advisor> advisors;
     private ArrayList<Parent> parents;
+    private ArrayList<String> notes;
 
     public Student(String userName, String firstName, String lastName, String password, String userType) {
         super(userName, firstName, lastName, password, userType);
@@ -44,8 +45,9 @@ public class Student extends User {
         this.advisor = advisors;
     }
 
-    public Student(String username, UUID userID, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
+    public Student(String username, UUID userID, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors, ArrayList<String> notes) {
         super(userID, username, firstName, lastName, password, userType);
+        this.notes = notes;
         this.gpa = gpa;
         this.year = year;
         this.currentMajor = currentMajor;

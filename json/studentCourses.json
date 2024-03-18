@@ -1,8 +1,6 @@
 [
     {
         "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
-        "courseSubjectCode":"CSCE",
-        "courseNumber":"146",
         "courseID":"4185c15b-9a71-43e8-a25d-b74b2613d44a",
         "transferred":false,
         "inProgess":false,
@@ -12,25 +10,26 @@
     },
     {
         "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
-        "courseSubjectCode":"CSCE",
-        "courseNumber":"211",
         "courseID":"994ee39f-7d7a-4759-8eec-9cb0a80118c2",
         "transferred":false,
         "inProgess":true,
         "completed":false,
         "semesterTaken":"Spring 2024",
         "grade":"B-"
+        
     },
     {
         "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
-        "courseSubjectCode":"CHEM",
-        "courseNumber":"112",
         "courseID":"a2d29md7-190s-29jn-29nd-1c78f59a0911",
         "transferred":true,
         "inProgess":false,
         "completed":false,
         "semesterTaken":"transferred",
         "grade":"transferred"
+    },
+    {
+        "studentID":" braxon west"
+
     }
 
     

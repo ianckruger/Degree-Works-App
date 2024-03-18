@@ -132,6 +132,13 @@ public class DataLoader extends DataConstant {
         int degreeCredits = ((Number)userObject.get(USER_DEGREE_CREDITS)).intValue();
         JSONArray Jparents = (JSONArray)userObject.get(USER_PARENTS); // might need to modify this
         JSONArray Jadvisors = (JSONArray)userObject.get(USER_ADVISORS);
+        JSONArray Jnotes = (JSONArray)userObject.get(ROADMAP_NOTES);
+
+        ArrayList<String> notes = new ArrayList<>();
+        for (int i = 0; i < Jnotes.size(); i++) {
+            String addThis = (String)Jnotes.get(i);
+            notes.add(addThis);
+        }
 
         ArrayList<String> parents = new ArrayList<>();
         for (int i = 0; i < Jparents.size(); i++) {
@@ -148,7 +155,7 @@ public class DataLoader extends DataConstant {
         // We are passing in empty arrays right now to ensure we can create a scenario
 
 
-        User user = new Student(userName, userID, firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors);
+        User user = new Student(userName, userID, firstName, lastName, password, userType, gpa, year, currentMajor, earnedCreditHours, totalCurrentCredits, degreeCredits, parents, advisors, notes);
         return user;
     }
 
@@ -304,14 +311,18 @@ public class DataLoader extends DataConstant {
         Roadmap roadmap = new Roadmap(user.getCurrentMajor());
         CourseList courses = CourseList.getInstance();
         try {
-            FileReader reader = new FileReader(ROADMAP_FILE_NAME);
+            FileReader reader1 = new FileReader(ROADMAP_FILE_NAME);
+            FileReader reader2 = new FileReader(ROADMAP_NOTES);
             JSONParser parser = new JSONParser();
-            JSONArray roadmapJSON = (JSONArray) parser.parse(reader);
+            JSONArray roadmapJSON = (JSONArray) parser.parse(reader1);
+            
 
             for(int i=0; i<roadmapJSON.size(); i++) {
                 JSONObject roadmapObject = (JSONObject)roadmapJSON.get(i);
                 String roadmapID = (String)roadmapObject.get(ROADMAP_ID);
                 String major = (String)roadmapObject.get(ROADMAP_MAJOR);
+                
+                
 
                 if(major.equalsIgnoreCase("cis")) {
                     CisState state = new CisState(roadmap);

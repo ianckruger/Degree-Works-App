@@ -23,9 +23,11 @@ public class Roadmap {
     protected UUID roadmapID;
     private String major;
     private static Roadmap roadmap;
+    private ArrayList<String> advisorNotes;
 
 
     public Roadmap(String major) {
+        this.advisorNotes = new ArrayList<>();
         this.major = major;
         cisState = new CisState(this);
         csceState = new CsceState(this);
@@ -40,6 +42,10 @@ public class Roadmap {
             setMajorState(csceState);
         }
 
+    }
+
+    public void setAdvisorNotes(ArrayList<String> notes) {
+        this.advisorNotes = notes;
     }
 
     public static Roadmap getInstance() {
