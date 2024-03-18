@@ -6,17 +6,24 @@ import java.util.UUID;
 public abstract class MajorState {
 
     protected Roadmap roadmap;
-    private ArrayList<Class> majorClasses;
-    private ArrayList<Class> carolinaCore;
-    private ArrayList<Class> electives;
-    private ArrayList<Class> liberalArtsElectives;
-    private ArrayList<Class> foundationalCourses;
-    private ArrayList<Class> lowerDivisionComputing;
+    protected ArrayList<Class> majorClasses;
+    protected ArrayList<Class> carolinaCore;
+    protected ArrayList<Class> electives;
+    protected ArrayList<Class> liberalArtsElectives;
+    protected ArrayList<Class> foundationalCourses;
+    protected ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
-    private ArrayList<String> advisorNotes;
+    protected ArrayList<String> advisorNotes;
 
     public MajorState(Roadmap roadmap) {
         this.roadmap = roadmap;
+        this.majorClasses = new ArrayList<>();
+        this.carolinaCore = new ArrayList<>();
+        this.electives = new ArrayList<>();
+        this.liberalArtsElectives = new ArrayList<>();
+        this.foundationalCourses = new ArrayList<>();
+        this.lowerDivisionComputing = new ArrayList<>();
+        this.advisorNotes = new ArrayList<>();
         
     }
 
@@ -76,33 +83,45 @@ public abstract class MajorState {
         StringBuilder msString = new StringBuilder();
 
         msString.append("Major Classes:\n");
-        for (Class course : majorClasses) {
-            msString.append(course.toString()).append("\n");
+        if(!majorClasses.isEmpty()) {
+            for (Class course : majorClasses) {
+                msString.append(course.toString()).append("\n");
+            }
         }
 
         msString.append("Carolina Core:\n");
-        for (Class course : carolinaCore) {
-            msString.append(course.toString()).append("\n");
+        if(!carolinaCore.isEmpty()) {
+            for (Class course : carolinaCore) {
+                msString.append(course.toString()).append("\n");
+            }
         }
 
         msString.append("Electives:\n");
-        for (Class course : electives) {
-            msString.append(course.toString()).append("\n");
+        if(!electives.isEmpty()) {
+            for (Class course : electives) {
+                msString.append(course.toString()).append("\n");
+            }
         }
 
         msString.append("Liberal Arts Electives:\n");
-        for (Class course : liberalArtsElectives) {
-            msString.append(course.toString()).append("\n");
+        if(!liberalArtsElectives.isEmpty()) {
+            for (Class course : liberalArtsElectives) {
+                msString.append(course.toString()).append("\n");
+            }
         }
 
         msString.append("Foundational Courses:\n");
-        for (Class course : foundationalCourses) {
-            msString.append(course.toString()).append("\n");
+        if (!foundationalCourses.isEmpty()) {
+            for (Class course : foundationalCourses) {
+                msString.append(course.toString()).append("\n");
+            }
         }
 
         msString.append("Lower Division Computing:\n");
-        for (Class course : lowerDivisionComputing) {
-            msString.append(course.toString()).append("\n");
+        if (!lowerDivisionComputing.isEmpty()) {
+            for (Class course : lowerDivisionComputing) {
+                msString.append(course.toString()).append("\n");
+            }
         }
 
         return msString.toString();

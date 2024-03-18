@@ -3,6 +3,8 @@ package frontend;
 import java.util.Scanner;
 
 import backend.CourseList;
+import backend.Roadmap;
+import backend.User;
 import backend.UserList;
 
 public class UI {
@@ -85,6 +87,9 @@ public class UI {
         }
         
         System.out.println(userName+" is now logged in");
+        application.printStudentProgress();
+
+        
     }
 
     public void userRegister() {

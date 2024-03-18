@@ -39,13 +39,15 @@ public class RoadmapApplication {
                         // add a check 
     
                         // if (student)
-                        if(user instanceof Student) {
+                        if (user.getUserType().equalsIgnoreCase("student")) {
                             users.setActiveUser(user);
                             this.courseList = CourseList.getInstance();
                             this.roadmap = Roadmap.getInstance();
                             return true;
-
-                        }  
+                        }
+                        
+                        
+    
                         // else aka if an advisor
                         // "What student would you like to see" 
                         // user enters: student id
@@ -111,26 +113,13 @@ public class RoadmapApplication {
 
     }
 
-    boolean  printStudentProgress() {
-        Student student = (Student) user;
+    public boolean printStudentProgress() {
+        Student student = (Student)userlist.getActive();
+
         if(student != null) {
             String major = student.getCurrentMajor();
             if (major != null ) {
-                switch (major.toLowerCase()) {
-                    case "csce":
-                        CsceState csceState = new CsceState(roadmap);
-                        System.out.println(csceState.toString());
-                        break;
-                    case "cis":
-                        CisState cisState = new CisState(roadmap);
-                        System.out.println(cisState.toString());
-                        break;
-                    case "ce":
-                        CeState ceState = new CeState(roadmap);
-                        System.out.println(ceState.toString());
-                        break;
-                    
-                }
+                roadmap.displayClasses();
                 return true;
             } else {
                 System.out.println("Student's major type not found.");
