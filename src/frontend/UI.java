@@ -183,7 +183,7 @@ public class UI {
     }
 
     public void scenario1() {
-        if (!application.login("braxwest", "westbrax")) {
+        if (!application.login("brax-west", "brax-is-cool")) {
             System.out.println("Sorry we couldn't log you in.");
         } else {
             System.out.println("Brax West is now logged in\nGenerating student's current progress...");
