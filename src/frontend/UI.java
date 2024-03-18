@@ -186,7 +186,7 @@ public class UI {
         if (!application.login("braxwest", "westbrax")) {
             System.out.println("Sorry we couldn't log you in.");
         } else {
-            System.out.println("Brax West is now logged in\n Generating student's current progress...");
+            System.out.println("Brax West is now logged in\nGenerating student's current progress...");
 
             if(application.printStudentProgress()) {
                 System.out.println("Student's progress printed successfully.");

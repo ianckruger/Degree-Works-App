@@ -135,10 +135,14 @@ public class DataLoader extends DataConstant {
         JSONArray Jnotes = (JSONArray)userObject.get(ROADMAP_NOTES);
 
         ArrayList<String> notes = new ArrayList<>();
-        for (int i = 0; i < Jnotes.size(); i++) {
-            String addThis = (String)Jnotes.get(i);
-            notes.add(addThis);
+        if(!notes.isEmpty()) {
+            for (int i = 0; i < Jnotes.size(); i++) {
+                String addThis = (String)Jnotes.get(i);
+                notes.add(addThis);
+            }
+
         }
+        
 
         ArrayList<String> parents = new ArrayList<>();
         for (int i = 0; i < Jparents.size(); i++) {
