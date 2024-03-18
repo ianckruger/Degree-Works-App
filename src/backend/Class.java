@@ -26,9 +26,9 @@ public class Class {
     private int yearTaken;
     private String semesterTaken;
 
-    // private boolean completed;
-    // private boolean inProgress;
-    // private boolean transferred;
+    private boolean completed;
+    private boolean inProgress;
+    private boolean transferred;
     private double grade;
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
@@ -164,17 +164,6 @@ public class Class {
         return this.prereqs;
     }
 
-    @Override
-    public String toString() {
-        return "Course Subject Code: " + courseSubjectCode + "\n" +
-           "Course Number: " + courseNumber + "\n" +
-           "Course Title: " + courseTitle + "\n" +
-           "Course ID: " + courseID + "\n" +
-           "Credits: " + credits + "\n" +
-           "Application Area: " + applicationArea + "\n" +
-           "Prerequisites: " + prereqs + "\n" +
-           "Description: " + courseDescription;
-}
 
 
 }
