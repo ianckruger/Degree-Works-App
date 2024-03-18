@@ -13,9 +13,11 @@ public abstract class MajorState {
     private ArrayList<Class> foundationalCourses;
     private ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
+    private ArrayList<String> advisorNotes;
 
     public MajorState(Roadmap roadmap) {
         this.roadmap = roadmap;
+        
     }
 
     public MajorState(MajorState majorState) {
