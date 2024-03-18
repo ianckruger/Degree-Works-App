@@ -28,7 +28,8 @@
         "grade":"transferred"
     },
 
-    
+    { "comment": "This is the start of scenario 1 classes."},
+
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
         "courseSubjectCode" :  "ENGL",
@@ -252,5 +253,11 @@
         "completed":true,
         "semesterTaken":"Spring 2023",
         "grade":"A+"
-    }
+    },
+
+    { "comment": "This is the end of scenario 1 classes."}
+
+
+
+
 ]
