@@ -85,9 +85,13 @@ public abstract class MajorState {
         msString.append("Major Classes:\n");
         if(!majorClasses.isEmpty()) {
             for (Class course : majorClasses) {
-                msString.append(course.toString()).append("\n");
+               msString.append(course.toString()).append("\n");
             }
+        } else {
+            msString.append("No major classes available\n");
         }
+        
+
 
         msString.append("Carolina Core:\n");
         if(!carolinaCore.isEmpty()) {
