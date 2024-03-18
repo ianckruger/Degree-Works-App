@@ -119,7 +119,7 @@ public class RoadmapApplication {
         if(student != null) {
             String major = student.getCurrentMajor();
             if (major != null ) {
-                roadmap.displayClasses();
+               System.out.println(roadmap.displayClasses());
                 return true;
             } else {
                 System.out.println("Student's major type not found.");
