@@ -14,6 +14,11 @@ public class UI {
         this.application = new RoadmapApplication();
     }
 
+    public static void main(String[] args) {
+        UI ui = new UI();
+        ui.run();
+    }
+
     
     public void start() {
         System.out.println("Enter your name:");
@@ -77,10 +82,6 @@ public class UI {
         }
         
         System.out.println(userName+" is now logged in");
-        // CourseList courses = CourseList.getInstance();
-        // for (int i= 0; i < courses.getCourses().size(); i++) {
-        //     System.out.print(courses.getCourses().get(i).getCourseTitle());
-        // }
     }
 
     public void userRegister() {
@@ -103,7 +104,6 @@ public class UI {
         String lastName = scanner.nextLine();
         System.out.println("Enter your User Type (Student/Parent/Advisor) for registration:");
         String userType = scanner.nextLine();
-
          
         if (register(userName, password, firstName, lastName, userType)) {
             System.out.println("Registration successful!");
@@ -175,33 +175,9 @@ public class UI {
         }
     }
     
-
-
-    //For user to login
-    public void loginUser() {
-        System.out.println("Enter your username:");
-        String username = scanner.nextLine();
-        System.out.println("Enter your password:");
-        String password = scanner.nextLine();
-    
-        if (application.login(username, password)) {
-            System.out.println("Login successful!");
-            // Proceed with the application
-        } else {
-            System.out.println("Login failed. Please check your username and password.");
-        }
-    }
-    
-
-
-
     public boolean register(String userName, String password, String firstName, String lastName, String userType) {
         return application.register(userName, firstName, lastName, password , userType);
     }
 
-    public static void main(String[] args) {
-        UI ui = new UI();
-        ui.run();
-    }
 
 }

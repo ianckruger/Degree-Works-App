@@ -157,6 +157,8 @@ public class Class {
         return this.prereqs;
     }
 
+    
+
     public boolean checkIfFailed() {
         if (this.grade < 60) {
             return true; // true for failed

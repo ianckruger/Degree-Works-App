@@ -71,8 +71,6 @@ public class RoadmapApplication {
     }
 
     public boolean isUsernameTaken(String userName) {
-        // Looks great, no need to call data loader tho, should automatically 
-        // be called when UI is ran, just get instance of list.
         UserList users = UserList.getInstance();
         ArrayList<User> userList = users.getUsers();
         for (User user : userList) {
@@ -84,11 +82,18 @@ public class RoadmapApplication {
         return false;
 
     }
- 
 
-    // public Roadmap getRoadmap() {
-    //     return roadmap.getInstance();
-    // }
+    public boolean logout() {
+        if (user == null) {
+            return false;
+        }
+        DataWriter.saveUsers();
+        user = null;
+        return true;
+
+    }
+
+   
     public void viewTranscript() {
 
     }
@@ -96,19 +101,6 @@ public class RoadmapApplication {
     public void switchState(String state) {
 
     }
-/* 
-    public ArrayList<Class> findClass() {
-
-    }
-
-    public ArrayList<Class> findClass(String courseTile, String courseNumber) {
-
-    }
-
-    public ArrayList<Class> getFavoriteClasses() {
-
-    }
-*/
     public void addFavoriteClass(Class course) {
 
     }

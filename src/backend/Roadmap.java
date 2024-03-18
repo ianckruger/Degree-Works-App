@@ -39,6 +39,7 @@ public class Roadmap {
         } else if (major.equalsIgnoreCase("csce")){
             setMajorState(csceState);
         }
+
     }
 
     public static Roadmap getInstance() {
@@ -47,7 +48,6 @@ public class Roadmap {
          }
         return roadmap;
     }
-
 
     public void setMajorState(MajorState majorState) {
         this.majorState = majorState;
@@ -85,32 +85,32 @@ public class Roadmap {
     
 
 
-    @Override
-    public String toString() {
-        JSONObject roadmapData = readRoadmapDataFromFile();
-        if (roadmapData != null) {
-            StringBuilder stringBuilder = new StringBuilder();
-            for (Object key : roadmapData.keySet()) {
-                String keyStr = (String) key;
-                Object keyvalue = roadmapData.get(keyStr);
-                stringBuilder.append(keyStr).append(": ").append(keyvalue).append("\n");
-            }
-            return stringBuilder.toString();
-        } else {
-            return "Error: Unable to retrieve roadmap data";
-        }
-    }
+    // @Override
+    // public String toString() {
+    //     JSONObject roadmapData = readRoadmapDataFromFile();
+    //     if (roadmapData != null) {
+    //         StringBuilder stringBuilder = new StringBuilder();
+    //         for (Object key : roadmapData.keySet()) {
+    //             String keyStr = (String) key;
+    //             Object keyvalue = roadmapData.get(keyStr);
+    //             stringBuilder.append(keyStr).append(": ").append(keyvalue).append("\n");
+    //         }
+    //         return stringBuilder.toString();
+    //     } else {
+    //         return "Error: Unable to retrieve roadmap data";
+    //     }
+    // }
 
-    private JSONObject readRoadmapDataFromFile() {
-        JSONParser parser = new JSONParser();
-        try {
-            Object obj = parser.parse(new FileReader("roadmap.json"));
-            JSONObject jsonObject = (JSONObject) obj;
-            return jsonObject;
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+    // private JSONObject readRoadmapDataFromFile() {
+    //     JSONParser parser = new JSONParser();
+    //     try {
+    //         Object obj = parser.parse(new FileReader("roadmap.json"));
+    //         JSONObject jsonObject = (JSONObject) obj;
+    //         return jsonObject;
+    //     } catch (IOException | ParseException e) {
+    //         e.printStackTrace();
+    //         return null;
+    //     }
+    // }
 
 }
