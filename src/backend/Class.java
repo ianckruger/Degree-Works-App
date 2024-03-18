@@ -23,12 +23,12 @@ public class Class {
     // private boolean isLabScience;
     private String courseDescription;
 
-    private int yearTaken;
+    // private int yearTaken;
     private String semesterTaken;
 
-    // private boolean completed;
-    // private boolean inProgress;
-    // private boolean transferred;
+    private boolean completed;
+    private boolean inProgress;
+    private boolean transferred;
     private double grade;
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
@@ -47,7 +47,7 @@ public class Class {
     }
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
-    ArrayList<String> prequisites,  String courseDescription, int yearTaken, String semesterTaken) {
+    ArrayList<String> prequisites,  String courseDescription, String semesterTaken) {
 
         setCourseSubjectCode(courseSubjectCode);
         setCourseNumber(courseNumber);
@@ -56,7 +56,6 @@ public class Class {
         setApplicationArea(applicationArea);
         setCredits(credits);
         setCouresDescription(courseDescription);
-        setYearTaken(yearTaken);
         setSemesterTaken(semesterTaken);
         this.prerequisitesIDS = prequisites;
         this.prereqs = new ArrayList<Class>();
@@ -71,9 +70,11 @@ public class Class {
         setApplicationArea(applicationArea);
         setCredits(credits);
         setCouresDescription(courseDescription);
-        setYearTaken(yearTaken);
         setSemesterTaken(semesterTaken);
         setGrade(grade);
+        this.transferred = transferred;
+        this.completed = completed;
+        this.inProgress = inProgress;
         this.prerequisitesIDS = prequisites;
         this.prereqs = new ArrayList<Class>();
      }
@@ -126,14 +127,6 @@ public class Class {
         this.courseDescription = courseDescription;
     }
 
-    public int getYearTaken() {
-        return yearTaken;
-    }
-
-    public void setYearTaken(int yearTaken) {
-        this.yearTaken = yearTaken;
-    }
-
     public String getSemesterTaken() {
         return semesterTaken;
     }
@@ -162,6 +155,26 @@ public class Class {
 
     public ArrayList<Class> getPrereqs() {
         return this.prereqs;
+    }
+
+    public boolean checkIfFailed() {
+        if (this.grade < 60) {
+            return true; // true for failed
+        }
+        return false; // false if passed
+    }
+
+    public String toString() {
+        if (this.completed) {
+            if (checkIfFailed()) {
+                return courseSubjectCode + courseNumber + ":" + courseTitle + " --  Grade: " + grade + " - Failed\n";
+            } else {
+                return courseSubjectCode + courseNumber + ":" + courseTitle + " --  Grade: " + grade + " - Passed\n";
+            }
+        } else if (inProgress) {
+            return courseSubjectCode + courseNumber + ":" + courseTitle + " --  In Progress\n"; // for the future change the color
+        }
+        return courseSubjectCode + courseNumber + ":" + courseTitle + "\n";
     }
 
 
