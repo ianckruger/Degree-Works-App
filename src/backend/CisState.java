@@ -19,7 +19,10 @@ public class CisState extends MajorState {
     public String toString() {
         StringBuilder cisString = new StringBuilder(super.toString());
 
-        cisString.append("Business Information Management Electives: ").append(businessInformationManagement).append("\n");
+        cisString.append("Business Information Management Electives:\n");
+        for (Class course : businessInformationManagement) {
+            cisString.append(course.toString()).append("\n");
+        }
 
         return cisString.toString();
     }

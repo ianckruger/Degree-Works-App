@@ -17,7 +17,10 @@ public class CeState extends MajorState {
     public String toString() {
         StringBuilder ceString = new StringBuilder(super.toString());
 
-        ceString.append("Electrical Engineering Electives: ").append(electricalEngineering).append("\n");
+        ceString.append("Electrical Engineering Courses:\n");
+        for (Class course : electricalEngineering) {
+            ceString.append(course.toString()).append("\n");
+        }
 
         return ceString.toString();
     }

@@ -51,6 +51,9 @@ public class UI {
             case 6:
                 scenario5(); // Creating an Advisor Account
                 break;
+            case 7:
+                scenario1(); // Running scenario 1
+                break;
             default:
                 System.out.println("Invalid choice. Please enter a number between 1 and 6.");
         }
@@ -177,6 +180,25 @@ public class UI {
     
     public boolean register(String userName, String password, String firstName, String lastName, String userType) {
         return application.register(userName, firstName, lastName, password , userType);
+    }
+
+    public void scenario1() {
+        if (!application.login("braxwest", "westbrax")) {
+            System.out.println("Sorry we couldn't log you in.");
+        } else {
+            System.out.println("Brax West is now logged in\n Generating student's current progress...");
+
+            if(application.printStudentProgress()) {
+                System.out.println("Student's progress printed successfully.");
+                
+            }
+            else {
+                System.out.println("Failed to print student's progress.");
+            }
+
+        }
+
+
     }
 
 
