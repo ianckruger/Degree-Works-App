@@ -212,7 +212,10 @@ public class UI {
 
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e87b25e985cc5b5d0a5fd7f91dfb727cd4948d57
     public void scenario2() {
         
         if(application.register("odden01", "Odden", "Osbert", "12345", "advisor")) {
@@ -266,7 +269,10 @@ public class UI {
             
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e87b25e985cc5b5d0a5fd7f91dfb727cd4948d57
 
 
 }
