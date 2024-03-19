@@ -134,7 +134,7 @@
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
         "courseSubjectCode" :  "CSCE",
         "courseNumber" :  "146",
-        "courseID":  "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6" ,
+        "courseID":  "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6",
         "transferred":false,
         "inProgess":false,
         "completed":true,
@@ -225,7 +225,8 @@
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
         "courseSubjectCode" :"CSCE",
-        "courseNumber" : "317" ,
+        "courseNumber" : "317",
+        "courseID": "c92f728c-76a7-4cf4-a220-8d41d5468014",
         "transferred":false,
         "inProgess":false,
         "completed":true,
@@ -254,6 +255,9 @@
         "semesterTaken":"Spring 2023",
         "grade":"A+"
     },
+
+    {"end of scenario 1 classes": ""},
+
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
         "courseID":  "9583ee33-5e0b-43fe-9bc7-7ef3816da225",
@@ -551,6 +555,7 @@
         "semesterTaken":"Spring 2023",
         "grade":"B"
     },
+    
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
         "courseID":   "f9bc9ca2-9fe9-43eb-8444-2f0fc53da6c3",
