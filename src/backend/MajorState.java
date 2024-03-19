@@ -14,6 +14,7 @@ public abstract class MajorState {
     protected ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
     protected ArrayList<String> advisorNotes;
+    protected String major;
 
     public MajorState(Roadmap roadmap) {
         this.roadmap = roadmap;
@@ -77,6 +78,14 @@ public abstract class MajorState {
 
     public void setElectives(ArrayList<Class> electives) {
         this.electives = electives;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public String getMajor() {
+        return this.major;
     }
 
     public String toString() {

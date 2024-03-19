@@ -330,6 +330,7 @@ public class DataLoader extends DataConstant {
                 
 
                 if(major.equalsIgnoreCase("cis")) {
+                    System.out.println("Loading CIS");
                     CisState state = new CisState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
                     System.out.println(majorClasses);
@@ -406,6 +407,7 @@ public class DataLoader extends DataConstant {
 
 
                 } else if (major.equalsIgnoreCase("ce")) {
+                    System.out.println("Loading CE");
                     CeState state = new CeState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
                     if(majorClasses.size()!= 0) {
@@ -482,6 +484,7 @@ public class DataLoader extends DataConstant {
 
 
                 } else if (major.equalsIgnoreCase("csce")){
+                    System.out.println("Loading CSCE");
                     CsceState state = new CsceState(roadmap);
 
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);

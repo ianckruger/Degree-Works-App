@@ -9,6 +9,7 @@ public class CeState extends MajorState {
     public CeState(Roadmap roadmap) {
         super(roadmap);
         this.electricalEngineering = new ArrayList<>();
+        setMajor("ce");
     };
 
     public ArrayList<Class> getElectricalEngineering() {

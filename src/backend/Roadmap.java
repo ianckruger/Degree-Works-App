@@ -85,6 +85,7 @@ public class Roadmap {
     }
 
     public String displayClasses() {
+        System.out.println("Major State: " + majorState.getMajor() + ".\n");
         return majorState.toString();
     }
     

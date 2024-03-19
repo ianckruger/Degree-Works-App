@@ -9,6 +9,7 @@ public class CisState extends MajorState {
     public CisState(Roadmap roadmap) {
         super(roadmap);
         this.businessInformationManagement = new ArrayList<>();
+        setMajor("cis");
         
     };
 

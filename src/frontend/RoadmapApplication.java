@@ -42,9 +42,12 @@ public class RoadmapApplication {
                 if (user.getUserName().equals(userName) && user.getPassword().equals(password)) {
                     // If user is a student
                     if (user.getUserType().equalsIgnoreCase("student")) {
-                        users.setActiveUser(user);
+                        Student student = (Student) user;
+                        users.setActiveUser(student);
                         this.courseList = CourseList.getInstance();
-                        this.roadmap = Roadmap.getInstance();
+                        Roadmap roadmap = Roadmap.getInstance();
+                        setRoadmap(roadmap);
+                        roadmap.setMajorState(student.getCurrentMajor());
                         return true;
                     } else if (user.getUserType().equalsIgnoreCase("advisor")) {
                         System.out.println("Enter the student ID you would like to view:");
@@ -54,6 +57,7 @@ public class RoadmapApplication {
                             if (student.getUserUUID().toString().equals(studentId) && student.getUserType().equalsIgnoreCase("student")) {
                                 // Set the student as the active user
                                 users.setActiveUser(student);
+                                
                                 return true;
                             }
                         }
@@ -168,6 +172,9 @@ public class RoadmapApplication {
 
     }
 
+    public void setRoadmap(Roadmap roadmap) {
+        this.roadmap = roadmap;
+    }
 
 
    
