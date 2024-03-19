@@ -333,7 +333,7 @@ public class DataLoader extends DataConstant {
                     System.out.println("Loading CIS");
                     CisState state = new CisState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-                    System.out.println(majorClasses);
+                   
                     if(majorClasses.size() != 0) {
                         for (int j = 0; j < majorClasses.size(); j++) {
                             for(Class course : courses.getCourses() ) {
