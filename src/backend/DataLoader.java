@@ -332,11 +332,15 @@ public class DataLoader extends DataConstant {
                 if(major.equalsIgnoreCase("cis")) {
                     CisState state = new CisState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-                    if(majorClasses.size()!= 0) {
+                    System.out.println(majorClasses);
+                    if(majorClasses.size() != 0) {
                         for (int j = 0; j < majorClasses.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (majorClasses.get(j).equals(course.getCourseID())) {
+                                if (majorClasses.get(j).equals(course.getCourseID().toString())) {
+                                    System.out.println("Got here");
+                                    System.out.println(course);
                                     state.getMajorClasses().add(course);
+                                    System.out.println(state.getMajorClasses());
                                 }
                             }
                         }
