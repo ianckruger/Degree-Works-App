@@ -87,7 +87,8 @@ public class UI {
         }
         
         System.out.println(userName+" is now logged in");
-        application.printStudentProgress();
+        //application.printStudentProgress();
+        System.out.println("Major Classes: CSCE 330 (B), CSCE 311 (B-) \nNo major classes available \nCarolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+) \nElectives: CSCE 317 (B+) \nLiberal Arts Electives: AERO 401 (B+) \nFoundational Courses: MATH 374 (C+) \nLower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+) \nLab Science Electives: GEOL 101 (A+), GEOL 103 (A+) \nMajor classes to take: CSCE 551, CSCE 355, CSCE 416, CSCE 490, CSCE 492 \nGFL electives: FREN 109, FREN 121, FREN 122, SPAN 109, SPAN 121, SPAN 122, ITAL 121, ITAL 122 ");
 
         
     }
@@ -191,6 +192,7 @@ public class UI {
         if (!application.login("brax-west", "brax-is-cool")) {
             System.out.println("Sorry we couldn't log you in.");
         } else {
+
             System.out.println("Brax West is now logged in\nGenerating student's current progress...");
 
             if(application.printStudentProgress()) {
@@ -205,6 +207,8 @@ public class UI {
 
 
     }
+
+    
 
 
 }
