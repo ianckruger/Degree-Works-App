@@ -254,9 +254,7 @@ public class DataLoader extends DataConstant {
                     if(userID.equals(courseStudentID)&& tempID.equals(courseMatchID)) {
                         yearTaken = (String)courseAndStudentObject.get(STUDENT_COURSE_SEMESTER_TAKEN);
                         transferred = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_TRANSFERRED);
-                       // inProgress = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_IN_PROGRESS);
-                        Object inProgressValue = courseAndStudentObject.get("in_progress");
-                        inProgress = inProgressValue != null ? (Boolean) inProgressValue : false;
+                        inProgress = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_IN_PROGRESS);
                         completed = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_COMPLETED);
                         grade = (String)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
                         break;
