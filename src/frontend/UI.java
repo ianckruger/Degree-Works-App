@@ -212,9 +212,6 @@ public class UI {
 
     }
 
-<<<<<<< HEAD
-    
-=======
     public void scenario2() {
         
         if(application.register("odden01", "Odden", "Osbert", "12345", "advisor")) {
@@ -268,7 +265,6 @@ public class UI {
             
 
     }
->>>>>>> branch-brandon
 
 
 }
