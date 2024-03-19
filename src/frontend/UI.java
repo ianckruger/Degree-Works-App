@@ -37,6 +37,7 @@ public class UI {
             case 1:
                 System.out.println("Logging in...");
                 userLogin();
+
                 break;
             case 2:
                 userRegister();
@@ -58,7 +59,7 @@ public class UI {
                 break;
             case 8: 
                 scenario2();
-                break;
+                break;//System.out.println("1. Login");
             default:
                 System.out.println("Invalid choice. Please enter a number between 1 and 6.");
         }
@@ -67,10 +68,11 @@ public class UI {
 
     public int displayMainMenu() {
         System.out.println("Main Menu:");
-        System.out.println("1. Login");
+        
+        System.out.println("1: Login");
         System.out.println("2. Register");
         System.out.println("3. Exit");
-        System.out.println("8: scenario 2");
+        
         System.out.println("Enter your choice:");
 
         int choice = scanner.nextInt();
@@ -91,8 +93,7 @@ public class UI {
         }
         
         System.out.println(userName+" is now logged in");
-        //application.printStudentProgress();
-        System.out.println("Major Classes: CSCE 330 (B), CSCE 311 (B-) \nNo major classes available \nCarolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+) \nElectives: CSCE 317 (B+) \nLiberal Arts Electives: AERO 401 (B+) \nFoundational Courses: MATH 374 (C+) \nLower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+) \nLab Science Electives: GEOL 101 (A+), GEOL 103 (A+) \nMajor classes to take: CSCE 551, CSCE 355, CSCE 416, CSCE 490, CSCE 492 \nGFL electives: FREN 109, FREN 121, FREN 122, SPAN 109, SPAN 121, SPAN 122, ITAL 121, ITAL 122 ");
+        application.printStudentProgress();
 
         
     }
@@ -212,10 +213,7 @@ public class UI {
 
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> e87b25e985cc5b5d0a5fd7f91dfb727cd4948d57
     public void scenario2() {
         
         if(application.register("odden01", "Odden", "Osbert", "12345", "advisor")) {
@@ -269,10 +267,7 @@ public class UI {
             
 
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> e87b25e985cc5b5d0a5fd7f91dfb727cd4948d57
 
 
 }
