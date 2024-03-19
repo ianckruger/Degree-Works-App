@@ -54,6 +54,8 @@ public class RoadmapApplication {
                             if (student.getUserUUID().toString().equals(studentId) && student.getUserType().equalsIgnoreCase("student")) {
                                 // Set the student as the active user
                                 users.setActiveUser(student);
+                                this.courseList = CourseList.getInstance();
+                                this.roadmap = Roadmap.getInstance();
                                 return true;
                             }
                         }
