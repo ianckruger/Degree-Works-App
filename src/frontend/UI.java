@@ -56,9 +56,6 @@ public class UI {
             case 7:
                 scenario1(); // Running scenario 1
                 break;
-            case 8: 
-                scenario2();
-                break;
             default:
                 System.out.println("Invalid choice. Please enter a number between 1 and 6.");
         }
@@ -70,7 +67,6 @@ public class UI {
         System.out.println("1. Login");
         System.out.println("2. Register");
         System.out.println("3. Exit");
-        System.out.println("8: scenario 2");
         System.out.println("Enter your choice:");
 
         int choice = scanner.nextInt();
@@ -91,8 +87,16 @@ public class UI {
         }
         
         System.out.println(userName+" is now logged in");
+
+
+
+
+
+
+
+        
         //application.printStudentProgress();
-        System.out.println("Major Classes: CSCE 330 (B), CSCE 311 (B-) \nNo major classes available \nCarolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+) \nElectives: CSCE 317 (B+) \nLiberal Arts Electives: AERO 401 (B+) \nFoundational Courses: MATH 374 (C+) \nLower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+) \nLab Science Electives: GEOL 101 (A+), GEOL 103 (A+) \nMajor classes to take: CSCE 551, CSCE 355, CSCE 416, CSCE 490, CSCE 492 \nGFL electives: FREN 109, FREN 121, FREN 122, SPAN 109, SPAN 121, SPAN 122, ITAL 121, ITAL 122 ");
+        System.out.println("Major Classes: CSCE 330 (B), CSCE 311 (B-) \nCarolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+) \nElectives: CSCE 317 (B+) \nLiberal Arts Electives: AERO 401 (B+) \nFoundational Courses: MATH 374 (C+) \nLower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+) \nLab Science Electives: GEOL 101 (A+), GEOL 103 (A+) \nMajor classes to take: CSCE 551, CSCE 355, CSCE 416, CSCE 490, CSCE 492 \nGFL electives: FREN 109, FREN 121, FREN 122, SPAN 109, SPAN 121, SPAN 122, ITAL 121, ITAL 122 ");
 
         
     }
@@ -212,63 +216,7 @@ public class UI {
 
     }
 
-<<<<<<< HEAD
     
-=======
-    public void scenario2() {
-        
-        if(application.register("odden01", "Odden", "Osbert", "12345", "advisor")) {
-            System.out.println("Advisor account created successfully");
-        }
-        userLogin();
-
-        if (application.addAdvisee("odden01", "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8")) {
-            System.out.println("Added Tawnie Hill as your advisee");
-        } else {
-            System.out.println("Failed to add Tawnie Hill as your advisee.");
-            return;  
-        }
-        
-
-        boolean continueLoop = true;
-        while(continueLoop) {
-            System.out.println("\nChoose an option:");
-            System.out.println("1. View student's progress");
-            System.out.println("2. Add a note for the student");
-            System.out.println("3. Exit");
-            int choice = scanner.nextInt();
-            
-
-
-            switch (choice) {
-                case 1:
-                    
-                    System.out.println("View student's current progress...");
-                    System.out.println("--Completed Classes--\nMajor Classes: CSCE205 (B+), CSCE520 (A)\nCarolinacore: ENGL101(A), ENGL102(B+), CSCE145(A-), FREN110(B), FAMS300(C)\nLiberal Art Electives: AERO401(A-), ANTH100(B)\nFoundational Courses: ENGL462(A), STAT509 (B), STAT516(B+)\nLower Division Computing: CSCE146(A+), CSCE190(A), CSCE201(B)\nBusiness Information Management: ECON224(A), ACCT222(B)\n ELectives: ACCT324(B)");
-                    System.out.println("\n--Incompleted Classes--\nMajor Classes: CSCE350, CSCE416, CSCE490, CSCE492, CSCE520, CSCE522,CSCE594\nCarolinacore: MATH141, CSCE390, GEOL101, AFAM200, HIST111, AFAMS201, CHEM102\nLiberal Art Electives: AERO402, ECON123, ECON 449,PHIL101\nFoundational Courses: MATH174\nLower Divison Computing: CSCE210, CSCE215, CSCE240, CSCE247\nBusiness Information Management: MGMT371, MGSC290\nElectives: ECON 311 or ECON379 or IBUS301");
-                    System.out.println("\nApplication Area: undeclared");
-                    break;
-                    
-                case 2:
-                    // Add a note for the student
-                    System.out.println("Adding a note for the student...");
-                    String note = "I have seen you have taken STAT509 and STAT516, consider picking Statistics as your Application Area";
-                    if(application.addNoteToStudent(note)) {
-                            System.out.println("Note added successfully");
-                    }
-                    
-                    break;
-                    case 3:
-                    continueLoop = false; // Exit the loop
-                    break;
-
-            }
-
-        }
-            
-
-    }
->>>>>>> branch-brandon
 
 
 }
