@@ -39,4 +39,7 @@ public class Advisor extends User {
     public ArrayList<Student> getStudent() {
         return student;
     };
+    public void addStudent(String studentId) {
+        students.add(studentId);
+    }
 }
