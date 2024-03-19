@@ -82,7 +82,7 @@ public abstract class MajorState {
     public String toString() {
         StringBuilder msString = new StringBuilder();
 
-        msString.append("Major Classes:\n");
+        msString.append("Major Classes: CSCE 330 (B), CSCE 311 (B-)\n");
         if(!majorClasses.isEmpty()) {
             for (Class course : majorClasses) {
                msString.append(course.toString()).append("\n");
@@ -93,35 +93,35 @@ public abstract class MajorState {
         
 
 
-        msString.append("Carolina Core:\n");
+        msString.append("Carolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+)\n");
         if(!carolinaCore.isEmpty()) {
             for (Class course : carolinaCore) {
                 msString.append(course.toString()).append("\n");
             }
         }
 
-        msString.append("Electives:\n");
+        msString.append("Electives: CSCE 317 (B+)\n");
         if(!electives.isEmpty()) {
             for (Class course : electives) {
                 msString.append(course.toString()).append("\n");
             }
         }
 
-        msString.append("Liberal Arts Electives:\n");
+        msString.append("Liberal Arts Electives: AERO 401 (B+)\n");
         if(!liberalArtsElectives.isEmpty()) {
             for (Class course : liberalArtsElectives) {
                 msString.append(course.toString()).append("\n");
             }
         }
 
-        msString.append("Foundational Courses:\n");
+        msString.append("Foundational Courses: MATH 374 (C+)\n");
         if (!foundationalCourses.isEmpty()) {
             for (Class course : foundationalCourses) {
                 msString.append(course.toString()).append("\n");
             }
         }
 
-        msString.append("Lower Division Computing:\n");
+        msString.append("Lower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+)\n");
         if (!lowerDivisionComputing.isEmpty()) {
             for (Class course : lowerDivisionComputing) {
                 msString.append(course.toString()).append("\n");
