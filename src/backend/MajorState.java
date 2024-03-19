@@ -91,10 +91,10 @@ public abstract class MajorState {
     public String toString() {
         StringBuilder msString = new StringBuilder();
 
-        msString.append("Major Classes: \n");
+        msString.append("\nMajor Classes: \n");
         if(!majorClasses.isEmpty()) {
             for (Class course : majorClasses) {
-               msString.append(course.toString()).append("\n");
+               msString.append(course.toString());
             }
         } else {
             msString.append("No major classes available\n");
@@ -102,38 +102,38 @@ public abstract class MajorState {
         
 
 
-        msString.append("Carolina Core: \n");
+        msString.append("\nCarolina Core: \n");
         if(!carolinaCore.isEmpty()) {
             for (Class course : carolinaCore) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
             }
         }
 
-        msString.append("Electives: \n");
+        msString.append("\nElectives: \n");
         if(!electives.isEmpty()) {
             for (Class course : electives) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
             }
         }
 
-        msString.append("Liberal Arts Electives: \n");
+        msString.append("\nLiberal Arts Electives: \n");
         if(!liberalArtsElectives.isEmpty()) {
             for (Class course : liberalArtsElectives) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
             }
         }
 
-        msString.append("Foundational Courses: \n");
+        msString.append("\nFoundational Courses: \n");
         if (!foundationalCourses.isEmpty()) {
             for (Class course : foundationalCourses) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
             }
         }
 
-        msString.append("Lower Division Computing: \n");
+        msString.append("\nLower Division Computing: \n");
         if (!lowerDivisionComputing.isEmpty()) {
             for (Class course : lowerDivisionComputing) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
             }
         }
 
