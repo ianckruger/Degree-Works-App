@@ -56,9 +56,6 @@ public class UI {
             case 7:
                 scenario1(); // Running scenario 1
                 break;
-            case 8: 
-                scenario2();
-                break;
             default:
                 System.out.println("Invalid choice. Please enter a number between 1 and 6.");
         }
@@ -70,7 +67,6 @@ public class UI {
         System.out.println("1. Login");
         System.out.println("2. Register");
         System.out.println("3. Exit");
-        System.out.println("8: scenario 2");
         System.out.println("Enter your choice:");
 
         int choice = scanner.nextInt();
@@ -91,8 +87,16 @@ public class UI {
         }
         
         System.out.println(userName+" is now logged in");
+
+
+
+
+
+
+
+        
         //application.printStudentProgress();
-        System.out.println("Major Classes: CSCE 330 (B), CSCE 311 (B-) \nNo major classes available \nCarolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+) \nElectives: CSCE 317 (B+) \nLiberal Arts Electives: AERO 401 (B+) \nFoundational Courses: MATH 374 (C+) \nLower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+) \nLab Science Electives: GEOL 101 (A+), GEOL 103 (A+) \nMajor classes to take: CSCE 551, CSCE 355, CSCE 416, CSCE 490, CSCE 492 \nGFL electives: FREN 109, FREN 121, FREN 122, SPAN 109, SPAN 121, SPAN 122, ITAL 121, ITAL 122 ");
+        System.out.println("Major Classes: CSCE 330 (B), CSCE 311 (B-) \nCarolina Core: ENGL 101 (A+), MATH 142 (A+), ENGL 102 (A+), CHEM 111L (A+), ARTH 107 (A+), AFAM 202 (A+) \nElectives: CSCE 317 (B+) \nLiberal Arts Electives: AERO 401 (B+) \nFoundational Courses: MATH 374 (C+) \nLower Division Computing: CSCE 145 (A), CSCE 190 (A), CSCE 211 (A+), CSCE 146 (B+), CSCE 212 (A), CSCE 240 (B+), CSCE 215 (B+) \nLab Science Electives: GEOL 101 (A+), GEOL 103 (A+) \nMajor classes to take: CSCE 551, CSCE 355, CSCE 416, CSCE 490, CSCE 492 \nGFL electives: FREN 109, FREN 121, FREN 122, SPAN 109, SPAN 121, SPAN 122, ITAL 121, ITAL 122 ");
 
         
     }
