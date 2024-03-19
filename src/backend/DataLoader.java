@@ -349,7 +349,7 @@ public class DataLoader extends DataConstant {
                     if(carolinaCore.size()!= 0) {
                         for (int j = 0; j < carolinaCore.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (carolinaCore.get(j).equals(course.getCourseID())) {
+                                if (carolinaCore.get(j).equals(course.getCourseID().toString())) {
                                     state.getCarolinaCore().add(course);
                                 }
                             }
@@ -359,7 +359,7 @@ public class DataLoader extends DataConstant {
                     if(electives.size()!= 0) {
                         for (int j = 0; j < electives.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (electives.get(j).equals(course.getCourseID())) {
+                                if (electives.get(j).equals(course.getCourseID().toString())) {
                                     state.getElectives().add(course);
                                 }
                             }
@@ -369,7 +369,7 @@ public class DataLoader extends DataConstant {
                     if(libArts.size()!= 0) {
                         for (int j = 0; j < libArts.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (libArts.get(j).equals(course.getCourseID())) {
+                                if (libArts.get(j).equals(course.getCourseID().toString())) {
                                     state.getLiberalArtsElectives().add(course);
                                 }
                             }
@@ -379,7 +379,7 @@ public class DataLoader extends DataConstant {
                     if(foundational.size()!= 0) {
                         for (int j = 0; j < foundational.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (foundational.get(j).equals(course.getCourseID())) {
+                                if (foundational.get(j).equals(course.getCourseID().toString())) {
                                     state.getFoundationalCourses().add(course);
                                 }
                             }
@@ -389,7 +389,7 @@ public class DataLoader extends DataConstant {
                     if(lowerDivisonComputing.size()!= 0) {
                         for (int j = 0; j < lowerDivisonComputing.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
+                                if (lowerDivisonComputing.get(j).equals(course.getCourseID().toString())) {
                                     state.getFoundationalCourses().add(course);
                                 }
                             }
@@ -399,7 +399,7 @@ public class DataLoader extends DataConstant {
                     if(bussinessFoundation.size()!= 0) {
                         for (int j = 0; j < bussinessFoundation.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (bussinessFoundation.get(j).equals(course.getCourseID())) {
+                                if (bussinessFoundation.get(j).equals(course.getCourseID().toString())) {
                                     state.getBusinessInformationManagement().add(course);
                                 }
                             }
@@ -414,7 +414,7 @@ public class DataLoader extends DataConstant {
                     if(majorClasses.size()!= 0) {
                         for (int j = 0; j < majorClasses.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (majorClasses.get(j).equals(course.getCourseID())) {
+                                if (majorClasses.get(j).equals(course.getCourseID().toString())) {
                                     state.getMajorClasses().add(course);
                                 }
                             }
@@ -424,7 +424,7 @@ public class DataLoader extends DataConstant {
                     if(carolinaCore.size()!= 0) {
                         for (int j = 0; j < carolinaCore.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (carolinaCore.get(j).equals(course.getCourseID())) {
+                                if (carolinaCore.get(j).equals(course.getCourseID().toString())) {
                                     state.getCarolinaCore().add(course);
                                 }
                             }
@@ -434,7 +434,7 @@ public class DataLoader extends DataConstant {
                     if(electives.size()!= 0) {
                         for (int j = 0; j < electives.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (electives.get(j).equals(course.getCourseID())) {
+                                if (electives.get(j).equals(course.getCourseID().toString())) {
                                     state.getElectives().add(course);
                                 }
                             }
@@ -444,7 +444,7 @@ public class DataLoader extends DataConstant {
                     if(libArts.size()!= 0) {
                         for (int j = 0; j < libArts.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (libArts.get(j).equals(course.getCourseID())) {
+                                if (libArts.get(j).equals(course.getCourseID().toString())) {
                                     state.getLiberalArtsElectives().add(course);
                                 }
                             }
@@ -454,7 +454,7 @@ public class DataLoader extends DataConstant {
                     if(foundational.size()!= 0) {
                         for (int j = 0; j < foundational.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (foundational.get(j).equals(course.getCourseID())) {
+                                if (foundational.get(j).equals(course.getCourseID().toString())) {
                                     state.getFoundationalCourses().add(course);
                                 }
                             }
@@ -464,7 +464,7 @@ public class DataLoader extends DataConstant {
                     if(lowerDivisonComputing.size()!= 0) {
                         for (int j = 0; j < lowerDivisonComputing.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
+                                if (lowerDivisonComputing.get(j).equals(course.getCourseID().toString())) {
                                     state.getFoundationalCourses().add(course);
                                 }
                             }
@@ -474,7 +474,7 @@ public class DataLoader extends DataConstant {
                     if(eletricEng.size()!= 0) {
                         for (int j = 0; j < eletricEng.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (eletricEng.get(j).equals(course.getCourseID())) {
+                                if (eletricEng.get(j).equals(course.getCourseID().toString())) {
                                     state.getElectricalEngineering().add(course);
                                 }
                             }
@@ -491,7 +491,7 @@ public class DataLoader extends DataConstant {
                     if(majorClasses.size()!= 0) {
                         for (int j = 0; j < majorClasses.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (majorClasses.get(j).equals(course.getCourseID())) {
+                                if (majorClasses.get(j).equals(course.getCourseID().toString())) {
                                     state.getMajorClasses().add(course);
                                 }
                             }
@@ -501,7 +501,7 @@ public class DataLoader extends DataConstant {
                     if(carolinaCore.size()!= 0) {
                         for (int j = 0; j < carolinaCore.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (carolinaCore.get(j).equals(course.getCourseID())) {
+                                if (carolinaCore.get(j).equals(course.getCourseID().toString())) {
                                     state.getCarolinaCore().add(course);
                                 }
                             }
@@ -511,7 +511,7 @@ public class DataLoader extends DataConstant {
                     if(electives.size()!= 0) {
                         for (int j = 0; j < electives.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (electives.get(j).equals(course.getCourseID())) {
+                                if (electives.get(j).equals(course.getCourseID().toString())) {
                                     state.getElectives().add(course);
                                 }
                             }
@@ -521,7 +521,7 @@ public class DataLoader extends DataConstant {
                     if(libArts.size()!= 0) {
                         for (int j = 0; j < libArts.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (libArts.get(j).equals(course.getCourseID())) {
+                                if (libArts.get(j).equals(course.getCourseID().toString())) {
                                     state.getLiberalArtsElectives().add(course);
                                 }
                             }
@@ -531,7 +531,7 @@ public class DataLoader extends DataConstant {
                     if(foundational.size()!= 0) {
                         for (int j = 0; j < foundational.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (foundational.get(j).equals(course.getCourseID())) {
+                                if (foundational.get(j).equals(course.getCourseID().toString())) {
                                     state.getFoundationalCourses().add(course);
                                 }
                             }
@@ -541,7 +541,7 @@ public class DataLoader extends DataConstant {
                     if(lowerDivisonComputing.size()!= 0) {
                         for (int j = 0; j < lowerDivisonComputing.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (lowerDivisonComputing.get(j).equals(course.getCourseID())) {
+                                if (lowerDivisonComputing.get(j).equals(course.getCourseID().toString())) {
                                     state.getFoundationalCourses().add(course);
                                 }
                             }
@@ -551,7 +551,7 @@ public class DataLoader extends DataConstant {
                     if(labScience.size()!= 0) {
                         for (int j = 0; j < labScience.size(); j++) {
                             for(Class course : courses.getCourses() ) {
-                                if (labScience.get(j).equals(course.getCourseID())) {
+                                if (labScience.get(j).equals(course.getCourseID().toString())) {
                                     state.getLabScienceElective().add(course);
                                 }
                             }

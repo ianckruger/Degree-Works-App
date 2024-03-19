@@ -71,14 +71,17 @@ public class Roadmap {
 
     public void setCisState(CisState state) {
         this.cisState = state;
+        setMajorState(cisState);
     }
 
     public void setCeState(CeState state) {
         this.ceState = state;
+        setMajorState(ceState);
     }
 
     public void setCsState(CsceState state) {
         this.csceState = state;
+        setMajorState(csceState);
     }
 
     public String displayClasses() {
