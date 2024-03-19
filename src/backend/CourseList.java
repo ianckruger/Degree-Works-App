@@ -18,9 +18,6 @@ public class CourseList {
                 System.out.println("No courses found in the course list.");
             } else {
                 System.out.println("Courses loaded successfully:");
-                for (Class course : courses.courseList) {
-                    System.out.println(course);
-                }
             }
         }
         return courses;

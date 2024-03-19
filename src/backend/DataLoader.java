@@ -337,10 +337,7 @@ public class DataLoader extends DataConstant {
                         for (int j = 0; j < majorClasses.size(); j++) {
                             for(Class course : courses.getCourses() ) {
                                 if (majorClasses.get(j).equals(course.getCourseID().toString())) {
-                                    System.out.println("Got here");
-                                    System.out.println(course);
                                     state.getMajorClasses().add(course);
-                                    System.out.println(state.getMajorClasses());
                                 }
                             }
                         }
