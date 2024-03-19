@@ -57,7 +57,6 @@ public class RoadmapApplication {
                             if (student.getUserUUID().toString().equals(studentId) && student.getUserType().equalsIgnoreCase("student")) {
                                 // Set the student as the active user
                                 users.setActiveUser(student);
-                                
                                 return true;
                             }
                         }
