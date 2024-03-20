@@ -94,6 +94,11 @@ public abstract class MajorState {
         if(!majorClasses.isEmpty()) {
             for (Class course : majorClasses) {
                msString.append(course.toString());
+               if (course.IsCompleted()) {
+                msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         } else {
             msString.append("No major classes available\n");
@@ -105,6 +110,11 @@ public abstract class MajorState {
         if(!carolinaCore.isEmpty()) {
             for (Class course : carolinaCore) {
                 msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
@@ -112,6 +122,11 @@ public abstract class MajorState {
         if(!electives.isEmpty()) {
             for (Class course : electives) {
                 msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
@@ -119,6 +134,11 @@ public abstract class MajorState {
         if(!liberalArtsElectives.isEmpty()) {
             for (Class course : liberalArtsElectives) {
                 msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
@@ -126,6 +146,11 @@ public abstract class MajorState {
         if (!foundationalCourses.isEmpty()) {
             for (Class course : foundationalCourses) {
                 msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
@@ -133,6 +158,11 @@ public abstract class MajorState {
         if (!lowerDivisionComputing.isEmpty()) {
             for (Class course : lowerDivisionComputing) {
                 msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 

@@ -21,6 +21,11 @@ public class CsceState extends MajorState {
         csceString.append("\nLab Science Electives: \n");
         for (Class course : labScienceElective) {
             csceString.append(course.toString());
+            if (course.IsCompleted()) {
+                msString.append("  --  Passed; Grade: "+calcGrade());
+            } else if (course.checkIfFailed()) {
+                msString.append("  --  Failed; Grade: "+calcGrade());
+            }
         }
 
         return csceString.toString();

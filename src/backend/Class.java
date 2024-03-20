@@ -177,8 +177,10 @@ public class Class {
         return this.prereqs;
     }
 
-    public boolean completed() {
-        return this.completed;
+    public boolean IsCompleted() {
+        if(this.completed || this.transferred)
+            return true;
+        return false;
     }
 
     public boolean inProgress() {
