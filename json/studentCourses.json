@@ -106,11 +106,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2022",
-<<<<<<< HEAD
-        "grade":85.00
-=======
         "grade":87
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -143,11 +139,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2022",
-<<<<<<< HEAD
-        "grade": 89.00
-=======
         "grade":89
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
 
 
@@ -160,11 +152,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-<<<<<<< HEAD
-        "grade":81.00
-=======
         "grade":85
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -208,11 +196,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-<<<<<<< HEAD
-        "grade":89.00
-=======
         "grade":89
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
 
 
@@ -225,11 +209,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-<<<<<<< HEAD
-        "grade":89.00
-=======
         "grade":89
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -240,11 +220,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-<<<<<<< HEAD
-        "grade":89.00
-=======
         "grade":89
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -255,11 +231,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-<<<<<<< HEAD
-        "grade":88.00
-=======
         "grade":89
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -356,11 +328,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-<<<<<<< HEAD
-        "grade": 81.00
-=======
         "grade":85
->>>>>>> e17c23ca406605d8147fa6a873b3b19c2e4690e8
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
