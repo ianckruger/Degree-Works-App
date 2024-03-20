@@ -7,6 +7,7 @@ public class UserList {
     private static UserList users;
     private ArrayList<User> userList;
     private User ActiveUser;
+    private User advisor;
 
     private UserList() {
         this.ActiveUser = null;
@@ -71,6 +72,10 @@ public class UserList {
 
         }
         return false;
+    }
+
+    public void setAdvisor(User user) {
+        this.advisor = user;
     }
 
      
