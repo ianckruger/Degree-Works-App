@@ -6,7 +6,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID":"3a261b51-2b01-4b22-a51c-4fce51aaaad8",
@@ -39,7 +39,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2021",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -50,7 +50,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2021",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -61,7 +61,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2021",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -72,7 +72,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2021",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -83,7 +83,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2021",
-        "grade":"A+"
+        "grade":97.00
     },
 
     {
@@ -95,7 +95,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2022",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -117,7 +117,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2022",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -128,7 +128,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2022",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -174,7 +174,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -185,7 +185,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -242,7 +242,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -253,7 +253,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-        "grade":"A+"
+        "grade":97.00
     },
 
     {"end of scenario 1 classes": ""},
@@ -301,7 +301,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2023",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -391,7 +391,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -409,7 +409,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-        "grade":"A+"
+        "grade":97.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -526,7 +526,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -544,7 +544,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Spring 2023",
-        "grade":"A"
+        "grade":95.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",

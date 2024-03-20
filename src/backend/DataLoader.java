@@ -258,7 +258,7 @@ public class DataLoader extends DataConstant {
                         Object inProgressValue = courseAndStudentObject.get("in_progress");
                         inProgress = inProgressValue != null ? (Boolean) inProgressValue : false;
                         completed = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_COMPLETED);
-                        grade = (String)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
+                        grade = (Double)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
                         break;
                     }
                 }

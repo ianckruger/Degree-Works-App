@@ -24,8 +24,7 @@ public abstract class MajorState {
         this.liberalArtsElectives = new ArrayList<>();
         this.foundationalCourses = new ArrayList<>();
         this.lowerDivisionComputing = new ArrayList<>();
-        this.advisorNotes = new ArrayList<>();
-        
+        this.advisorNotes = new ArrayList<>();   
     }
 
     public MajorState(MajorState majorState) {
