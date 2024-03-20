@@ -211,29 +211,4 @@ public class RoadmapApplication {
 
 
    
-    public void viewTranscript() {
-
-    }
-    
-    public void switchState(String state) {
-
-    }
-    public void addFavoriteClass(Class course) {
-
-    }
-
-    public void inputNotesForStudent(String notes) {
-
-    }
-
-    public void whatIf(String major) {
-
-    }
-
-
-
-
-
-
-
 }
