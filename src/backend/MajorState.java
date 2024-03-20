@@ -105,6 +105,9 @@ public abstract class MajorState {
         if(!carolinaCore.isEmpty()) {
             for (Class course : carolinaCore) {
                 msString.append(course.toString());
+                if (course.completed()) {
+                    msString.append("major");
+                }
             }
         }
 
