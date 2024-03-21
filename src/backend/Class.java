@@ -149,6 +149,26 @@ public class Class {
         this.grade = grade;
     }
 
+    public String calcGrade() {
+        
+        if(this.grade >= 90) {
+            return "A";
+        }
+        else if(this.grade <= 89 && this.grade >= 80) {
+            return "B";
+        }
+        else if(this.grade <= 79 && this.grade >= 70) {
+            return "C";
+        }
+        else if(this.grade <= 69 && this.grade >= 65) {
+            return "D";
+        }
+        else {
+            return "F";
+        }
+
+    }
+
     public ArrayList<String> getPrereqIDs() {
         return this.prerequisitesIDS;
     }

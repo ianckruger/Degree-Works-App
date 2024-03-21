@@ -25,7 +25,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"transferred",
-        "grade":"transferred"
+        "grade": 90.00
     },
 
     { "comment": "This is the start of scenario 1 classes."},
@@ -163,7 +163,7 @@
         "inProgess":false,
         "completed":true,
         "semesterTaken":"Fall 2022",
-        "grade":"C+"
+        "grade":79.00
     },
     {
         "studentID":"f6aed0c2-f32a-489a-a6c6-505985db2788",
@@ -265,7 +265,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -274,7 +274,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"S",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -283,7 +283,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -292,7 +292,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"Spring 2023",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -310,7 +310,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -319,7 +319,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -337,7 +337,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -346,7 +346,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -355,7 +355,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -364,7 +364,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -373,7 +373,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -382,7 +382,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -400,7 +400,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -418,7 +418,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -427,7 +427,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -436,7 +436,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -445,7 +445,7 @@
         "inProgess":true,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -454,7 +454,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -481,7 +481,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -490,7 +490,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -499,7 +499,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -508,7 +508,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -535,7 +535,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -563,7 +563,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -572,7 +572,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -581,7 +581,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -590,7 +590,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -599,7 +599,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -608,7 +608,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -617,7 +617,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -626,7 +626,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -644,7 +644,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -653,7 +653,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     },
     {
         "studentID": "aa39ad3f-1cbc-4b14-8051-efb5500ff0b8",
@@ -662,7 +662,7 @@
         "inProgess":false,
         "completed":false,
         "semesterTaken":"",
-        "grade":""
+        "grade":0.00
     }
 
 
