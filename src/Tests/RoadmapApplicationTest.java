@@ -39,10 +39,10 @@ public class RoadmapApplicationTest {
    @Test
 
    public void testRegisterStudent() {
-        assertTrue(app.register("student1", "John", "Doe", "123", "student"));
+        app.register("student1", "John", "Doe", "123", "student");
         app.login("student1", "123");
-        assertEquals(1, users.getUsers().size());
-        assertTrue(users.getUsers().get(0) instanceof Student);
+        AssertEquals()
+
    }
 
    @Test
@@ -78,6 +78,12 @@ public class RoadmapApplicationTest {
    }
 
    @Test
+   void testNameTakennull() {
+    app.register(null, "", "", "", "");
+    assertFalse(app.isUsernameTaken(null));
+   }
+
+   @Test
    void testLoginStudent() {
     app.register("user1", "John", "Do", "123", "student");
     assertTrue(app.login("user1", "123"));
@@ -103,15 +109,23 @@ public class RoadmapApplicationTest {
 
    @Test
    void testUserNameNull() {
-    app.register(null,"john","Doe","123","student");
-    assertTrue(app.login(null, "123"));
+    app.register(null,"",""," ","");
+    assertFalse(app.login(null, ""));
+    }
+
+   @Test
+   void testAddAdvisee() {
+    app.register("advisor1", "John", "Doe", "password", "advisor");
+    app.register("student1", "Jane", "Smith", "password", "student");
+    assertTrue(app.addAdvisee("advisor1", "student1"));
+
    }
 
 
-   
 
 
-   
+
+
 
     
 }

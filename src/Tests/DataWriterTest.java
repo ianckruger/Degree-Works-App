@@ -60,7 +60,7 @@ import backend.Parent;
     void testWritingParent() {
         userList.add(new Parent("kayden05", "Kayden", "Lee", "123", "parent"));
         DataWriter.saveUsers();
-        assertEquals("erik09", DataLoader.readUsers().get(0).getUserName());
+        assertEquals("kayden05", DataLoader.readUsers().get(0).getUserName());
     }
 
     @Test
@@ -81,7 +81,7 @@ import backend.Parent;
 
     @Test
     void testWritingNullUser(){
-        userList.add(new Advisor(null,"","","",null));
+        userList.add(new Advisor(null,"","","",""));
         DataWriter.saveUsers();
         assertEquals(null, DataLoader.readUsers().get(0).getUserName());
     }

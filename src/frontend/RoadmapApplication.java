@@ -52,13 +52,13 @@ public class RoadmapApplication {
                         } else if (user.getUserType().equalsIgnoreCase("advisor")) {
                             users.setAdvisor(user);
                             return false;
-                        }
+                        } 
                         
                     }
                     return false;
                 }
             }
-        }
+        } 
         return false; // Return false if no user is found or incorrect credentials
     }
 
@@ -170,7 +170,7 @@ public class RoadmapApplication {
         UserList users = UserList.getInstance();
         ArrayList<User> userList = users.getUsers();
         for (User user : userList) {
-            if(user.getUserName().equals(userName)) {
+            if(user.getUserName().equals(userName) && user.getUserName() != null) {
                 return true;
             }
 
@@ -180,7 +180,7 @@ public class RoadmapApplication {
     }
 
     public boolean logout() {
-        if (user == null) {
+        if (user != null) {
             return false;
         }
         DataWriter.saveUsers();
