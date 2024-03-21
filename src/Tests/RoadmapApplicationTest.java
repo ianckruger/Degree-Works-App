@@ -119,7 +119,8 @@ public class RoadmapApplicationTest {
    void testAddAdvisee() {
     app.register("advisor1", "John", "Doe", "password", "advisor");
     app.register("student1", "Jane", "Smith", "password", "student");
-    assertTrue(app.addAdvisee("advisor1", "student1"));
+    String studentId = users.getUsers().get(1).getUserUUID().toString();
+    assertTrue(app.addAdvisee("advisor1",  studentId));
 
    }
 
