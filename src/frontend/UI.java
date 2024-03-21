@@ -129,6 +129,7 @@ public class UI {
             System.out.println("Registration failed.");
         }
 
+        // wont work if not added to user list
         if (!application.login(userName, password)) {
             System.out.println("Username or Password is not correct.");
             return;

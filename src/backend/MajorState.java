@@ -95,9 +95,9 @@ public abstract class MajorState {
             for (Class course : majorClasses) {
                msString.append(course.toString());
                if (course.IsCompleted()) {
-                msString.append("  --  Passed; Grade: "+calcGrade());
+                msString.append("  --  Passed; Grade: "+course.calcGrade());
                 } else if (course.checkIfFailed()) {
-                msString.append("  --  Failed; Grade: "+calcGrade());
+                msString.append("  --  Failed; Grade: "+course.calcGrade());
                 }
             }
         } else {
@@ -111,9 +111,9 @@ public abstract class MajorState {
             for (Class course : carolinaCore) {
                 msString.append(course.toString());
                 if (course.IsCompleted()) {
-                    msString.append("  --  Passed; Grade: "+calcGrade());
+                    msString.append("  --  Passed; Grade: "+course.calcGrade());
                 } else if (course.checkIfFailed()) {
-                    msString.append("  --  Failed; Grade: "+calcGrade());
+                    msString.append("  --  Failed; Grade: "+course.calcGrade());
                 }
             }
         }
@@ -123,9 +123,9 @@ public abstract class MajorState {
             for (Class course : electives) {
                 msString.append(course.toString());
                 if (course.IsCompleted()) {
-                    msString.append("  --  Passed; Grade: "+calcGrade());
+                    msString.append("  --  Passed; Grade: "+course.calcGrade());
                 } else if (course.checkIfFailed()) {
-                    msString.append("  --  Failed; Grade: "+calcGrade());
+                    msString.append("  --  Failed; Grade: "+course.calcGrade());
                 }
             }
         }
@@ -135,9 +135,9 @@ public abstract class MajorState {
             for (Class course : liberalArtsElectives) {
                 msString.append(course.toString());
                 if (course.IsCompleted()) {
-                    msString.append("  --  Passed; Grade: "+calcGrade());
+                    msString.append("  --  Passed; Grade: "+course.calcGrade());
                 } else if (course.checkIfFailed()) {
-                    msString.append("  --  Failed; Grade: "+calcGrade());
+                    msString.append("  --  Failed; Grade: "+course.calcGrade());
                 }
             }
         }
@@ -147,9 +147,9 @@ public abstract class MajorState {
             for (Class course : foundationalCourses) {
                 msString.append(course.toString());
                 if (course.IsCompleted()) {
-                    msString.append("  --  Passed; Grade: "+calcGrade());
+                    msString.append("  --  Passed; Grade: "+course.calcGrade());
                 } else if (course.checkIfFailed()) {
-                    msString.append("  --  Failed; Grade: "+calcGrade());
+                    msString.append("  --  Failed; Grade: "+course.calcGrade());
                 }
             }
         }
@@ -159,9 +159,9 @@ public abstract class MajorState {
             for (Class course : lowerDivisionComputing) {
                 msString.append(course.toString());
                 if (course.IsCompleted()) {
-                    msString.append("  --  Passed; Grade: "+calcGrade());
+                    msString.append("  --  Passed; Grade: "+course.calcGrade());
                 } else if (course.checkIfFailed()) {
-                    msString.append("  --  Failed; Grade: "+calcGrade());
+                    msString.append("  --  Failed; Grade: "+course.calcGrade());
                 }
             }
         }
