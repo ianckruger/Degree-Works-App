@@ -1,11 +1,6 @@
 package backend;
 import java.util.ArrayList;
 import java.util.UUID;
-import java.io.FileReader;
-import java.io.IOException;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 public class Roadmap {
     private Student student;
@@ -85,12 +80,15 @@ public class Roadmap {
     }
 
     public String displayClasses() {
+        System.out.println("Major State: " + majorState.getMajor() + ".\n");
         return majorState.toString();
     }
     
     public String displayStudentInfo() {
         return "";
     }
+
+    
     
 
 }

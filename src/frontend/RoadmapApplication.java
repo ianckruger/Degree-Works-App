@@ -36,37 +36,86 @@ public class RoadmapApplication {
     public boolean login(String userName, String password) {
         UserList users = UserList.getInstance();
         ArrayList<User> userList = users.getUsers();
-        Scanner scanner = new Scanner(System.in); // Add scanner initialization
-        if (userList != null) {
-            for (User user : userList) {
-                if (user.getUserName().equals(userName) && user.getPassword().equals(password)) {
-                    // If user is a student
-                    if (user.getUserType().equalsIgnoreCase("student")) {
-                        users.setActiveUser(user);
-                        this.courseList = CourseList.getInstance();
-                        this.roadmap = Roadmap.getInstance();
-                        return true;
-                    } else if (user.getUserType().equalsIgnoreCase("advisor")) {
-                        System.out.println("Enter the student ID you would like to view:");
-                        String studentId = scanner.nextLine();
-                        // Search for the student in the user list
-                        for (User student : userList) {
-                            if (student.getUserUUID().toString().equals(studentId) && student.getUserType().equalsIgnoreCase("student")) {
-                                // Set the student as the active user
-                                users.setActiveUser(student);
-                                this.courseList = CourseList.getInstance();
-                                this.roadmap = Roadmap.getInstance();
-                                return true;
-                            }
+        try (Scanner scanner = new Scanner(System.in)) {
+            if (userList != null) {
+                for (User user : userList) {
+                    if (user.getUserName().equals(userName) && user.getPassword().equals(password)) {
+                        // If user is a student
+                        if (user.getUserType().equalsIgnoreCase("student")) {
+                            Student student = (Student) user;
+                            users.setActiveUser(student);
+                            CourseList courseList = CourseList.getInstance();
+                            Roadmap roadmap = Roadmap.getInstance();
+                            setRoadmap(roadmap);
+                            roadmap.setMajorState(student.getCurrentMajor());
+                            return true;
+                        } else if (user.getUserType().equalsIgnoreCase("advisor")) {
+                            users.setAdvisor(user);
+                            return false;
                         }
-                        // Student with the entered ID not found
-                        System.out.println("Student not found.");
-                        return false; // Return false outside the loop
+                        
                     }
+                    return false;
                 }
             }
         }
         return false; // Return false if no user is found or incorrect credentials
+    }
+
+
+    public void advisor() {
+        UserList users = UserList.getInstance();
+        ArrayList<User> userList = users.getUsers();
+        User user = users.getAdvisor();
+        try (Scanner scanner = new Scanner(System.in)) {
+            int choice = RoadmapAdvisorOptions(user);
+            if (choice == 1) {
+                System.out.println("Enter a student ID to find: ");
+                String studentId = scanner.nextLine();
+                for (User student : userList) {
+                    if (student.getUserUUID().toString().equals(studentId) && student.getUserType().equalsIgnoreCase("student")) {
+                        users.setActiveUser(student);
+                        this.courseList = CourseList.getInstance();
+                        this.roadmap = Roadmap.getInstance();
+
+                    }
+                }
+            }
+            else if (choice == 2) {
+                if (users.getActive() != null) {
+                    System.out.println("What note would you like to add?: ");
+                    String note = scanner.nextLine();
+                    Student student = (Student)users.getActive();
+                    ArrayList<String> notes = student.getNotes();
+                    notes.add(note);
+
+
+                } else {
+                    System.out.println("Load a student first.");
+                }
+
+                }
+            }
+    }
+
+    public void student() {
+        UserList users = UserList.getInstance();
+        Student student = (Student)users.getActive();
+        System.out.println("Hello "+user.getFirstName()+". What would you like to do?\n1. Display Roadmap\n2. Find Class");
+        try (Scanner scanner = new Scanner(System.in)) {
+            int choice = scanner.nextInt();
+        }
+
+    }
+
+    
+
+    public int RoadmapAdvisorOptions(User user) {
+        System.out.println("Hello "+user.getFirstName()+". What would you like to do?\n1. View Student\n2. Add note");
+        try (Scanner scanner = new Scanner(System.in)) {
+            int choice = scanner.nextInt();
+            return choice;
+        }
     }
 
     public boolean addAdvisee(String advisorUsername, String studentId) {
@@ -170,32 +219,10 @@ public class RoadmapApplication {
 
     }
 
+    public void setRoadmap(Roadmap roadmap) {
+        this.roadmap = roadmap;
+    }
 
 
    
-    public void viewTranscript() {
-
-    }
-    
-    public void switchState(String state) {
-
-    }
-    public void addFavoriteClass(Class course) {
-
-    }
-
-    public void inputNotesForStudent(String notes) {
-
-    }
-
-    public void whatIf(String major) {
-
-    }
-
-
-
-
-
-
-
 }

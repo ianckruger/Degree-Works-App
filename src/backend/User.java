@@ -37,43 +37,6 @@ public abstract class User {
 
     }
 
-    /* 
-    public boolean login(String userName, String password) {
-        
-
-    }
-
-    public boolean signUp(String firstName, String lastName, String userName, String password, String userType) {
-
-    }
-    */
-
-    @Override
-    public String toString() {
-        JSONObject courseData = readCourseDataFromFile();
-        if (courseData != null) {
-            String courseSubjectCode = (String) courseData.get("courseSubjectCode");
-            String courseNumber = (String) courseData.get("courseNumber");
-            String courseTitle = (String) courseData.get("courseTitle");
-            long credits = (long) courseData.get("credits");
-            return "Course: " + courseSubjectCode + courseNumber + " - " + courseTitle + " (Credits: " + credits + ")";
-        } else {
-            return "Error: Unable to retrieve course data";
-        }
-    }
-
-    private JSONObject readCourseDataFromFile() {
-        JSONParser parser = new JSONParser();
-        try {
-            Object obj = parser.parse(new FileReader("class.json"));
-            JSONObject jsonObject = (JSONObject) obj;
-            return jsonObject;
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     public void setUserType(String userType) {
         this.userType = userType;
     }

@@ -244,7 +244,7 @@ public class DataLoader extends DataConstant {
                 boolean transferred = false;
                 boolean inProgress = false;
                 boolean completed = false;
-                String grade = "";
+                double grade = 0.0;
 
                 
                 for (int j=0; j < courseAndStudentJSON.size(); j++) {    
@@ -254,11 +254,9 @@ public class DataLoader extends DataConstant {
                     if(userID.equals(courseStudentID)&& tempID.equals(courseMatchID)) {
                         yearTaken = (String)courseAndStudentObject.get(STUDENT_COURSE_SEMESTER_TAKEN);
                         transferred = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_TRANSFERRED);
-                       // inProgress = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_IN_PROGRESS);
-                        Object inProgressValue = courseAndStudentObject.get("in_progress");
-                        inProgress = inProgressValue != null ? (Boolean) inProgressValue : false;
+                        inProgress = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_IN_PROGRESS);
                         completed = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_COMPLETED);
-                        grade = (String)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
+                        grade = (Double)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
                         break;
                     }
                 }
@@ -330,9 +328,10 @@ public class DataLoader extends DataConstant {
                 
 
                 if(major.equalsIgnoreCase("cis")) {
+                    System.out.println("Loading CIS");
                     CisState state = new CisState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-                    System.out.println(majorClasses);
+                   
                     if(majorClasses.size() != 0) {
                         for (int j = 0; j < majorClasses.size(); j++) {
                             for(Class course : courses.getCourses() ) {
@@ -406,6 +405,7 @@ public class DataLoader extends DataConstant {
 
 
                 } else if (major.equalsIgnoreCase("ce")) {
+                    System.out.println("Loading CE");
                     CeState state = new CeState(roadmap);
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
                     if(majorClasses.size()!= 0) {
@@ -482,6 +482,7 @@ public class DataLoader extends DataConstant {
 
 
                 } else if (major.equalsIgnoreCase("csce")){
+                    System.out.println("Loading CSCE");
                     CsceState state = new CsceState(roadmap);
 
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
@@ -539,7 +540,7 @@ public class DataLoader extends DataConstant {
                         for (int j = 0; j < lowerDivisonComputing.size(); j++) {
                             for(Class course : courses.getCourses() ) {
                                 if (lowerDivisonComputing.get(j).equals(course.getCourseID().toString())) {
-                                    state.getFoundationalCourses().add(course);
+                                    state.getLowerDivisionComputing().add(course);
                                 }
                             }
                         }

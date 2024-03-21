@@ -29,7 +29,7 @@ public class Class {
     private boolean completed;
     private boolean inProgress;
     private boolean transferred;
-    private String grade;
+    private double grade;
 
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
     ArrayList<String> prequisites, String courseDescription) {
@@ -62,7 +62,7 @@ public class Class {
     
     }
     public Class(String courseSubjectCode, String courseNumber, String courseTitle, UUID courseID, int credits, String applicationArea,
-    ArrayList<String> prequisites, String courseDescription, String semesterTaken, boolean completed, boolean inProgress, boolean transferred, String grade) {
+    ArrayList<String> prequisites, String courseDescription, String semesterTaken, boolean completed, boolean inProgress, boolean transferred, double grade) {
         setCourseSubjectCode(courseSubjectCode);
         setCourseNumber(courseNumber);
         setCourseTitle(courseTitle);
@@ -142,11 +142,31 @@ public class Class {
         this.applicationArea = applicationArea;
     }
 
-    public String getGrade() {
+    public double getGrade() {
         return grade;
     }
-    public void setGrade(String grade) {
+    public void setGrade(double grade) {
         this.grade = grade;
+    }
+
+    public String calcGrade() {
+        
+        if(this.grade >= 90) {
+            return "A";
+        }
+        else if(this.grade <= 89 && this.grade >= 80) {
+            return "B";
+        }
+        else if(this.grade <= 79 && this.grade >= 70) {
+            return "C";
+        }
+        else if(this.grade <= 69 && this.grade >= 65) {
+            return "D";
+        }
+        else {
+            return "F";
+        }
+
     }
 
     public ArrayList<String> getPrereqIDs() {
@@ -157,10 +177,19 @@ public class Class {
         return this.prereqs;
     }
 
+    public boolean IsCompleted() {
+        if(this.completed || this.transferred)
+            return true;
+        return false;
+    }
+
+    public boolean inProgress() {
+        return this.inProgress;
+    }
     
 
     public boolean checkIfFailed() {
-        if (this.grade.equals("C") || this.grade.equals("D") || this.grade.equals("F")) {
+        if (this.grade>65) {
             return true; // true for failed
         }
         return false; // false if passed

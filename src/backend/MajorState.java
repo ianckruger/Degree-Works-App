@@ -14,6 +14,7 @@ public abstract class MajorState {
     protected ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
     protected ArrayList<String> advisorNotes;
+    protected String major;
 
     public MajorState(Roadmap roadmap) {
         this.roadmap = roadmap;
@@ -23,8 +24,7 @@ public abstract class MajorState {
         this.liberalArtsElectives = new ArrayList<>();
         this.foundationalCourses = new ArrayList<>();
         this.lowerDivisionComputing = new ArrayList<>();
-        this.advisorNotes = new ArrayList<>();
-        
+        this.advisorNotes = new ArrayList<>();   
     }
 
     public MajorState(MajorState majorState) {
@@ -79,13 +79,26 @@ public abstract class MajorState {
         this.electives = electives;
     }
 
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public String getMajor() {
+        return this.major;
+    }
+
     public String toString() {
         StringBuilder msString = new StringBuilder();
 
-        msString.append("Major Classes: \n");
+        msString.append("\nMajor Classes: \n");
         if(!majorClasses.isEmpty()) {
             for (Class course : majorClasses) {
-               msString.append(course.toString()).append("\n");
+               msString.append(course.toString());
+               if (course.IsCompleted()) {
+                msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         } else {
             msString.append("No major classes available\n");
@@ -93,38 +106,63 @@ public abstract class MajorState {
         
 
 
-        msString.append("Carolina Core: \n");
+        msString.append("\nCarolina Core: \n");
         if(!carolinaCore.isEmpty()) {
             for (Class course : carolinaCore) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
-        msString.append("Electives: \n");
+        msString.append("\nElectives: \n");
         if(!electives.isEmpty()) {
             for (Class course : electives) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
-        msString.append("Liberal Arts Electives: \n");
+        msString.append("\nLiberal Arts Electives: \n");
         if(!liberalArtsElectives.isEmpty()) {
             for (Class course : liberalArtsElectives) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
-        msString.append("Foundational Courses: \n");
+        msString.append("\nFoundational Courses: \n");
         if (!foundationalCourses.isEmpty()) {
             for (Class course : foundationalCourses) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 
-        msString.append("Lower Division Computing: \n");
+        msString.append("\nLower Division Computing: \n");
         if (!lowerDivisionComputing.isEmpty()) {
             for (Class course : lowerDivisionComputing) {
-                msString.append(course.toString()).append("\n");
+                msString.append(course.toString());
+                if (course.IsCompleted()) {
+                    msString.append("  --  Passed; Grade: "+calcGrade());
+                } else if (course.checkIfFailed()) {
+                    msString.append("  --  Failed; Grade: "+calcGrade());
+                }
             }
         }
 

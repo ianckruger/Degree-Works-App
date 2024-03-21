@@ -8,6 +8,7 @@ public class CsceState extends MajorState {
     public CsceState(Roadmap roadmap) {
         super(roadmap);
         this.labScienceElective = new ArrayList<>();
+        setMajor("csce");
     };
 
     public ArrayList<Class> getLabScienceElective() {
@@ -17,9 +18,14 @@ public class CsceState extends MajorState {
     public String toString() {
         StringBuilder csceString = new StringBuilder(super.toString());
 
-        csceString.append("Lab Science Electives: \n");
+        csceString.append("\nLab Science Electives: \n");
         for (Class course : labScienceElective) {
-            csceString.append(course.toString()).append("\n");
+            csceString.append(course.toString());
+            if (course.IsCompleted()) {
+                csceString.append("  --  Passed; Grade: "+calcGrade());
+            } else if (course.checkIfFailed()) {
+                csceString.append("  --  Failed; Grade: "+calcGrade());
+            }
         }
 
         return csceString.toString();

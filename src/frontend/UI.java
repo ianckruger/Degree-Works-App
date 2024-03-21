@@ -37,6 +37,10 @@ public class UI {
             case 1:
                 System.out.println("Logging in...");
                 userLogin();
+                UserList users = UserList.getInstance();
+                if (users.getAdvisor()!=null) {
+                    application.advisor();
+                }
 
                 break;
             case 2:
