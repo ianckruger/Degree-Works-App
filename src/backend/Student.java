@@ -97,6 +97,14 @@ public class Student extends User {
     public ArrayList<Advisor> getAdvisor() {
         return advisors;
     }
+
+    public ArrayList<String> getNotes() {
+        return this.notes;
+    }
+
+    public void setNotes (ArrayList<String> notes) {
+        this.notes = notes;
+    }
     
     
 

@@ -244,7 +244,7 @@ public class DataLoader extends DataConstant {
                 boolean transferred = false;
                 boolean inProgress = false;
                 boolean completed = false;
-                String grade = "";
+                double grade = 0.0;
 
                 
                 for (int j=0; j < courseAndStudentJSON.size(); j++) {    

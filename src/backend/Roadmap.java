@@ -39,7 +39,6 @@ public class Roadmap {
 
     }
 
-
     public void setAdvisorNotes(ArrayList<String> notes) {
         this.advisorNotes = notes;
     }
@@ -88,6 +87,8 @@ public class Roadmap {
     public String displayStudentInfo() {
         return "";
     }
+
+    
     
 
 }
