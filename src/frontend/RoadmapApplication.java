@@ -53,7 +53,6 @@ public class RoadmapApplication {
                             users.setAdvisor(user);
                             return false;
                         } 
-                        
                     }
                     return false;
                 }

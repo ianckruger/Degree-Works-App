@@ -41,7 +41,9 @@ public class RoadmapApplicationTest {
    public void testRegisterStudent() {
         app.register("student1", "John", "Doe", "123", "student");
         app.login("student1", "123");
-        AssertEquals()
+        assertEquals("student1", users.getActive().getUserName());
+        assertTrue(users.getActive() instanceof Student);
+
 
    }
 
