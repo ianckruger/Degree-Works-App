@@ -23,9 +23,9 @@ public class CeState extends MajorState {
         for (Class course : electricalEngineering) {
             ceString.append(course.toString());
             if (course.IsCompleted()) {
-                ceString.append("  --  Passed; Grade: "+calcGrade());
+                ceString.append("  --  Passed; Grade: "+course.calcGrade());
             } else if (course.checkIfFailed()) {
-                ceString.append("  --  Failed; Grade: "+calcGrade());
+                ceString.append("  --  Failed; Grade: "+course.calcGrade());
             }
         }
 
