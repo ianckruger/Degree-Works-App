@@ -22,12 +22,14 @@ public class RoadmapApplicationTest {
     private UserList users = UserList.getInstance();
     private ArrayList<User> userList = users.getUsers();
     private RoadmapApplication app = new RoadmapApplication();
-    private Roadmap roadmap = Roadmap.getInstance();
+    
 
    @BeforeEach
    public void setup() {
      UserList.getInstance().getUsers().clear();
      DataWriter.saveUsers();
+     app.register("testUser", "John", "Doe", "password", "student");
+     app.login("testUser", "password");
    }
 
    @AfterEach
@@ -123,6 +125,8 @@ public class RoadmapApplicationTest {
     assertTrue(app.addAdvisee("advisor1",  studentId));
 
    }
+
+   
 
 
 
