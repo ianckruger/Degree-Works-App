@@ -22,12 +22,14 @@ public class RoadmapApplication {
     private UserList userlist;
     private Roadmap roadmap;
     private User user;
+    private Scanner scanner;
     private CourseList courseList;
     
 
 
     public RoadmapApplication() {
         this.userlist = UserList.getInstance();
+        this.scanner = new Scanner(System.in);
  
         
     }
@@ -51,11 +53,10 @@ public class RoadmapApplication {
                             return true;
                         } else if (user.getUserType().equalsIgnoreCase("advisor")) {
                             users.setAdvisor(user);
-                            return false;
+                            return true;
                         }
                         
                     }
-                    return false;
                 }
             }
         }
@@ -102,20 +103,17 @@ public class RoadmapApplication {
         UserList users = UserList.getInstance();
         Student student = (Student)users.getActive();
         System.out.println("Hello "+user.getFirstName()+". What would you like to do?\n1. Display Roadmap\n2. Find Class");
-        try (Scanner scanner = new Scanner(System.in)) {
-            int choice = scanner.nextInt();
-        }
+        int choice = scanner.nextInt();
 
     }
 
     
 
     public int RoadmapAdvisorOptions(User user) {
-        System.out.println("Hello "+user.getFirstName()+". What would you like to do?\n1. View Student\n2. Add note");
-        try (Scanner scanner = new Scanner(System.in)) {
-            int choice = scanner.nextInt();
-            return choice;
-        }
+        System.out.println("Hello "+user.getFirstName()+". What would you like to do?\n1. View Student\n2. Add note\n");
+        scanner.next();
+        int choice = scanner.nextInt();
+        return choice;
     }
 
     public boolean addAdvisee(String advisorUsername, String studentId) {
