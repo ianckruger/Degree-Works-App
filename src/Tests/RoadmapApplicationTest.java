@@ -126,6 +126,104 @@ public class RoadmapApplicationTest {
 
    }
 
+   @Test
+   void  tesAddNonStudentAdvisee() {
+    app.register("advisor1", "John", "Doe", "password", "advisor");
+    app.register("student1", "Jane", "Smith", "password", "advisor");
+    String addedUserId = users.getUsers().get(1).getUserUUID().toString();
+    assertFalse(app.addAdvisee("advisor1",  addedUserId));
+   }
+
+   @Test
+   void testAddNullAdvisee() {
+    app.register("advisor1", "John", "Doe", "password", "advisor");
+    assertFalse(app.addAdvisee("advisor1",  null));
+   }
+
+   @Test
+   void testPrintProgress_studentWithMajor() {
+    app.register("student1", "Jane", "Smith", "password", "student");
+    app.login("student1", "password");
+    Student student = (Student) users.getActive();
+    student.setCurrentMajor("cs");
+    assertTrue(app.printStudentProgress());
+   }
+
+   @Test
+   void testPrintProgress_studentNoMajor() {
+    app.register("student1", "Jane", "Smith", "password", "student");
+    app.login("student1", "password");
+    Student student = (Student) users.getActive();
+    student.setCurrentMajor("");
+    assertFalse(app.printStudentProgress());
+   }
+
+   @Test
+   void testPrintProgress_nullStudent() {
+    app.register(null, null, null, null, null);
+    app.login(null,null);
+    Student student = (Student) users.getActive();
+     assertFalse(app.printStudentProgress());
+   }
+
+   @Test
+   void TestaddNoteToStudent() {
+    app.register("advisor1", "John", "Doe", "password", "advisor");
+    app.register("student1", "Jane", "Smith", "password", "student");
+    app.addAdvisee(null, null);
+    String note = "consider picking STAT as your application!";
+    assertTrue(app.addNoteToStudent(note));
+   }
+
+   @Test
+   void testAddEmptyNoteToStudent() {
+    app.register("advisor1", "John", "Doe", "password", "advisor");
+    app.register("student1", "Jane", "Smith", "password", "student");
+    String studentId = users.getUsers().get(1).getUserUUID().toString();
+    app.addAdvisee("advisor1",  studentId);
+    String note = "Consider picking STAT as your application";
+    assertFalse(app.addNoteToStudent(note));
+   }
+
+   @Test
+   void testAddNullNoteToStudent() {
+    app.register("advisor1", "John", "Doe", "password", "advisor");
+    app.register("student1", "Jane", "Smith", "password", "student");
+    String studentId = users.getUsers().get(1).getUserUUID().toString();
+    app.addAdvisee("advisor1",  studentId);
+    assertFalse(app.addNoteToStudent(null));
+   }
+
+   @Test
+   void testLogOut() {
+    app.register("student1", "Jane", "Smith", "password", "student");
+    app.login("student1","password");
+    assertTrue(app.logout());
+   }
+
+   @Test
+   void testNullUserLogOUt() {
+     app.login(null, null);
+     assertFalse(app.logout());
+
+   }
+
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+   
+
    
 
 

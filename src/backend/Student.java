@@ -74,6 +74,11 @@ public class Student extends User {
         return currentMajor;
     }
 
+    public void setCurrentMajor(String currentMajor) {
+        this.currentMajor = currentMajor;
+
+    }
+
     public int getEarnedCreditHours() {
         return earnedCreditHours;
     }
