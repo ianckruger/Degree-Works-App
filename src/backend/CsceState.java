@@ -15,6 +15,10 @@ public class CsceState extends MajorState {
         return labScienceElective;
     }
 
+    public void setLabScienceElective(ArrayList<Class> labScienceElective) {
+        this.labScienceElective = labScienceElective;
+    }
+
     public String toString() {
         StringBuilder csceString = new StringBuilder(super.toString());
 
