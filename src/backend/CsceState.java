@@ -31,5 +31,10 @@ public class CsceState extends MajorState {
         return csceString.toString();
     
     }
+
+    public void clear() {
+        this.clear();
+        this.labScienceElective.clear();
+    }
     
 }

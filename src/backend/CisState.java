@@ -33,5 +33,11 @@ public class CisState extends MajorState {
 
         return cisString.toString();
     }
+
+    public void clear() {
+        this.clear();
+        this.businessInformationManagement.clear();
+
+    }
     
 }

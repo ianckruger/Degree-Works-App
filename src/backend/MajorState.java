@@ -87,6 +87,16 @@ public abstract class MajorState {
         return this.major;
     }
 
+    public void clear() {
+        this.majorClasses.clear();
+        this.carolinaCore.clear();
+        this.electives = new ArrayList<>();
+        this.liberalArtsElectives.clear();
+        this.foundationalCourses.clear();
+        this.lowerDivisionComputing.clear();
+        this.advisorNotes.clear();
+    }
+
     public String toString() {
         StringBuilder msString = new StringBuilder();
 

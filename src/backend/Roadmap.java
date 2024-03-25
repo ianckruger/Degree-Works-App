@@ -88,6 +88,10 @@ public class Roadmap {
         return "";
     }
 
+    public MajorState getMajorState() {
+        return this.majorState;
+    }
+
     
     
 

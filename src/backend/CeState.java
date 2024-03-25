@@ -31,5 +31,10 @@ public class CeState extends MajorState {
 
         return ceString.toString();
     }
+
+    public void clear() {
+        this.clear();
+        this.electricalEngineering.clear();
+    }
     
 }
