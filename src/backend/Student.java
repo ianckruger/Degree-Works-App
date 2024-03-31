@@ -23,7 +23,7 @@ public class Student extends User {
         super(userName, firstName, lastName, password, userType);
         this.gpa = 0;
         this.year = "";
-        this.currentMajor = "";
+        this.currentMajor = "csce";
         this.earnedCreditHours = 0;
         this.totalCurrentCredits = 0;
         this.degreeCredits = 0;
