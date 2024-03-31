@@ -24,11 +24,6 @@ public class CisState extends MajorState {
         cisString.append("\nBusiness Information Management Electives:\n");
         for (Class course : businessInformationManagement) {
             cisString.append(course.toString());
-            if (course.IsCompleted()) {
-                cisString.append("  --  Passed; Grade: "+course.calcGrade());
-            } else if (course.checkIfFailed()) {
-                cisString.append("  --  Failed; Grade: "+course.calcGrade());
-            }
         }
 
         return cisString.toString();

@@ -189,7 +189,7 @@ public class Class {
     
 
     public boolean checkIfFailed() {
-        if (this.grade>65) {
+        if (this.grade<65) {
             return true; // true for failed
         }
         return false; // false if passed
