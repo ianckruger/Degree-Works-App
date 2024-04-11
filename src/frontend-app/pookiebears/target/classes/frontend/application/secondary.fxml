@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,11 +20,36 @@
                   <Image url="@images/USC.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="486.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Ian" wrappingWidth="96.79541015625">
+            <Text fill="WHITE" layoutX="534.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Ian" wrappingWidth="96.79541015625">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
+            <Button layoutX="20.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Profile">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="150.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Acedemic">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="281.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Semester Plan">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="410.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="What-If">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="540.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="277.0" layoutX="20.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
@@ -56,17 +82,50 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="32.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID">
+      <Text layoutX="32.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="250.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+      <Text layoutX="250.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="466.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth">
+      <Text layoutX="466.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree:" wrappingWidth="57.21630859375">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="32.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="252.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="466.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Text layoutX="250.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:" wrappingWidth="124.27001953125">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="466.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class:" wrappingWidth="124.27001953125">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bachelor of Science">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="261.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sophomore">
          <font>
             <Font size="15.0" />
          </font>
