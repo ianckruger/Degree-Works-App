@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 .button {
     -fx-background-color: #730217;
     -fx-text-fill: #fff;
   }
+=======
+.root{
+    -fx-background: blue;
+}
+>>>>>>> branch-zenker
