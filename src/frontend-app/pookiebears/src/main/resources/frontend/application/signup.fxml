@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="98.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="98.0" fitWidth="255.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/USC.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="243.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="114.98307228088379">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <TextField layoutX="136.0" layoutY="168.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #EFEFEF;" />
+      <TextField layoutX="328.0" layoutY="168.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #EFEFEF;" />
+      <Text layoutX="136.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+      <Text layoutX="328.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+      <TextField layoutX="136.0" layoutY="223.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
+      <TextField layoutX="135.0" layoutY="278.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
+      <Text layoutX="137.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="135.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <MenuButton layoutX="136.0" layoutY="330.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="329.0" text="Account Type">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Student" />
+          <MenuItem mnemonicParsing="false" text="Advisor" />
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuButton>
+      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" text="Register" />
+   </children>
+</AnchorPane>
