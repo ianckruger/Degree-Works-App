@@ -38,17 +38,17 @@
       <TextField fx:id="txt_password" layoutX="135.0" layoutY="278.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
       <Text layoutX="137.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
       <Text layoutX="135.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <MenuButton layoutX="136.0" layoutY="330.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="329.0" text="Account Type">
+      <MenuButton fx:id="menuButton" accessibleRole="BUTTON" layoutX="136.0" layoutY="330.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="329.0" text="Account Type">
         <items>
-          <MenuItem fx:id="student_type" mnemonicParsing="false" text="Student" />
-          <MenuItem fx:id="advisor_type" mnemonicParsing="false" text="Advisor" />
+          <MenuItem fx:id="student_type" mnemonicParsing="false" onAction="#handleMenuItem" text="Student" />
+          <MenuItem fx:id="advisor_type" mnemonicParsing="false" onAction="#handleMenuItem" text="Advisor" />
         </items>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </MenuButton>
-      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" text="Register" />
-      <Label layoutX="243.0" layoutY="395.0" prefHeight="18.0" prefWidth="221.0" text=" " textFill="#e10303">
+      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#SignUpClicked" text="Register" />
+      <Label fx:id="lbl_error" layoutX="243.0" layoutY="395.0" prefHeight="18.0" prefWidth="221.0" text=" " textFill="#e10303">
          <font>
             <Font size="14.0" />
          </font>
