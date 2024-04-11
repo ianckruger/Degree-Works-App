@@ -11,5 +11,11 @@ import javafx.scene.input.MouseEvent;
 
 
 public class LoginController implements Initializable{
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'initialize'");
+    }
     
 }
