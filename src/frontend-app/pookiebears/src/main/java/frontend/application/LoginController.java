@@ -8,14 +8,50 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import frontend.application.App;
+import backend.*;
 
 
-public class LoginController implements Initializable{
 
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initialize'");
+public class LoginController implements Initializable {
+    @FXML
+    private Label lbl_error;
+
+    @FXML
+    private TextField txt_password;
+
+    @FXML
+    private TextField txt_username;
+
+    @FXML
+    void LoginClicked(MouseEvent event) throws IOException {
+        String username = txt_username.getText();
+        String password = txt_password.getText();
+        RoadmapApplication application = RoadmapApplication.getInstance();
+
+        if (!application.login(username,password)) {
+            lbl_error.setText("Invalid login credentials!");
+            return;
+        } else {
+            lbl_error.setText("Login successfully !");
+            return;
+        }
+
+ 
+        
     }
-    
+
+    @FXML
+    void SignUpClicked(MouseEvent event) throws IOException {
+        App.setRoot("signup");
+
+  
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
+
 }
+
+
+ 

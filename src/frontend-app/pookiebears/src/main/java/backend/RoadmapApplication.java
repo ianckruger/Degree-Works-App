@@ -1,4 +1,4 @@
-package frontend;
+package backend;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,6 +24,7 @@ public class RoadmapApplication {
     private User user;
     private Scanner scanner;
     private CourseList courseList;
+    private static  RoadmapApplication application;
     
 
 
@@ -31,7 +32,14 @@ public class RoadmapApplication {
         this.userlist = UserList.getInstance();
         this.scanner = new Scanner(System.in);
  
+    }
+
+    public static RoadmapApplication  getInstance(){
+        if( application == null){
+            application = new  RoadmapApplication();
+        }
         
+        return application;
     }
 
 
