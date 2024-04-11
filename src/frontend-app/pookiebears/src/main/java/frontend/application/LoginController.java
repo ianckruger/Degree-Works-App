@@ -32,9 +32,12 @@ public class LoginController implements Initializable {
         if (!application.login(username,password)) {
             lbl_error.setText("Invalid login credentials!");
             return;
+        } else {
+            lbl_error.setText("Login successfully !");
+            return;
         }
-        App.setRoot("signup");
 
+ 
         
     }
 
