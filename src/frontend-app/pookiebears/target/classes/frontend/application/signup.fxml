@@ -3,7 +3,6 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="658.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.application.SignUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="658.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="98.0" prefWidth="658.0" style="-fx-background-color: #000000;">
          <children>
@@ -30,29 +29,24 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Text>
-      <TextField fx:id="txt_firstname" layoutX="136.0" layoutY="168.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #EFEFEF;" />
-      <TextField fx:id="txt_lastname" layoutX="328.0" layoutY="168.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #EFEFEF;" />
+      <TextField layoutX="136.0" layoutY="168.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #EFEFEF;" />
+      <TextField layoutX="328.0" layoutY="168.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #EFEFEF;" />
       <Text layoutX="136.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
       <Text layoutX="328.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
-      <TextField fx:id="txt_username" layoutX="136.0" layoutY="223.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
-      <TextField fx:id="txt_password" layoutX="135.0" layoutY="278.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
+      <TextField layoutX="136.0" layoutY="223.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
+      <TextField layoutX="135.0" layoutY="278.0" prefHeight="33.0" prefWidth="329.0" style="-fx-background-color: #EFEFEF;" />
       <Text layoutX="137.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
       <Text layoutX="135.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <MenuButton fx:id="menuButton" accessibleRole="BUTTON" layoutX="136.0" layoutY="330.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="329.0" text="Account Type">
+      <MenuButton layoutX="136.0" layoutY="330.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="329.0" text="Account Type">
         <items>
-          <MenuItem fx:id="student_type" mnemonicParsing="false" onAction="#handleMenuItem" text="Student" />
-          <MenuItem fx:id="advisor_type" mnemonicParsing="false" onAction="#handleMenuItem" text="Advisor" />
+          <MenuItem mnemonicParsing="false" text="Student" />
+          <MenuItem mnemonicParsing="false" text="Advisor" />
         </items>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </MenuButton>
-      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#SignUpClicked" text="Register" />
-      <Label fx:id="lbl_error" layoutX="243.0" layoutY="395.0" prefHeight="18.0" prefWidth="221.0" text=" " textFill="#e10303">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" text="Register" />
    </children>
    <stylesheets>
       <URL value="@styles.css" />
