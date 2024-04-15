@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="644.0" style="-fx-background-color: #FFFFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.application.studentProfileController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="98.0" prefWidth="646.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="234.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/USC.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="518.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Portia" wrappingWidth="112.79541015625">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="277.0" layoutX="20.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
+      <Text layoutX="35.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Line endX="473.5" layoutX="135.0" layoutY="150.0" startX="-100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="202.0" layoutX="36.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" width="575.0" />
+      <Text layoutX="34.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Portia" wrappingWidth="139.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="50.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Text layoutX="50.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advisor ID:" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="451.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="252.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Text layoutX="252.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="451.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth:" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="57.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="258.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portia Plante" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="457.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="04/20/1800" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Catalog Year:" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="50.0" layoutY="295.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Text layoutX="57.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2023-2024" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="252.0" layoutY="295.0" stroke="BLACK" strokeType="INSIDE" width="342.0" />
+      <Text layoutX="252.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depertment:" wrappingWidth="106.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="260.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College of Engineering and Computing" wrappingWidth="326.79541015625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</fx:root>
