@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="644.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.application.LoginController">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="644.0" style="-fx-background-color: #FFFFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.application.studentProfileController">
    <children>
       <Pane layoutX="-1.0" prefHeight="98.0" prefWidth="646.0" style="-fx-background-color: #000000;">
          <children>
@@ -29,8 +30,11 @@
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
+               <effect>
+                  <Bloom />
+               </effect>
             </Button>
-            <Button layoutX="119.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="Acedemic">
+            <Button layoutX="119.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#academicClicked" prefHeight="26.0" prefWidth="84.0" text="Acedemic">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -139,4 +143,4 @@
    <stylesheets>
       <URL value="@styles.css" />
    </stylesheets>
-</AnchorPane>
+</fx:root>

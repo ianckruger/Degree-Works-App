@@ -43,7 +43,7 @@ public class SignUpController implements Initializable {
     private Label lbl_error;
 
     @FXML
-    void handleMenuItem(ActionEvent event) throws Exception{
+    void handleMenuItem(ActionEvent event) throws IOException{
         MenuItem menuItem = (MenuItem) event.getSource();
         String selectedItem = menuItem.getText();
         menuButton.setText(selectedItem);
@@ -51,7 +51,7 @@ public class SignUpController implements Initializable {
     }
 
     @FXML
-    void SignUpClicked(MouseEvent event) throws Exception{
+    void SignUpClicked(MouseEvent event) throws  IOException{
 
         String username = txt_username.getText();
         String password = txt_password.getText();
