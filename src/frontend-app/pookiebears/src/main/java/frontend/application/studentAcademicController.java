@@ -13,7 +13,7 @@ import backend.*;
 public class studentAcademicController implements Initializable{
     @FXML
     void profileClicked(MouseEvent event) throws IOException {
-        App.setRoot("studentProfile");
+        App.setRoot("studentHome");
 
     }
 
