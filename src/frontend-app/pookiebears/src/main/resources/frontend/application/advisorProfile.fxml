@@ -24,6 +24,21 @@
                   <Font size="15.0" />
                </font>
             </Text>
+             <Button layoutX="34.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Profile">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Log Out">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="270.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Advisees">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="277.0" layoutX="20.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
@@ -84,7 +99,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="252.0" layoutY="295.0" stroke="BLACK" strokeType="INSIDE" width="342.0" />
-      <Text layoutX="252.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depertment:" wrappingWidth="106.79541015625">
+      <Text layoutX="252.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department:" wrappingWidth="106.79541015625">
          <font>
             <Font size="15.0" />
          </font>

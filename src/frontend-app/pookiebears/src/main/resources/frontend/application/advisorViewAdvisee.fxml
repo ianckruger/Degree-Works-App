@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="644.0" style="-fx-background-color: #FFFFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.application.studentProfileController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="98.0" prefWidth="646.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="234.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/USC.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="518.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Portia" wrappingWidth="112.79541015625">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button layoutX="34.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Profile">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Log Out">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="270.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Advisees">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="277.0" layoutX="20.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
+      <Text layoutX="31.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Advisees" wrappingWidth="180.70703125">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Line endX="473.5" layoutX="135.0" layoutY="150.0" startX="-100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="214.0" layoutX="36.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" width="575.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="178.0" layoutX="250.0" layoutY="189.0" stroke="BLACK" strokeType="INSIDE" width="342.0" />
+      <ScrollPane layoutX="43.0" layoutY="167.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane layoutX="100.0" layoutY="100.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <Text layoutX="250.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currently Viewing:" wrappingWidth="313.02166748046875">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="502.0" layoutY="199.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Progress">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="502.0" layoutY="241.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Plan">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="502.0" layoutY="284.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Notes">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="502.0" layoutY="327.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Profile">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Text layoutX="255.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Kruger" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="257.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:" wrappingWidth="75.1430070426253" />
+      <Text layoutX="375.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth:" wrappingWidth="75.1430070426253" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="33.0" layoutX="254.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="33.0" layoutX="372.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+      <Text layoutX="258.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" wrappingWidth="75.1430070426253" />
+      <Text layoutX="376.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="03/24/2005" wrappingWidth="75.1430070426253" />
+      <Text layoutX="256.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level:" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class:" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sophomore" wrappingWidth="76.83295149218532">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Undergraduate" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIS" wrappingWidth="70.55179000160967">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minor:" wrappingWidth="76.83295149218532">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" wrappingWidth="76.83295149218532">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:" wrappingWidth="70.55179000160967">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College of Engineering and Computing" wrappingWidth="196.79521336044456">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</fx:root>
