@@ -69,7 +69,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="194.0" layoutY="196.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="CIS" wrappingWidth="190.56201171875">
+      <Text layoutX="195.0" layoutY="196.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="CIS" wrappingWidth="190.56201171875">
          <font>
             <Font size="14.0" />
          </font>
