@@ -76,17 +76,17 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="32.0" layoutY="201.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="250.0" layoutY="201.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="37.0" layoutX="466.0" layoutY="201.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
-      <Text layoutX="41.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345678">
+      <Text layoutX="41.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="261.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Kruger">
+      <Text layoutX="261.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="475.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="03/24/2005">
+      <Text layoutX="475.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
@@ -101,7 +101,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="466.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth:">
+      <Text layoutX="466.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
@@ -124,17 +124,17 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="41.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bachelor of Science">
+      <Text layoutX="41.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="261.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIS">
+      <Text layoutX="261.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="475.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sophomore">
+      <Text layoutX="475.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
          <font>
             <Font size="15.0" />
          </font>
