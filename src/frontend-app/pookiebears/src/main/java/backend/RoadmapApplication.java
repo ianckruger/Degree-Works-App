@@ -211,9 +211,17 @@ public class RoadmapApplication {
             return "Student is null";
             
         }
-        
-        
-         
+    }
+
+    public ArrayList<Class> getClasses() {
+        Student student = (Student)userlist.getActive();
+        if(student != null) {
+            String major = student.getCurrentMajor();
+            if(major != null) {
+                return roadmap.getClasses();
+            } 
+        }   
+        return null;
     }
 
     public boolean addNoteToStudent(String note) {

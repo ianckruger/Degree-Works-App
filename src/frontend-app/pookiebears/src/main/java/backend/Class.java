@@ -195,6 +195,17 @@ public class Class {
         return false; // false if passed
     }
 
+    public String getClassStatus() {
+        if (this.completed) {
+            return "Completed";
+        } else if (this.inProgress) {
+            return "In Progress";
+        }
+        return "N/A";
+
+     }
+    
+
     public String toString() {
         if (this.completed) {
             if (checkIfFailed()) {
