@@ -15,6 +15,7 @@ public class studentProfileController implements Initializable {
         App.setRoot("studentAcademic");
 
     }
+    
 
      @Override
     public void initialize(URL url, ResourceBundle rb) {

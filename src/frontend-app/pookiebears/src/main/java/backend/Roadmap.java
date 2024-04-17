@@ -1,5 +1,6 @@
 package backend;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Roadmap {
@@ -90,6 +91,20 @@ public class Roadmap {
 
     public MajorState getMajorState() {
         return this.majorState;
+    }
+
+    public ArrayList<Class> getClasses() {
+        ArrayList<Class> classes = new ArrayList<>();
+        
+        classes.addAll(majorState.getMajorClasses());
+        classes.addAll(majorState.getCarolinaCore());
+        classes.addAll(majorState.getElectives());
+        classes.addAll(majorState.getLiberalArtsElectives());
+        classes.addAll(majorState.getFoundationalCourses());
+        classes.addAll(majorState.getLowerDivisionComputing());
+
+        return classes;
+
     }
 
     

@@ -195,25 +195,33 @@ public class RoadmapApplication {
 
     }
 
-    public boolean printStudentProgress() {
+    public String printStudentProgress() {
         Student student = (Student)userlist.getActive();
  
         if(student != null) {
             String major = student.getCurrentMajor();
             if (major != null ) {
-               System.out.println(roadmap.displayClasses());
-                return true;
+               return roadmap.displayClasses();
+                
             } else {
-                System.out.println("Student's major type not found.");
-                 return false;
+                return "Student's major type not found.";
+                 
             }
         } else {
-            System.out.println("Student is null");
-            return false;
+            return "Student is null";
+            
         }
-        
-        
-         
+    }
+
+    public ArrayList<Class> getClasses() {
+        Student student = (Student)userlist.getActive();
+        if(student != null) {
+            String major = student.getCurrentMajor();
+            if(major != null) {
+                return roadmap.getClasses();
+            } 
+        }   
+        return null;
     }
 
     public boolean addNoteToStudent(String note) {

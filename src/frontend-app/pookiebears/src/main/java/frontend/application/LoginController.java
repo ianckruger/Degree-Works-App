@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import frontend.application.App;
@@ -24,6 +25,9 @@ public class LoginController implements Initializable {
     private TextField txt_username;
 
     @FXML
+    private TextArea studentProgress;
+
+    @FXML
     void LoginClicked(MouseEvent event) throws IOException {
         String username = txt_username.getText();
         String password = txt_password.getText();
@@ -32,13 +36,13 @@ public class LoginController implements Initializable {
         if (!application.login(username,password)) {
             lbl_error.setText("Invalid login credentials!");
             return;
-        } else {
-            lbl_error.setText("Login successfully !");
+        } else if (!application.isUsernameTaken(username)) {
+            lbl_error.setText("Username already exists. Please use another Username!");
             return;
+        }  else  {
+                App.setRoot("studentAcademic");
+                // studentProgress.setText(application.printStudentProgress());
         }
-
- 
-        
     }
 
     @FXML
