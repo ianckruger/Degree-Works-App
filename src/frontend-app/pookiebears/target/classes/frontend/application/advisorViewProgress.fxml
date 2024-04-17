@@ -45,28 +45,19 @@
          </children>
       </Pane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="277.0" layoutX="20.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
-<<<<<<< HEAD
       <Text layoutX="77.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Student:" wrappingWidth="180.70703125">
          <font>
             <Font size="14.0" />
-=======
-      <Text layoutX="77.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Student" wrappingWidth="180.70703125">
-         <font>
-            <Font size="26.0" />
->>>>>>> branch-brandon
          </font>
       </Text>
       <Line endX="473.5" layoutX="135.0" layoutY="150.0" startX="-100.0" />
       <Button layoutX="26.0" layoutY="117.0" mnemonicParsing="false" text="Back" />
-<<<<<<< HEAD
       <Text layoutX="77.0" layoutY="145.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Kruger" wrappingWidth="94.56201171875">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
       <Button layoutX="26.0" layoutY="117.0" mnemonicParsing="false" text="Back" />
-=======
->>>>>>> branch-brandon
       <Circle fill="WHITE" layoutX="77.0" layoutY="220.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
       <Arc fill="#730217" layoutX="77.0" layoutY="219.0" length="210.0" radiusX="38.0" radiusY="37.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
       <Text layoutX="39.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree:" wrappingWidth="76.0">
@@ -97,14 +88,11 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#730217" height="18.0" layoutX="39.0" layoutY="267.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
       <Text layoutX="63.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete" wrappingWidth="57.28857421875" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="175.0" layoutX="130.0" layoutY="202.0" stroke="BLACK" strokeType="INSIDE" width="488.0" />
-<<<<<<< HEAD
       <Text layoutX="466.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree Progress" wrappingWidth="142.56201171875">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-=======
->>>>>>> branch-brandon
    </children>
    <stylesheets>
       <URL value="@styles.css" />

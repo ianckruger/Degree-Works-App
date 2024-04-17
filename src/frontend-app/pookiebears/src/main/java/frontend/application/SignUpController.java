@@ -62,11 +62,15 @@ public class SignUpController implements Initializable {
 
         RoadmapApplication application = RoadmapApplication.getInstance();
 
-        if (!application.register(username, firstName, lastName, password, userType))  {
+        if (!application.isUsernameTaken(username))  {
             lbl_error.setText("Account couldn't be created !");
             return;
 
+        } else if (!application.isUsernameTaken(username)) {
+            lbl_error.setText("Username already exists. Please use another username!");
+            return;
         }
+        
         App.setRoot("login");
 
 
