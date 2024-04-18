@@ -41,8 +41,7 @@ public class LoginController implements Initializable {
             return;
         }  else  {
                 App.setRoot("studentHome");
-                // studentProgress.setText(application.printStudentProgress());
-        }
+         }
     }
 
     @FXML
