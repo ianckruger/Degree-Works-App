@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import frontend.application.App;
 
 import java.io.IOException;
@@ -15,6 +16,7 @@ import java.util.ResourceBundle;
 import javafx.util.Callback;
 import backend.*;
 import backend.Class;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -44,6 +46,19 @@ public class studentAcademicController implements Initializable{
     @FXML
     private TableColumn<Class, String> subjectCode;
 
+    @FXML
+    private Text studentGPA;
+
+    @FXML
+    private Text studentMajor;
+
+    @FXML
+    private CheckBox completeBox;
+
+    @FXML
+    private CheckBox incompleteBox;
+
+
     private RoadmapApplication application;
  
     
@@ -53,12 +68,39 @@ public class studentAcademicController implements Initializable{
         App.setRoot("studentHome");
 
     }
+
+    
+
+    @FXML
+    void notesClicked(MouseEvent event)throws IOException{
+        App.setRoot("studentNotes");
+
+    }
+
+    @FXML
+    void whatIfClicked(MouseEvent event) throws IOException {
+        App.setRoot("studentWhatIf");
+
+    }
+
+
  
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        application = RoadmapApplication.getInstance();
+
+       UserList users = UserList.getInstance();
+       Student student = (Student)users.getActive();
+       if(student != null) {
+            studentMajor.setText(student.getCurrentMajor().toUpperCase());
+            studentGPA.setText(Double.toString(student.getGPA()));
+            
+       }
+
+ 
+
        subjectCode.setCellValueFactory(new PropertyValueFactory<>("courseSubjectCode"));
        courseNumber.setCellValueFactory(new PropertyValueFactory<>("courseNumber"));
        courseTitle.setCellValueFactory(new PropertyValueFactory<>("courseTitle"));
@@ -77,10 +119,41 @@ public class studentAcademicController implements Initializable{
  
        ArrayList<Class> studentClasses = application.getClasses();
        classTable.getItems().addAll(studentClasses);
+        /*
+         * Add listerner to checkbox
+         */
+       completeBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
+        if (newValue) { // If the checkbox is checked
+            classTable.getItems().clear(); // Clear current items in the table
+            // Get only completed classes and add them to the table
+            ArrayList<Class> completedClasses = application.getCompletedClasses();
+            classTable.getItems().addAll(completedClasses);
+        } else { // If the checkbox is unchecked
+            classTable.getItems().clear(); // Clear current items in the table
+            // Add all classes back to the table
+            ArrayList<Class> allClasses = application.getClasses();
+            classTable.getItems().addAll(allClasses);
+        }
+    });
+
+    incompleteBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
+        if (newValue) { // If the checkbox is checked
+            classTable.getItems().clear(); // Clear current items in the table
+            // Get only completed classes and add them to the table
+            ArrayList<Class> completedClasses = application.getIncompletedClasses();
+            classTable.getItems().addAll(completedClasses);
+        } else { // If the checkbox is unchecked
+            classTable.getItems().clear(); // Clear current items in the table
+            // Add all classes back to the table
+            ArrayList<Class> allClasses = application.getClasses();
+            classTable.getItems().addAll(allClasses);
+        }
+    });
+
+    
 
 
-        // studentProgress.setText(application.printStudentProgress());
-        
+         
     }
 
 

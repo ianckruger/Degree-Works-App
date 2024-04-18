@@ -197,11 +197,11 @@ public class Class {
 
     public String getClassStatus() {
         if (this.completed) {
-            return "Completed";
+            return "Complete";
         } else if (this.inProgress) {
-            return "In Progress";
+            return "In-Progress";
         }
-        return "N/A";
+        return "Incomplete";
 
      }
     

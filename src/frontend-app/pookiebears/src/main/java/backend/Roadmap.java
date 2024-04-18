@@ -107,6 +107,105 @@ public class Roadmap {
 
     }
 
+    public ArrayList<Class> getCompletedClasses() {
+        ArrayList<Class> completedClasses = new ArrayList<>();
+        
+        // Add completed major classes
+        for (Class course : majorState.getMajorClasses()) {
+            if (course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add completed Carolina Core classes
+        for (Class course : majorState.getCarolinaCore()) {
+            if (course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add completed electives
+        for (Class course : majorState.getElectives()) {
+            if (course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add completed liberal arts electives
+        for (Class  course : majorState.getLiberalArtsElectives()) {
+            if (course.IsCompleted()) {
+                completedClasses.add( course);
+            }
+        }
+        
+        // Add completed foundational courses
+        for (Class course : majorState.getFoundationalCourses()) {
+            if (course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add completed lower division computing classes
+        for (Class course : majorState.getLowerDivisionComputing()) {
+            if (course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        return completedClasses;
+    }
+
+    public ArrayList<Class> getIncompletedClasses() {
+        ArrayList<Class> completedClasses = new ArrayList<>();
+        
+        // Add incompleted major classes
+        for (Class course : majorState.getMajorClasses()) {
+            if (!course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add incompleted Carolina Core classes
+        for (Class course : majorState.getCarolinaCore()) {
+            if (!course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add incompleted electives
+        for (Class course : majorState.getElectives()) {
+            if (!course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add incompleted liberal arts electives
+        for (Class  course : majorState.getLiberalArtsElectives()) {
+            if (!course.IsCompleted()) {
+                completedClasses.add( course);
+            }
+        }
+        
+        // Add incompleted foundational courses
+        for (Class course : majorState.getFoundationalCourses()) {
+            if (!course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        // Add incompleted lower division computing classes
+        for (Class course : majorState.getLowerDivisionComputing()) {
+            if (!course.IsCompleted()) {
+                completedClasses.add(course);
+            }
+        }
+        
+        return completedClasses;
+    }
+
+
+
+
     
     
 
