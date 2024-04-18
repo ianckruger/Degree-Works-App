@@ -224,6 +224,30 @@ public class RoadmapApplication {
         return null;
     }
 
+    public ArrayList<Class> getCompletedClasses() {
+        Student student = (Student)userlist.getActive();
+        if(student != null) {
+            String major = student.getCurrentMajor();
+            if(major!= null) {
+                return roadmap.getCompletedClasses();
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Class> getIncompletedClasses() {
+        Student student = (Student)userlist.getActive();
+        if(student != null) {
+            String major = student.getCurrentMajor();
+            if(major!= null) {
+                return roadmap.getIncompletedClasses();
+            }
+        }
+        return null;
+    }
+
+
+
     public boolean addNoteToStudent(String note) {
         if (note != null) {
             System.out.println(note);

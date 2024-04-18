@@ -40,7 +40,7 @@ public class LoginController implements Initializable {
             lbl_error.setText("Username already exists. Please use another Username!");
             return;
         }  else  {
-                App.setRoot("studentAcademic");
+                App.setRoot("studentHome");
                 // studentProgress.setText(application.printStudentProgress());
         }
     }

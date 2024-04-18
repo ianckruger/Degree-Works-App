@@ -62,26 +62,87 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Button layoutX="515.0" layoutY="199.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="Advisees">
+      <Button layoutX="502.0" layoutY="199.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Progress">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="515.0" layoutY="241.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="Advisees">
+      <Button layoutX="502.0" layoutY="241.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Plan">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="515.0" layoutY="284.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="Advisees">
+      <Button layoutX="502.0" layoutY="284.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Notes">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="515.0" layoutY="327.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="69.0" text="Advisees">
+      <Button layoutX="502.0" layoutY="327.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Profile">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
+      <Text layoutX="255.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Kruger" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="257.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:" wrappingWidth="75.1430070426253" />
+      <Text layoutX="375.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth:" wrappingWidth="75.1430070426253" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="33.0" layoutX="254.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="33.0" layoutX="372.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+      <Text layoutX="258.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" wrappingWidth="75.1430070426253" />
+      <Text layoutX="376.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="03/24/2005" wrappingWidth="75.1430070426253" />
+      <Text layoutX="256.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level:" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class:" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sophomore" wrappingWidth="76.83295149218532">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Undergraduate" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:" wrappingWidth="75.1430070426253">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIS" wrappingWidth="70.55179000160967">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minor:" wrappingWidth="76.83295149218532">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" wrappingWidth="76.83295149218532">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:" wrappingWidth="70.55179000160967">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="256.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College of Engineering and Computing" wrappingWidth="196.79521336044456">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
    </children>
    <stylesheets>
       <URL value="@styles.css" />
