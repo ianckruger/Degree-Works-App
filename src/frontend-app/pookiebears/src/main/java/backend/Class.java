@@ -204,9 +204,8 @@ public class Class {
         return "Incomplete";
 
      }
-    
 
-    public String toString() {
+     public String toString() {
         if (this.completed) {
             if (checkIfFailed()) {
                 return courseSubjectCode + " "+courseNumber + ": " + courseTitle + " --  Grade: " + grade + " - Failed\n";

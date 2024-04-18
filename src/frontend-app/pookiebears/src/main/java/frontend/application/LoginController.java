@@ -36,12 +36,22 @@ public class LoginController implements Initializable {
         if (!application.login(username,password)) {
             lbl_error.setText("Invalid login credentials!");
             return;
-        } else if (!application.isUsernameTaken(username)) {
-            lbl_error.setText("Username already exists. Please use another Username!");
-            return;
-        }  else  {
+        } else {
+            String userType = application.getUserType();
+            String advisorType = application.getAdvisorType();
+
+            if ("student".equalsIgnoreCase(userType)) {
                 App.setRoot("studentHome");
-         }
+            } else if ("advisor".equalsIgnoreCase(advisorType)) {
+                // App.setRoot("advisorHome");
+                lbl_error.setText("It's an adivosr");
+                return;
+            } else {
+                lbl_error.setText("Invalid user type!");
+
+            }
+
+        }
     }
 
     @FXML

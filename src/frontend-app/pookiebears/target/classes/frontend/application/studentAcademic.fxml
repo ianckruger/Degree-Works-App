@@ -90,7 +90,7 @@
       <TableView fx:id="classTable" layoutX="4.0" layoutY="252.0" prefHeight="200.0" prefWidth="630.0">
         <columns>
           <TableColumn fx:id="subjectCode" prefWidth="45.0" text="Code" />
-          <TableColumn fx:id="courseNumber" prefWidth="30.0" text="#" />
+          <TableColumn fx:id="courseNumber" prefWidth="35.0" text="#" />
             <TableColumn fx:id="courseTitle" prefWidth="420.0" resizable="false" text="Course Title" />
             <TableColumn fx:id="grade" prefWidth="45.0" text="Grade" />
             <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
