@@ -45,4 +45,17 @@ public class Advisor extends User {
     public void addStudent(String studentId) {
         students.add(studentId);
     }
+
+    public Student getStudentById(String studentId) {
+        // Iterate over the list of student IDs
+        for (int i = 0; i < students.size(); i++) {
+            // Check if the current student ID matches the ID being searched for
+            if (students.get(i).equals(studentId)) {
+                // If a match is found, return the corresponding Student object
+                return student.get(i);
+            }
+        }
+        // If no match is found, return null
+        return null;
+    }
 }
