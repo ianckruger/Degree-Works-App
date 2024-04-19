@@ -43,6 +43,8 @@ public class UserList {
         this.advisor = user;
     }
 
+    
+
     public User getAdvisor() {
         return this.advisor;
     }
