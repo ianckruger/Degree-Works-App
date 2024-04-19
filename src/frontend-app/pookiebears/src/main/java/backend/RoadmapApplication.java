@@ -78,6 +78,7 @@ public class RoadmapApplication {
     return false; // Return false if no user is found or incorrect credentials
 }
 
+
     public void setRoadmap(Roadmap roadmap) {
         this.roadmap = roadmap;
     }
@@ -192,16 +193,26 @@ public class RoadmapApplication {
     }
 
     public String getUserType() {
-       return userlist.getActive().getUserType();
-    }
+        UserList users = UserList.getInstance();
+        return users.getActive().getUserType();
+
+     }
 
     public void setUserType(String userType) {
         userlist.getActive().setUserType(userType);
      }
 
      public String getAdvisorType() {
-        return userlist.getAdvisor().getUserType();
+        UserList users = UserList.getInstance();
+        return users.getAdvisor().getUserType();
      }
+
+     public User getActiveUser() {
+        return userlist.getActive();
+        
+     }
+
+     
 
 
 

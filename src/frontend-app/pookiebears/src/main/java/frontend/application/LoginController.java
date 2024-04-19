@@ -37,22 +37,36 @@ public class LoginController implements Initializable {
             lbl_error.setText("Invalid login credentials!");
             return;
         } else {
-            String userType = application.getUserType();
+
+        if (application.getActiveUser() == null) {
             String advisorType = application.getAdvisorType();
+            if ("advisor".equalsIgnoreCase(advisorType)) {
+                App.setRoot("advisorHome");
+               
+            } else {
+                lbl_error.setText("Invalid user type!");
+                return;
+            }
+        } else {
+            String userType = application.getUserType();
 
             if ("student".equalsIgnoreCase(userType)) {
                 App.setRoot("studentHome");
-            } else if ("advisor".equalsIgnoreCase(advisorType)) {
-                // App.setRoot("advisorHome");
-                lbl_error.setText("It's an adivosr");
-                return;
             } else {
-                lbl_error.setText("Invalid user type!");
-
+                String advisorType = application.getAdvisorType();
+    
+                if ("advisor".equalsIgnoreCase(advisorType)) {
+                App.setRoot("advisorHome");
+                } else {
+                    lbl_error.setText("Invalid user type!");
+                }
             }
 
         }
+
+        
     }
+}
 
     @FXML
     void SignUpClicked(MouseEvent event) throws IOException {

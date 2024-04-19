@@ -41,7 +41,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="348.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#whatIfClicked" prefHeight="26.0" prefWidth="84.0" text="What-If">
+            <Button layoutX="348.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="What-If">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
