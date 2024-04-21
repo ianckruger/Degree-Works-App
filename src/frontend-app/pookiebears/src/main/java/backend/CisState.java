@@ -10,6 +10,7 @@ public class CisState extends MajorState {
         super(roadmap);
         this.businessInformationManagement = new ArrayList<>();
         setMajor("cis");
+        GenerateSemesterPlan();
         
     };
 
@@ -32,7 +33,7 @@ public class CisState extends MajorState {
         SemesterThree.add(courseList.searchClass("CSCE", "210"));
         SemesterThree.add(courseList.searchClass("CSCE", "247"));
         SemesterThree.add(courseList.searchClass("ECON", "224"));
-        SemesterThree.add(courseList.searchClass("SPCH", "140"));
+        SemesterThree.add(courseList.searchClass("SPCH", "145"));
 
         SemesterFour.add(courseList.searchClass("CSCE", "201"));
         SemesterFour.add(courseList.searchClass("CSCE", "240"));

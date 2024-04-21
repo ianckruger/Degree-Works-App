@@ -193,6 +193,95 @@ public class RoadmapApplication {
         
      }
 
+     public ArrayList<Class> getSemesterOnePlan() {
+        Student student = (Student)userlist.getActive();
+        if(student != null) {
+            String major = student.getCurrentMajor();
+            if(major!= null) {
+                return roadmap.getSemesterOnePlan();
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Class> getSemesterTwoPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterTwoPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterThreePlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterThreePlan();
+            }
+        }
+        return null;
+    }
+    
+    // Replicate the logic for the rest of the semesters
+    public ArrayList<Class> getSemesterFourPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterFourPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterFivePlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterFivePlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterSixPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterSixPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterSevenPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterSevenPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterEightPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterEightPlan();
+            }
+        }
+        return null;
+    }
+
 
 
 

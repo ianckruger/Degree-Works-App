@@ -34,7 +34,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="226.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Semester Plan">
+            <Button layoutX="226.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#semesterPlanClicked" prefHeight="26.0" prefWidth="97.0" text="Semester Plan">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -44,7 +44,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="450.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Notes">
+            <Button layoutX="450.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#notesClicked" prefHeight="26.0" prefWidth="79.0" text="Notes">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

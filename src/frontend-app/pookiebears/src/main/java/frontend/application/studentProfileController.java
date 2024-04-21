@@ -52,11 +52,14 @@ public class studentProfileController implements Initializable {
     }
 
     @FXML
+    void semesterPlanClicked(MouseEvent event) throws IOException {
+        App.setRoot("studentSemesterPlan");
+
+    }
+
+    @FXML
     void logOutClicked(MouseEvent event) throws IOException {
-       if(application.logout()) {
-        App.setRoot("login");
-       }
-       App.setRoot("studentNotes");
+       
 
     }
 

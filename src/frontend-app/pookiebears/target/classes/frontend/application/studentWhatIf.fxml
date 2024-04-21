@@ -89,7 +89,7 @@
             <Font size="12.0" />
          </font>
       </Text>
-      <Button layoutX="280.0" layoutY="283.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Proceed" />
+      <Button fx:id="proceedClicked" layoutX="280.0" layoutY="283.0" mnemonicParsing="false" onMouseClicked="#proceedClicked" prefHeight="26.0" prefWidth="79.0" text="Proceed" />
       <Text fx:id="studentMajor" layoutX="380.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
    </children>
    <stylesheets>

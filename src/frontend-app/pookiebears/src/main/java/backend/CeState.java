@@ -10,6 +10,7 @@ public class CeState extends MajorState {
         super(roadmap);
         this.electricalEngineering = new ArrayList<>();
         setMajor("ce");
+        GenerateSemesterPlan();
     };
 
     public void GenerateSemesterPlan() {

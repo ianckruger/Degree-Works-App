@@ -205,6 +205,40 @@ public class Roadmap {
         return completedClasses;
     }
 
+    public ArrayList<Class> getSemesterOnePlan() {
+          return majorState.getSemesterOne();
+    }
+
+    public ArrayList<Class> getSemesterTwoPlan() {
+         return majorState.getSemesterTwo();
+    }
+    
+    public ArrayList<Class> getSemesterThreePlan() {
+         return majorState.getSemesterThree();
+    }
+    
+    public ArrayList<Class> getSemesterFourPlan() {
+         return majorState.getSemesterFour();
+    }
+    
+    public ArrayList<Class> getSemesterFivePlan() {
+         return majorState.getSemesterFive();
+    }
+    
+    public ArrayList<Class> getSemesterSixPlan() {
+         return majorState.getSemesterSix();
+    }
+    
+    public ArrayList<Class> getSemesterSevenPlan() {
+         return majorState.getSemesterSeven();
+    }
+    
+    public ArrayList<Class> getSemesterEightPlan() {
+         return majorState.getSemesterEight();
+    }
+
+
+
 
 
 
