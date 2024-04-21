@@ -14,7 +14,17 @@ public abstract class MajorState {
     protected ArrayList<Class> lowerDivisionComputing;
     protected MajorState majorState;
     protected ArrayList<String> advisorNotes;
+    protected ArrayList<Class> SemesterOne;
+    protected ArrayList<Class> SemesterTwo;
+    protected ArrayList<Class> SemesterThree;
+    protected ArrayList<Class> SemesterFour;
+    protected ArrayList<Class> SemesterFive;
+    protected ArrayList<Class> SemesterSix;
+    protected ArrayList<Class> SemesterSeven;
+    protected ArrayList<Class> SemesterEight;
     protected String major;
+
+    
 
     public MajorState(Roadmap roadmap) {
         this.roadmap = roadmap;
@@ -25,11 +35,23 @@ public abstract class MajorState {
         this.foundationalCourses = new ArrayList<>();
         this.lowerDivisionComputing = new ArrayList<>();
         this.advisorNotes = new ArrayList<>();   
+        this.SemesterOne = new ArrayList<>();
+        this.SemesterTwo = new ArrayList<>();
+        this.SemesterThree = new ArrayList<>();
+        this.SemesterFour = new ArrayList<>();
+        this.SemesterFive = new ArrayList<>();
+        this.SemesterSix = new ArrayList<>();
+        this.SemesterSeven = new ArrayList<>();
+        this.SemesterEight = new ArrayList<>();
     }
+    
+    public abstract void GenerateSemesterPlan();
+
 
     public MajorState(MajorState majorState) {
         this.majorState = majorState;
     }
+
 
     public ArrayList<Class> getMajorClasses() {
         return majorClasses;
@@ -148,6 +170,38 @@ public abstract class MajorState {
         }
 
         return msString.toString();
+    }
+
+    public ArrayList<Class> getSemesterOne() {
+        return this.SemesterOne;
+    }
+
+    public ArrayList<Class> getSemesterTwo() {
+        return this.SemesterTwo;
+    }
+
+    public ArrayList<Class> getSemesterThree() {
+        return this.SemesterThree;
+    }
+
+    public ArrayList<Class> getSemesterFour() {
+        return this.SemesterFour;
+    }
+
+    public ArrayList<Class> getSemesterFive() {
+        return this.SemesterFive;
+    }
+
+    public ArrayList<Class> getSemesterSix() {
+        return this.SemesterSix;
+    }
+
+    public ArrayList<Class> getSemesterSeven() {
+        return this.SemesterSeven;
+    }
+
+    public ArrayList<Class> getSemesterEight() {
+        return this.SemesterEight;
     }
 
 
