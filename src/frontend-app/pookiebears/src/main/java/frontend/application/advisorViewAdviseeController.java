@@ -14,7 +14,7 @@ public class advisorViewAdviseeController implements Initializable{
     void progressClicked(MouseEvent event) throws IOException {
         App.setRoot("advisorViewProgress");
 
-fasdf
+
     }
 
 

@@ -10,7 +10,7 @@ import javafx.scene.input.MouseEvent;
 
 public class studentNotesController implements Initializable{
 
-sad
+
     @FXML
     void academicClicked(MouseEvent event) throws IOException{
         App.setRoot("studentAcademic");

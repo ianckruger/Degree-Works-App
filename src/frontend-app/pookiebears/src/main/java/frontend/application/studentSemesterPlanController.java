@@ -45,23 +45,27 @@ public class studentSemesterPlanController implements Initializable {
     private RoadmapApplication application;
 
 
-    void NoteClicked(MouseEvent event) {
+    void NoteClicked(MouseEvent event) throws IOException {
         App.setRoot("studentNotes");
 
     }
 
     @FXML
-    void academicClicked(MouseEvent event) {
+    void academicClicked(MouseEvent event) throws IOException {
+        App.setRoot("studentAcademic");
 
     }
 
     @FXML
-    void profileClicked(MouseEvent event) {
+    void profileClicked(MouseEvent event) throws IOException{
+        App.setRoot("studentHome");
 
     }
 
     @FXML
-    void whatIfClicked(MouseEvent event) {
+    void whatIfClicked(MouseEvent event) throws IOException {
+
+        App.setRoot("studentWhatIf");
 
     }
 
