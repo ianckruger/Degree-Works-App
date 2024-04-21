@@ -15,7 +15,7 @@ import backend.*;
 public class startScreenController implements Initializable {
 
     @FXML
-    void getStarted(MouseEvent event) throws Exception{
+    void getStarted(MouseEvent event) throws IOException{
         App.setRoot("login");
 
 

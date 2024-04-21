@@ -97,6 +97,7 @@ public abstract class MajorState {
         this.advisorNotes.clear();
     }
 
+
     public String toString() {
         StringBuilder msString = new StringBuilder();
 
@@ -148,5 +149,9 @@ public abstract class MajorState {
 
         return msString.toString();
     }
+
+
+
+
 
 }

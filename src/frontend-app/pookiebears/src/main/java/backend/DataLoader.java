@@ -256,7 +256,7 @@ public class DataLoader extends DataConstant {
                         transferred = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_TRANSFERRED);
                         inProgress = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_IN_PROGRESS);
                         completed = (Boolean)courseAndStudentObject.get(STUDENT_COURSE_COMPLETED);
-                        grade = (Double)courseAndStudentObject.get(STUDENT_COURSE_GRADE);
+                        grade = ((Number)courseAndStudentObject.get(STUDENT_COURSE_GRADE)).doubleValue();
                         break;
                     }
                 }
@@ -330,6 +330,7 @@ public class DataLoader extends DataConstant {
                 if(major.equalsIgnoreCase("cis")) {
                     System.out.println("Loading CIS");
                     CisState state = new CisState(roadmap);
+                    // default state
                     JSONArray majorClasses = (JSONArray)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
                    
                     if(majorClasses.size() != 0) {
@@ -386,7 +387,7 @@ public class DataLoader extends DataConstant {
                         for (int j = 0; j < lowerDivisonComputing.size(); j++) {
                             for(Class course : courses.getCourses() ) {
                                 if (lowerDivisonComputing.get(j).equals(course.getCourseID().toString())) {
-                                    state.getFoundationalCourses().add(course);
+                                    state.getLowerDivisionComputing().add(course);
                                 }
                             }
                         }
@@ -462,7 +463,7 @@ public class DataLoader extends DataConstant {
                         for (int j = 0; j < lowerDivisonComputing.size(); j++) {
                             for(Class course : courses.getCourses() ) {
                                 if (lowerDivisonComputing.get(j).equals(course.getCourseID().toString())) {
-                                    state.getFoundationalCourses().add(course);
+                                    state.getLowerDivisionComputing().add(course);
                                 }
                             }
                         }
