@@ -67,7 +67,8 @@ public class RoadmapApplication {
                         roadmap.setMajorState(student.getCurrentMajor());
                         return true;
                     } else if (user.getUserType().equalsIgnoreCase("advisor")) {
-                        users.setAdvisor(user);
+                        Advisor advisor = (Advisor) user;
+                        users.setAdvisor(advisor);
                         return true;
                     }
                     
