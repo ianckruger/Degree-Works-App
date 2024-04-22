@@ -49,18 +49,11 @@ public class studentNotesController implements Initializable{
         application = RoadmapApplication.getInstance();
         UserList users = UserList.getInstance();
         Student student = (Student)users.getActive();
-
-        System.out.println(application.GetNotes());
-        String note = application.GetNote();
-        System.out.println("Note: "+note);
-        application.addNoteToStudent("Advised");
-        System.out.println(application.GetNotes());
-        String note2 = application.GetNote();
-        System.out.println("Note: "+note2);
-
+        application.addNoteToStudent("Advised for CS major for FA23: CSCE 146, CSCE 215, CSCE 205");
+        
         if(textField != null) {
 
-            textField.setText(application.GetNote());
+            textField.setText(student.getNote());
         }
         else {
             textField.setText("note is nothing");
