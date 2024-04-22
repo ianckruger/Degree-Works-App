@@ -97,6 +97,23 @@ public class UserList {
 
    }
 
+   public void SelectStudent(String id) {
+    for (User student : userList) {
+        if (student.getUserUUID().toString().equals(id) && student.getUserType().equalsIgnoreCase("student")) {
+            users.setActiveUser(student);
+            CourseList courseList = CourseList.getInstance();
+            Roadmap roadmap = Roadmap.getInstance();
+         }
+     }
+   }
+
+   public void addNote(String note) {
+    Student user = (Student)this.ActiveUser;
+    user.getNotes().add(note);
+   }
+
+
+
    public boolean logout() {
     if (ActiveUser == null && advisor == null) {
         // No user is currently logged in
@@ -117,6 +134,8 @@ public class UserList {
     advisor = null;
     return true;
 }
+
+
 
 
     

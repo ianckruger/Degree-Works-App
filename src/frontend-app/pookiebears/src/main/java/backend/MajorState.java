@@ -23,6 +23,7 @@ public abstract class MajorState {
     protected ArrayList<Class> SemesterSeven;
     protected ArrayList<Class> SemesterEight;
     protected String major;
+ 
 
     
 
@@ -202,6 +203,10 @@ public abstract class MajorState {
 
     public ArrayList<Class> getSemesterEight() {
         return this.SemesterEight;
+    }
+
+    public void setAdvisorNotes(ArrayList<String> notes) {
+        this.advisorNotes = notes;
     }
 
 
