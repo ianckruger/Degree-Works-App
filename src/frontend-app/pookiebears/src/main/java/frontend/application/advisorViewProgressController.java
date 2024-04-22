@@ -1,5 +1,7 @@
 package frontend.application;
 
+import java.io.IOError;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -12,6 +14,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 import backend.*;
@@ -45,6 +48,13 @@ public class advisorViewProgressController implements Initializable{
 
     @FXML
     private CheckBox incompleteBox;
+
+    @FXML
+    void backClicked(MouseEvent event) throws IOException {
+        App.setRoot("advisorViewAdvisee");
+
+    }
+
 
 
 

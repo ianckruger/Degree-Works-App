@@ -75,7 +75,11 @@
          </font>
       </Text>
       <Line endX="482.5" layoutX="143.0" layoutY="174.0" startX="-128.5" />
+<<<<<<< HEAD
       <TextArea fx:id="textField" layoutX="16.0" layoutY="187.0" prefHeight="200.0" prefWidth="606.0" />
+=======
+      <Text fx:id="notesText" layoutX="34.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="129.666015625" />
+>>>>>>> 5e4df092a20bc022e25e3034d7119fc89c040c1f
    </children>
    <stylesheets>
       <URL value="@styles.css" />

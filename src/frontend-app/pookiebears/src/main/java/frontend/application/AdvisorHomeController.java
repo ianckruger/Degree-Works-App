@@ -20,6 +20,7 @@ public class AdvisorHomeController implements Initializable {
     @FXML
     void adviseeClicked(MouseEvent event) throws IOException {
         App.setRoot("advisorViewAdvisee");
+
     }
 
 

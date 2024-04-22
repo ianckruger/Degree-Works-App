@@ -74,6 +74,7 @@
          </font>
       </Text>
       <Line endX="482.5" layoutX="143.0" layoutY="174.0" startX="-128.5" />
+      <Text fx:id="notesText" layoutX="34.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="129.666015625" />
    </children>
    <stylesheets>
       <URL value="@styles.css" />

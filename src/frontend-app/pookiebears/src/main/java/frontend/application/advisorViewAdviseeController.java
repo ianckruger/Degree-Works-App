@@ -11,11 +11,22 @@ import javafx.scene.input.MouseEvent;
 public class advisorViewAdviseeController implements Initializable{
 
     @FXML
-    void progressClicked(MouseEvent event) throws IOException {
-        App.setRoot("advisorViewProgress");
-
+    void noteClicked(MouseEvent event) throws IOException {
 
     }
+
+    @FXML
+    void planClicked(MouseEvent event) throws IOException {
+        App.setRoot("advisorViewSemesterPlan");
+
+    }
+
+    @FXML
+    void progressClicked(MouseEvent event) throws IOException{
+        App.setRoot("advisorViewProgress");
+
+    }
+    
 
 
     @Override
