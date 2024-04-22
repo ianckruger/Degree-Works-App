@@ -34,7 +34,7 @@
                   <Bloom />
                </effect>
             </Button>
-            <Button layoutX="270.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Advisees">
+            <Button layoutX="270.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#adviseeClicked" prefHeight="28.0" prefWidth="107.0" text="Advisees">
                <font>
                   <Font size="15.0" />
                </font>
