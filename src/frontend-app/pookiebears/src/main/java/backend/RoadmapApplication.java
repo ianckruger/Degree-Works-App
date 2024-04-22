@@ -330,6 +330,12 @@ public class RoadmapApplication {
         return user.getNotes();
     }
 
+    public String GetNote() {
+        Student user = (Student) userlist.getActive();
+        return user.getNote();
+    }
+
+
     
 
 
