@@ -5,13 +5,25 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import backend.RoadmapApplication;
+import backend.Student;
+import backend.UserList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
+
+
 
 public class studentNotesController implements Initializable{
+
+    
+
+    @FXML
+    private Text notesText;
+
+
+    private RoadmapApplication application;
 
 
     @FXML
@@ -32,21 +44,24 @@ public class studentNotesController implements Initializable{
 
     }
 
-    @FXML
-    private TableView<Class> classTable;
-    
-    private RoadmapApplication application;
-
-    @FXML
-    private TableColumn<Class, String> notes;
-
 
 
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        application = RoadmapApplication.getInstance();
+
+       application = RoadmapApplication.getInstance();
+
+       UserList users = UserList.getInstance();
+       Student student = (Student)users.getActive();
+
+       String notes = student.getNote();
+       
+       notesText.setText(notes);
         
+
+
+
      }
     
 }
