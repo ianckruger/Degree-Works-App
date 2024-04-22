@@ -24,12 +24,12 @@ public class CeState extends MajorState {
 
         SemesterTwo.add(courseList.searchClass("ENGL", "102"));
         SemesterTwo.add(courseList.searchClass("MATH", "142"));
-        SemesterOne.add(courseList.searchClass("FAMS", "240"));
+        SemesterTwo.add(courseList.searchClass("FAMS", "300"));
         SemesterTwo.add(courseList.searchClass("CSCE", "146"));
         SemesterTwo.add(courseList.searchClass("CSCE", "215"));
 
         SemesterThree.add(courseList.searchClass("CSCE", "211"));
-        SemesterThree.add(courseList.searchClass("SPCH", "140"));
+        SemesterThree.add(courseList.searchClass("SPCH", "145"));
         SemesterThree.add(courseList.searchClass("MATH", "374"));
         SemesterThree.add(courseList.searchClass("PHYS", "211"));
         SemesterThree.add(courseList.searchClass("PHYS", "211L"));
@@ -53,13 +53,13 @@ public class CeState extends MajorState {
         SemesterSix.add(courseList.searchClass("MATH", "241"));
         SemesterSix.add(courseList.searchClass("CSCE", "390"));
         SemesterSix.add(courseList.searchClass("ENGL", "462"));
-        SemesterFive.add(courseList.searchClass("ELCT", "201"));
+        SemesterSix.add(courseList.searchClass("ELCT", "201"));
 
         SemesterSeven.add(courseList.searchClass("CSCE", "490"));
         SemesterSeven.add(courseList.searchClass("CSCE", "416"));
         SemesterSeven.add(courseList.searchClass("CSCE", "330"));
         SemesterSeven.add(courseList.searchClass("CSCE", "355"));
-        SemesterSeven.add(courseList.searchClass("POLI", "201"));
+        SemesterSeven.add(courseList.searchClass("AFAM", "201"));
         SemesterSeven.add(courseList.searchClass("ELCT", "321"));
 
         SemesterEight.add(courseList.searchClass("CSCE", "492"));

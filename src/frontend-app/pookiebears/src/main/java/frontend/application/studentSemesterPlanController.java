@@ -115,19 +115,17 @@ public class studentSemesterPlanController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         application = RoadmapApplication.getInstance();
-
-        
-
-         
         UserList users = UserList.getInstance();
         Student student = (Student)users.getActive();
         
+        
+        
+         
 
         subjectCode.setCellValueFactory(new PropertyValueFactory<>("courseSubjectCode"));
         courseNumber.setCellValueFactory(new PropertyValueFactory<>("courseNumber"));
         courseTitle.setCellValueFactory(new PropertyValueFactory<>("courseTitle"));
         credits.setCellValueFactory(new PropertyValueFactory<>("credits"));
-
         prereq.setCellValueFactory(cellData -> {
             ArrayList<Class> prereqs = cellData.getValue().getPrereqs();
             if (prereqs != null && !prereqs.isEmpty()) {

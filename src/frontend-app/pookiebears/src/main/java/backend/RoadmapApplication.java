@@ -282,6 +282,50 @@ public class RoadmapApplication {
         return null;
     }
 
+    public boolean switchMajorStateCSCE() {
+        Student student = (Student)userlist.getActive();
+        String major = student.getCurrentMajor();
+        if(student != null) {
+            major = student.getCurrentMajor();
+            if(major != null) {
+                Roadmap roadmap = Roadmap.getInstance();
+                roadmap.switchMajorStateCSCE();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean switchMajorStateCIS() {
+        Student student = (Student)userlist.getActive();
+        String major = student.getCurrentMajor();
+        if(student != null) {
+            major = student.getCurrentMajor();
+            if(major != null) {
+                Roadmap roadmap = Roadmap.getInstance();
+                roadmap.switchMajorStateCIS();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean switchMajorStateCE() {
+        Student student = (Student)userlist.getActive();
+        String major = student.getCurrentMajor();
+        if(student != null) {
+            major = student.getCurrentMajor();
+            if(major != null) {
+                Roadmap roadmap = Roadmap.getInstance();
+                roadmap.switchMajorStateCE();
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+     
 
 
 

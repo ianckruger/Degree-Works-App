@@ -65,12 +65,20 @@ public class studentWhatIfController implements Initializable {
         UserList users = UserList.getInstance();
         Student student = (Student)users.getActive();
         if(student != null) {
-            student.setCurrentMajor(selectedMajor);
-            App.setRoot("studentSemesterPlan");
-        }
+            if(selectedMajor.equals("Computer Science")) {
+                student.setCurrentMajor("csce");
+                application.switchMajorStateCSCE();
+              } else if (selectedMajor.equals("Computer Information System")) {
+                student.setCurrentMajor("cis");
+                application.switchMajorStateCIS();
+            } else if (selectedMajor.equals("Computer Engineering")) {
+                student.setCurrentMajor("ce");
+                application.switchMajorStateCE();
+             }
+             App.setRoot("studentSemesterPlan");
+         }
         
         
-
     }
 
     @Override

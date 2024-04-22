@@ -20,10 +20,10 @@ public class CisState extends MajorState {
         SemesterOne.add(courseList.searchClass("MATH", "141"));
         SemesterOne.add(courseList.searchClass("CSCE", "145"));
         SemesterOne.add(courseList.searchClass("CSCE", "190"));
-        SemesterOne.add(courseList.searchClass("ANTH", "161"));
+        SemesterOne.add(courseList.searchClass("FAMS", "300"));
 
         SemesterTwo.add(courseList.searchClass("ENGL", "102"));
-        SemesterTwo.add(courseList.searchClass("FAMS", "240"));
+        SemesterTwo.add(courseList.searchClass("FAMS", "300"));
         SemesterTwo.add(courseList.searchClass("CHEM", "111"));
         SemesterTwo.add(courseList.searchClass("CHEM", "111L"));
         SemesterTwo.add(courseList.searchClass("CSCE", "146"));
@@ -39,7 +39,7 @@ public class CisState extends MajorState {
         SemesterFour.add(courseList.searchClass("CSCE", "240"));
         SemesterFour.add(courseList.searchClass("MATH", "374"));
         SemesterFour.add(courseList.searchClass("MGSC", "290"));
-        SemesterFour.add(courseList.searchClass("POLI", "201"));
+        SemesterFour.add(courseList.searchClass("AFAM", "218"));
 
         SemesterFive.add(courseList.searchClass("ACCT", "222"));
         SemesterFive.add(courseList.searchClass("MGMT", "371"));
@@ -49,10 +49,10 @@ public class CisState extends MajorState {
         SemesterFive.add(courseList.searchClass("STAT", "515"));        
 
         SemesterSix.add(courseList.searchClass("CSCE", "520"));
-        SemesterSix.add(courseList.searchClass("STAT", "516"));
+        SemesterSix.add(courseList.searchClass("STAT", "509"));
         SemesterSix.add(courseList.searchClass("ACCT", "324"));
         SemesterSix.add(courseList.searchClass("CSCE", "594"));
-        SemesterSix.add(courseList.searchClass("HIST", "101"));
+        SemesterSix.add(courseList.searchClass("HIST", "111"));
 
         SemesterSeven.add(courseList.searchClass("CSCE", "490"));
         SemesterSeven.add(courseList.searchClass("CSCE", "416"));
@@ -63,7 +63,7 @@ public class CisState extends MajorState {
         SemesterEight.add(courseList.searchClass("CSCE", "492"));
         SemesterEight.add(courseList.searchClass("MATH", "344"));
         SemesterEight.add(courseList.searchClass("MATH", "344L"));
-        SemesterEight.add(courseList.searchClass("PHIL", "102"));
+        SemesterEight.add(courseList.searchClass("PHIL", "213"));
         SemesterEight.add(courseList.searchClass("ITAL", "121"));
     }
 

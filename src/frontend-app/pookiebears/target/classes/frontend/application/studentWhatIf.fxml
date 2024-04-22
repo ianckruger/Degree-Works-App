@@ -83,7 +83,7 @@
             <MenuItem fx:id="cisItem" mnemonicParsing="false" onAction="#handleMenuItem" text="Computer Information System" />
         </items>
       </MenuButton>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="26.0" layoutX="367.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="196.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="26.0" layoutX="367.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="236.0" />
       <Text layoutX="367.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Major">
          <font>
             <Font size="12.0" />

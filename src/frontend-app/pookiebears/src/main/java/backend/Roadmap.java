@@ -63,6 +63,21 @@ public class Roadmap {
         }
     }
 
+    
+
+    public boolean switchMajorStateCIS() {
+        setMajorState(this.cisState);
+        return true;
+    }
+    public boolean switchMajorStateCSCE() {
+        setMajorState(this.csceState);
+        return true;
+    }
+    public boolean switchMajorStateCE() {
+        setMajorState(this.ceState);
+        return true;
+    }
+
     public void setCisState(CisState state) {
         this.cisState = state;
         setMajorState(cisState);
