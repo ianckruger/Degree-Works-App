@@ -39,6 +39,7 @@ public class studentNotesController implements Initializable{
     private TextArea textField;
     
     private RoadmapApplication application;
+
     void logOutClicked(MouseEvent event) throws IOException{
         application.logout();
         App.setRoot("login");
@@ -61,7 +62,7 @@ public class studentNotesController implements Initializable{
         application = RoadmapApplication.getInstance();
         UserList users = UserList.getInstance();
         Student student = (Student)users.getActive();
-        application.addNoteToStudent("Advised for CS major for FA23: CSCE 146, CSCE 215, CSCE 205");
+        // application.addNoteToStudent("Advised for CS major for FA23: CSCE 146, CSCE 215, CSCE 205");
         
         if(textField != null) {
 

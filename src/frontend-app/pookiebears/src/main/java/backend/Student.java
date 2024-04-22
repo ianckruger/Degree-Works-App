@@ -104,9 +104,9 @@ public class Student extends User {
         return advisors;
     }
 
-    public ArrayList<String> getNotes() {
-        return this.notes;
-    }
+    // public ArrayList<String> getNotes() {
+    //     return this.notes;
+    // }
 
     public String getNote() {
         StringBuilder msString = new StringBuilder();

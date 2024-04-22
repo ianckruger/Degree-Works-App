@@ -154,9 +154,9 @@ public class DataWriter extends DataConstant {
         for (String advisor : user.getAdvisors()) {
             advisorsArray.add(advisor);
         }
-        for (String note : user.getNotes()) {
-            notesArray.add(note);
-        }
+        // for (String note : user.getNotes()) {
+        //     notesArray.add(note);
+        // }
         userDetails.put(USER_PARENTS, advisorsArray);
         userDetails.put(USER_ADVISORS, parentsArray);
         userDetails.put(USER_NOTES, notesArray);
