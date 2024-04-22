@@ -32,6 +32,7 @@ public class Student extends User {
         this.advisors = new ArrayList<Advisor>();
         this.parents = new ArrayList<Parent>();
         
+        
     }
     public Student(String userName, String firstName, String lastName, String password, String userType, double gpa, String year, String currentMajor, int earnedCreditHours, int totalCurrentCredits, int degreeCredits, ArrayList<String> parents, ArrayList<String> advisors) {
         super(userName, firstName, lastName, password, userType);
@@ -110,8 +111,8 @@ public class Student extends User {
     public String getNote() {
         StringBuilder msString = new StringBuilder();
         if (!notes.isEmpty()) {
-            for (String note : notes) {
-                msString.append(note.toString());
+            for (int i = 0; i < notes.size(); i++) {
+                msString.append(notes.get(i).toString());
                 msString.append("\n");
             }
         } 
