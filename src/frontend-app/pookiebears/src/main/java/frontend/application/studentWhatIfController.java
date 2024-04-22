@@ -59,6 +59,13 @@ public class studentWhatIfController implements Initializable {
     }
 
     @FXML
+    void semesterPlanClicked(MouseEvent event) throws IOException {
+        App.setRoot("studentSemesterPlan");
+
+    }
+
+
+    @FXML
     void proceedClicked(MouseEvent event) throws IOException{
         String selectedMajor = majorPick.getText();
         application = RoadmapApplication.getInstance();

@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="9.0" layoutY="10.0" prefHeight="98.0" prefWidth="646.0" style="-fx-background-color: #000000;">
@@ -103,7 +102,7 @@
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Log Out">
+                  <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#logOutClicked" prefHeight="28.0" prefWidth="107.0" text="Log Out">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -122,7 +121,7 @@
                </font>
             </Text>
             <Line endX="473.5" layoutX="135.0" layoutY="150.0" startX="-100.0" />
-            <Button layoutX="26.0" layoutY="117.0" mnemonicParsing="false" text="Back" />
+            <Button layoutX="26.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#backClicked" text="Back" />
             <Text layoutX="77.0" layoutY="145.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Kruger" wrappingWidth="94.56201171875">
                <font>
                   <Font size="14.0" />
@@ -135,7 +134,7 @@
             </Text>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="217.0" layoutX="35.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="575.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="115.0" layoutX="50.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="235.0" />
-            <Button layoutX="50.0" layoutY="308.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Add Note">
+            <Button layoutX="50.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#addNote" prefHeight="28.0" prefWidth="107.0" text="Add Note">
                <font>
                   <Font size="15.0" />
                </font>
@@ -145,7 +144,7 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text layoutX="52.0" layoutY="192.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Add note here:" wrappingWidth="119.79541015625">
+            <Text fx:id="addNote" layoutX="52.0" layoutY="192.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.79541015625">
                <font>
                   <Font size="14.0" />
                </font>
@@ -156,6 +155,7 @@
             <Line endX="164.5" layoutX="422.0" layoutY="233.0" startX="-100.0" />
             <Line endX="164.5" layoutX="422.0" layoutY="273.0" startX="-100.0" />
             <Line endX="164.5" layoutX="422.0" layoutY="313.0" startX="-100.0" />
+            <Text fx:id="noteAdded" layoutX="322.0" layoutY="333.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="272.79541015625" />
          </children>
          <stylesheets>
             <URL value="@styles.css" />
