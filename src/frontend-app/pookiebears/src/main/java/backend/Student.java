@@ -107,6 +107,17 @@ public class Student extends User {
         return this.notes;
     }
 
+    public String getNote() {
+        StringBuilder msString = new StringBuilder();
+        if (!notes.isEmpty()) {
+            for (String note : notes) {
+                msString.append(note.toString());
+                msString.append("\n");
+            }
+        } 
+        return msString.toString();
+    }
+
     public void setNotes (ArrayList<String> notes) {
         this.notes = notes;
     }
