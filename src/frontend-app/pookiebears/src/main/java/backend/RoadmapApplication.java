@@ -129,14 +129,7 @@ public class RoadmapApplication {
     }
 
 
-    public boolean addNoteToStudent(String note) {
-        if (note != null) {
-            System.out.println(note);
-            return true;
-        }
-        return false;
-
-    }
+   
 
     // Get default classes 
     public ArrayList<Class> getClasses() {
@@ -323,6 +316,21 @@ public class RoadmapApplication {
         }
         return false;
     }
+
+    public void addNoteToStudent(String note) {
+        userlist.addNote(note);
+        Roadmap roadmap = Roadmap.getInstance();
+        roadmap.getMajorState().setAdvisorNotes(GetNotes());
+    }
+
+     
+
+    public ArrayList<String> GetNotes() {
+        Student user = (Student) userlist.getActive();
+        return user.getNotes();
+    }
+
+    
 
 
      
