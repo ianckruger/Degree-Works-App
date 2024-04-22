@@ -58,6 +58,29 @@ public class studentWhatIfController implements Initializable {
         App.setRoot("studentNotes");
     }
 
+    @FXML
+    void proceedClicked(MouseEvent event) throws IOException{
+        String selectedMajor = majorPick.getText();
+        application = RoadmapApplication.getInstance();
+        UserList users = UserList.getInstance();
+        Student student = (Student)users.getActive();
+        if(student != null) {
+            if(selectedMajor.equals("Computer Science")) {
+                student.setCurrentMajor("csce");
+                application.switchMajorStateCSCE();
+              } else if (selectedMajor.equals("Computer Information System")) {
+                student.setCurrentMajor("cis");
+                application.switchMajorStateCIS();
+            } else if (selectedMajor.equals("Computer Engineering")) {
+                student.setCurrentMajor("ce");
+                application.switchMajorStateCE();
+             }
+             App.setRoot("studentSemesterPlan");
+         }
+        
+        
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         application = RoadmapApplication.getInstance();
@@ -69,6 +92,8 @@ public class studentWhatIfController implements Initializable {
 
         
     }
+
+    
 
     
 }
