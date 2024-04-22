@@ -11,6 +11,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -101,6 +103,10 @@
       </TableView>
       <Text fx:id="studentMajor" layoutX="300.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
       <Text fx:id="studentGPA" layoutX="458.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
+      <Circle fill="WHITE" layoutX="74.0" layoutY="190.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
+      <Arc fill="#730217" layoutX="70.0" layoutY="188.0" length="150.0" radiusX="38.0" radiusY="37.0" startAngle="80.5" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#730217" height="18.0" layoutX="121.0" layoutY="209.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+      <Text layoutX="144.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete" wrappingWidth="57.28857421875" />
    </children>
    <stylesheets>
       <URL value="@styles.css" />

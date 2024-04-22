@@ -128,27 +128,6 @@ public class RoadmapApplication {
          
     }
 
-    public boolean printEightSemesterPlan() {
-        Student student = (Student)userlist.getActive();
-        if(student != null) {
-            String major = student.getCurrentMajor();
-            if(major != null) {
-                Roadmap roadmap = Roadmap.getInstance();
-                System.out.println(roadmap.EightSemesterPlan());
-                return true;
-
-            } else {
-                System.out.println("Student's major type not found.");
-                return false;
-
-            }
-
-        } else {
-            System.out.println("Student is null");
-            return false;
-        }
-
-    }
 
     public boolean addNoteToStudent(String note) {
         if (note != null) {
@@ -159,7 +138,7 @@ public class RoadmapApplication {
 
     }
 
-    
+    // Get default classes 
     public ArrayList<Class> getClasses() {
         Student student = (Student)userlist.getActive();
         if(student != null) {
@@ -193,6 +172,7 @@ public class RoadmapApplication {
         return null;
     }
 
+
     public String getUserType() {
         UserList users = UserList.getInstance();
         return users.getActive().getUserType();
@@ -213,8 +193,139 @@ public class RoadmapApplication {
         
      }
 
-     
+     public ArrayList<Class> getSemesterOnePlan() {
+        Student student = (Student)userlist.getActive();
+        if(student != null) {
+            String major = student.getCurrentMajor();
+            if(major!= null) {
+                return roadmap.getSemesterOnePlan();
+            }
+        }
+        return null;
+    }
 
+    public ArrayList<Class> getSemesterTwoPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterTwoPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterThreePlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterThreePlan();
+            }
+        }
+        return null;
+    }
+    
+    // Replicate the logic for the rest of the semesters
+    public ArrayList<Class> getSemesterFourPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterFourPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterFivePlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterFivePlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterSixPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterSixPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterSevenPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterSevenPlan();
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<Class> getSemesterEightPlan() {
+        Student student = (Student) userlist.getActive();
+        if (student != null) {
+            String major = student.getCurrentMajor();
+            if (major != null) {
+                return roadmap.getSemesterEightPlan();
+            }
+        }
+        return null;
+    }
+
+    public boolean switchMajorStateCSCE() {
+        Student student = (Student)userlist.getActive();
+        String major = student.getCurrentMajor();
+        if(student != null) {
+            major = student.getCurrentMajor();
+            if(major != null) {
+                Roadmap roadmap = Roadmap.getInstance();
+                roadmap.switchMajorStateCSCE();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean switchMajorStateCIS() {
+        Student student = (Student)userlist.getActive();
+        String major = student.getCurrentMajor();
+        if(student != null) {
+            major = student.getCurrentMajor();
+            if(major != null) {
+                Roadmap roadmap = Roadmap.getInstance();
+                roadmap.switchMajorStateCIS();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean switchMajorStateCE() {
+        Student student = (Student)userlist.getActive();
+        String major = student.getCurrentMajor();
+        if(student != null) {
+            major = student.getCurrentMajor();
+            if(major != null) {
+                Roadmap roadmap = Roadmap.getInstance();
+                roadmap.switchMajorStateCE();
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+     
 
 
 

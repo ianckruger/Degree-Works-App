@@ -1,4 +1,5 @@
 package backend;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -97,14 +98,24 @@ public class UserList {
    }
 
    public boolean logout() {
-    if (ActiveUser != null) {
+    if (ActiveUser == null && advisor == null) {
+        // No user is currently logged in
         return false;
     }
-    DataWriter.saveUsers();
-    ActiveUser = null;
-    return true;
-    
 
+    try {
+        // Save user data before logout
+        DataWriter.saveUsers();
+    } catch (Exception e) {
+        // Error occurred while saving user data
+        e.printStackTrace(); // Log the exception for debugging purposes
+        return false;
+    }
+
+    // Reset active user and advisor after successful logout
+    ActiveUser = null;
+    advisor = null;
+    return true;
 }
 
 

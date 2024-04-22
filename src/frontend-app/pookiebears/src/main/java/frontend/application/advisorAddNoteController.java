@@ -1,13 +1,13 @@
-package frontend.application;
+// package frontend.application;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+// import java.net.URL;
+// import java.util.ResourceBundle;
 
-import javafx.fxml.Initializable;
+// import javafx.fxml.Initializable;
 
-public class advisorAddNoteController implements Initializable{
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-    }
+// public class advisorAddNoteController implements Initializable{
+//     @Override
+//     public void initialize(URL url, ResourceBundle rb) {
+//     }
     
-}
+// }

@@ -71,7 +71,7 @@ public class SignUpController implements Initializable {
                 lbl_error.setText("Account couldn't be created !");
                 return;
             } 
-            application.setUserType(userType);
+            //application.setUserType(userType);
             App.setRoot("login");
         }
     }
