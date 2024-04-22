@@ -37,17 +37,17 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="226.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Semester Plan">
+            <Button layoutX="226.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#semesterPlanClicked" prefHeight="26.0" prefWidth="97.0" text="Semester Plan">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="348.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="What-If">
+            <Button layoutX="348.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#whatIfClicked" prefHeight="26.0" prefWidth="84.0" text="What-If">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="450.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#logOutClicked" prefHeight="26.0" prefWidth="79.0" text="Notes">
+            <Button layoutX="450.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Notes">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -76,7 +76,10 @@
       </Text>
       <Line endX="482.5" layoutX="143.0" layoutY="174.0" startX="-128.5" />
       <Text fx:id="notesText" layoutX="34.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="129.666015625" />
-      <TextArea fx:id="textField" layoutX="16.0" layoutY="196.0" prefHeight="182.0" prefWidth="612.0" />
+      <TextArea fx:id="textField" layoutX="16.0" layoutY="196.0" prefHeight="182.0" prefWidth="612.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
    </children>
    <stylesheets>
       <URL value="@styles.css" />

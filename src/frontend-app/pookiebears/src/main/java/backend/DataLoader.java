@@ -135,11 +135,9 @@ public class DataLoader extends DataConstant {
         JSONArray Jnotes = (JSONArray)userObject.get(USER_NOTES);
 
         ArrayList<String> notes = new ArrayList<>();
-        if(!notes.isEmpty()) {
-            for (int i = 0; i < Jnotes.size(); i++) {
-                String addThis = (String)Jnotes.get(i);
-                notes.add(addThis);
-            }
+        for (int i = 0; i < Jnotes.size(); i++) {
+            String addThis = (String) Jnotes.get(i);
+            notes.add(addThis);
 
         }
         
@@ -643,82 +641,4 @@ public class DataLoader extends DataConstant {
 
 
 
-/* 
-    // Roadmap parsing logic same as user parsing
-
-    // THIS IS ALL GOING TO BE RECONSTRUCTED LATER PROBABLY
-    public static ArrayList<RoadmapList> readRoadmaps() {
-        RoadmapList roadmaps = RoadmapList.getInstance();
-
-        try {
-            FileReader reader = new FileReader(ROADMAP_FILE_NAME);
-            JSONParser parser = new JSONParser();
-            JSONArray roadmapJSON = (JSONArray) parser.parse(reader);
-
-            for(int i=0; i < roadmapJSON.size(); i++) {
-                JSONObject roadmapObject = (JSONObject)roadmapJSON.get(i);
-                String major = (String)roadmapObject.get(ROADMAP_MAJOR);
-
-                if(major == "CSCE") {
-                    Roadmap csceRoadmap = createCSCERoadmap(roadmapObject, major);
-                    roadmaps.addRoadmap(csceRoadmap);
-                } else if(major == "CE") {
-                    Roadmap ceRoadmap = createCERoadmap(roadmapObject, major);
-                    roadmaps.addRoadmap(ceRoadmap);
-                } else if(major == "CIS") {
-                    Roadmap cisRoadmap = createCISRoadmap(roadmapObject, major);
-                    roadmaps.addRoadmap(cisRoadmap);
-                }
-                else {
-                    System.out.println("Unknown major");
-                }
-                
-            }
-            return roadmaps.getRoadmaps();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    
-    //Roadmap creation methods
-    public static Roadmap createCSCERoadmap(JSONObject roadmapObject, String major) {
-        UUID roadmapID = (UUID)roadmapObject.get(ROADMAP_ID);
-        String majorName = (String)roadmapObject.get(ROADMAP_MAJOR);
-        ArrayList<Roadmap> majorClasses = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-        ArrayList<Roadmap> carolinaCore = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_CAROLINA_CORE);
-        Object programRequirements = roadmapObject.get(ROADMAP_PROGRAM_REQUIREMENTS); // I think this is right? Fix in future.
-        ArrayList<Roadmap> electives = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_ELECTIVES);
-
-        Roadmap roadmap = new Roadmap(roadmapID, majorName, majorClasses, carolinaCore, programRequirements, electives);
-        return roadmap;
-    }
-
-    public static Roadmap createCERoadmap(JSONObject roadmapObject, String major) {
-        UUID roadmapID = (UUID)roadmapObject.get(ROADMAP_ID);
-        String majorName = (String)roadmapObject.get(ROADMAP_MAJOR);
-        ArrayList<Roadmap> majorClasses = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-        ArrayList<Roadmap> carolinaCore = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_CAROLINA_CORE);
-        Object programRequirements = roadmapObject.get(ROADMAP_PROGRAM_REQUIREMENTS); // I think this is right? Fix in future.
-        ArrayList<Roadmap> electives = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_ELECTIVES);
-
-        Roadmap roadmap = new Roadmap(roadmapID, majorName, majorClasses, carolinaCore, programRequirements, electives);
-        return roadmap;
-    }
-
-    public static Roadmap createCISRoadmap(JSONObject roadmapObject, String major) {
-        UUID roadmapID = (UUID)roadmapObject.get(ROADMAP_ID);
-        String majorName = (String)roadmapObject.get(ROADMAP_MAJOR);
-        ArrayList<Roadmap> majorClasses = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_MAJOR_CLASSES);
-        ArrayList<Roadmap> carolinaCore = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_CAROLINA_CORE);
-        Object programRequirements = roadmapObject.get(ROADMAP_PROGRAM_REQUIREMENTS); // I think this is right? Fix in future.
-        ArrayList<Roadmap> electives = (ArrayList<Roadmap>)roadmapObject.get(ROADMAP_ELECTIVES);
-
-        Roadmap roadmap = new Roadmap(roadmapID, majorName, majorClasses, carolinaCore, programRequirements, electives);
-        return roadmap;
-    }
-
-}
-
-*/
+ 

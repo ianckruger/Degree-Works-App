@@ -135,7 +135,7 @@
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Log Out">
+                  <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#logOutClicked" prefHeight="28.0" prefWidth="107.0" text="Log Out">
                      <font>
                         <Font size="15.0" />
                      </font>

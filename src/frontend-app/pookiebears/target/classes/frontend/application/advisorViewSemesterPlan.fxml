@@ -52,26 +52,12 @@
                         <Image url="@images/USC.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" layoutX="518.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Portia" wrappingWidth="112.79541015625">
+                  <Text fill="WHITE" layoutX="569.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome " wrappingWidth="112.79541015625">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button layoutX="34.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Profile">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Log Out">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="270.0" layoutY="68.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="Advisees">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
+                  <Button layoutX="11.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#backClicked" text="Back" />
                </children>
             </Pane>
             <TableView fx:id="classTable" layoutX="8.0" layoutY="137.0" prefHeight="127.0" prefWidth="629.0">
@@ -106,7 +92,6 @@
             <CheckBox fx:id="sem3and4CheckBox" layoutX="292.0" layoutY="111.0" mnemonicParsing="false" text="Semester 3-4" />
             <CheckBox fx:id="sem5and6CheckBox" layoutX="412.0" layoutY="111.0" mnemonicParsing="false" text="Semester 5-6" />
             <CheckBox fx:id="sem7and8CheckBox" layoutX="538.0" layoutY="111.0" mnemonicParsing="false" text="Semester 7-8" />
-            <Button layoutX="99.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#backClicked" text="Back" />
             <Text fx:id="secondSemesterText" layoutX="7.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester Two">
                <font>
                   <Font name="System Bold" size="14.0" />

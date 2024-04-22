@@ -40,10 +40,12 @@ public class studentNotesController implements Initializable{
     
     private RoadmapApplication application;
 
+    @FXML
     void logOutClicked(MouseEvent event) throws IOException{
-        application.logout();
-        App.setRoot("login");
-
+        if(application.logout()) {
+            App.setRoot("login");
+        }
+ 
     }
 
     @FXML
@@ -62,15 +64,12 @@ public class studentNotesController implements Initializable{
         application = RoadmapApplication.getInstance();
         UserList users = UserList.getInstance();
         Student student = (Student)users.getActive();
-        // application.addNoteToStudent("Advised for CS major for FA23: CSCE 146, CSCE 215, CSCE 205");
         
-        if(textField != null) {
+        
+        
 
             textField.setText(student.getNote());
-        }
-        else {
-            textField.setText("note is nothing");
-        }
+       
 
 
         

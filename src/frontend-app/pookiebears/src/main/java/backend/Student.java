@@ -31,6 +31,7 @@ public class Student extends User {
         this.advisor = new ArrayList<String>();
         this.advisors = new ArrayList<Advisor>();
         this.parents = new ArrayList<Parent>();
+        this.notes = new ArrayList<String>();
         
         
     }
@@ -104,9 +105,9 @@ public class Student extends User {
         return advisors;
     }
 
-    // public ArrayList<String> getNotes() {
-    //     return this.notes;
-    // }
+    public ArrayList<String> getNotes() {
+        return this.notes;
+    }
 
     public String getNote() {
         StringBuilder msString = new StringBuilder();

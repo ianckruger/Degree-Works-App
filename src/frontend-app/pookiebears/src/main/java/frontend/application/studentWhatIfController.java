@@ -64,6 +64,15 @@ public class studentWhatIfController implements Initializable {
 
     }
 
+    @FXML
+    void logOutClicked(MouseEvent event) throws IOException {
+        if(application.logout()) {
+            App.setRoot("login");
+        }
+
+    }
+
+
 
     @FXML
     void proceedClicked(MouseEvent event) throws IOException{

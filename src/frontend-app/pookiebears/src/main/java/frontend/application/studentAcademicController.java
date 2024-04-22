@@ -91,6 +91,9 @@ public class studentAcademicController implements Initializable{
 
     @FXML
     void logOutClicked(MouseEvent event) throws IOException{
+        if(application.logout()) {
+            App.setRoot("login");
+        }
 
     }
 

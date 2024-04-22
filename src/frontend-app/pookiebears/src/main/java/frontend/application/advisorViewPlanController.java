@@ -16,7 +16,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import backend.Advisor;
 import backend.Class;
+import backend.CourseList;
+import backend.Roadmap;
+
 import java.io.IOException;
 
  
@@ -84,10 +88,16 @@ public class advisorViewPlanController implements Initializable{
      @Override
     public void initialize(URL url, ResourceBundle rb) {
          application = RoadmapApplication.getInstance();
-        UserList users = UserList.getInstance();
-        Student student = (Student)users.getActive();
-        
-        
+        UserList users = UserList.getInstance();        
+        Advisor advisor = (Advisor)users.getAdvisor();
+        Student student = advisor.getStudentById("aa39ad3f-1cbc-4b14-8051-efb5500ff0b8");
+        users.setActiveUser(student);
+        CourseList courseList = CourseList.getInstance();
+        Roadmap roadmap = Roadmap.getInstance();
+        application.setRoadmap(roadmap);
+        roadmap.setMajorState(student.getCurrentMajor());
+       
+
         
          
 

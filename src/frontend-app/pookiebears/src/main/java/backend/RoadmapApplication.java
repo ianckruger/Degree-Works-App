@@ -317,18 +317,18 @@ public class RoadmapApplication {
         return false;
     }
 
-    // public void addNoteToStudent(String note) {
-    //     userlist.addNote(note);
-    //     Roadmap roadmap = Roadmap.getInstance();
-    //     roadmap.getMajorState().setAdvisorNotes(GetNotes());
-    // }
+    public void addNoteToStudent(String note) {
+        userlist.addNote(note);
+        Roadmap roadmap = Roadmap.getInstance();
+        roadmap.getMajorState().setAdvisorNotes(GetNotes());
+    }
 
      
 
-    // public ArrayList<String> GetNotes() {
-    //     Student user = (Student) userlist.getActive();
-    //     return user.getNotes();
-    // }
+    public ArrayList<String> GetNotes() {
+        Student user = (Student) userlist.getActive();
+        return user.getNotes();
+    }
 
     public String GetNote() {
         Student user = (Student) userlist.getActive();
