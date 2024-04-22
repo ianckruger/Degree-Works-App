@@ -83,6 +83,17 @@ public class studentAcademicController implements Initializable{
 
     }
 
+    @FXML
+    void semesterPlanClicked(MouseEvent event) throws IOException{
+        App.setRoot("studentSemesterPlan");
+
+    }
+
+    @FXML
+    void logOutClicked(MouseEvent event) throws IOException{
+
+    }
+
 
  
 

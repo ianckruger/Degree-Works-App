@@ -12,6 +12,7 @@ public class advisorViewAdviseeController implements Initializable{
 
     @FXML
     void noteClicked(MouseEvent event) throws IOException {
+        App.setRoot("advisorAddNote");
 
     }
 
